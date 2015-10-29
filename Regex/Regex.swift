@@ -1,6 +1,6 @@
 //  Copyright © 2015 Outware Mobile. All rights reserved.
 
-public struct Regex: StringLiteralConvertible {
+public struct Regex: StringLiteralConvertible, CustomStringConvertible, CustomDebugStringConvertible {
 
   // MARK: Initialisation
 
@@ -34,6 +34,16 @@ public struct Regex: StringLiteralConvertible {
 
   public func allMatches(string: String) -> [MatchResult] {
     return regex.matchesInString(string, options: [], range: string.entireRange).map { MatchResult(string.utf16, $0) }
+  }
+
+  // MARK: Describing
+
+  public var description: String {
+    return regex.pattern
+  }
+
+  public var debugDescription: String {
+    return "/\(description)/"
   }
 
 }
