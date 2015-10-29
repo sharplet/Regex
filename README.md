@@ -34,7 +34,11 @@ default:
 Capture:
 
 ```swift
-let subject = Regex("hello (world|universe|swift)").match("hello swift").captures[0]
+let greeting: Regex = "hello (world|universe|swift)"
+
+if let subject = greeting.match("hello swift")?.captures[0] {
+  print("ohai \(subject)")
+}
 ```
 
 ## Installation
