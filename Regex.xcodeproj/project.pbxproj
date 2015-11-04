@@ -10,11 +10,11 @@
 		CE6CDF641BE239DE00AE6393 /* Regex.h in Headers */ = {isa = PBXBuildFile; fileRef = CE6CDF631BE239DE00AE6393 /* Regex.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CE6CDF6B1BE239DE00AE6393 /* Regex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6CDF601BE239DE00AE6393 /* Regex.framework */; };
 		CE6CDF701BE239DE00AE6393 /* RegexSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CDF6F1BE239DE00AE6393 /* RegexSpec.swift */; };
-		CE6CDF7E1BE23AB600AE6393 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6CDF7D1BE23AB600AE6393 /* Quick.framework */; };
-		CE6CDF801BE23ABA00AE6393 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6CDF7F1BE23ABA00AE6393 /* Nimble.framework */; };
 		CE6CDF821BE23BE800AE6393 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CDF811BE23BE800AE6393 /* Regex.swift */; };
 		CE6CDF841BE2C52600AE6393 /* MatchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CDF831BE2C52600AE6393 /* MatchResult.swift */; };
 		CE6CDF861BE2C64D00AE6393 /* Foundation+Ranges.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CDF851BE2C64D00AE6393 /* Foundation+Ranges.swift */; };
+		CEC768611BE9991A0066BA1E /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC768601BE9991A0066BA1E /* Nimble.framework */; };
+		CEC768631BE999210066BA1E /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC768621BE999210066BA1E /* Quick.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,11 +34,11 @@
 		CE6CDF6A1BE239DE00AE6393 /* RegexTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RegexTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6CDF6F1BE239DE00AE6393 /* RegexSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexSpec.swift; sourceTree = "<group>"; };
 		CE6CDF711BE239DE00AE6393 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE6CDF7D1BE23AB600AE6393 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = "../Carthage/Checkouts/Quick/build/Debug-iphoneos/Quick.framework"; sourceTree = "<group>"; };
-		CE6CDF7F1BE23ABA00AE6393 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = "../Carthage/Checkouts/Nimble/build/Debug-iphoneos/Nimble.framework"; sourceTree = "<group>"; };
 		CE6CDF811BE23BE800AE6393 /* Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
 		CE6CDF831BE2C52600AE6393 /* MatchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchResult.swift; sourceTree = "<group>"; };
 		CE6CDF851BE2C64D00AE6393 /* Foundation+Ranges.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Foundation+Ranges.swift"; sourceTree = "<group>"; };
+		CEC768601BE9991A0066BA1E /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEC768621BE999210066BA1E /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,9 +53,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE6CDF801BE23ABA00AE6393 /* Nimble.framework in Frameworks */,
-				CE6CDF7E1BE23AB600AE6393 /* Quick.framework in Frameworks */,
 				CE6CDF6B1BE239DE00AE6393 /* Regex.framework in Frameworks */,
+				CEC768631BE999210066BA1E /* Quick.framework in Frameworks */,
+				CEC768611BE9991A0066BA1E /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,8 +121,8 @@
 		CE6CDF7C1BE23A6400AE6393 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CE6CDF7D1BE23AB600AE6393 /* Quick.framework */,
-				CE6CDF7F1BE23ABA00AE6393 /* Nimble.framework */,
+				CEC768621BE999210066BA1E /* Quick.framework */,
+				CEC768601BE9991A0066BA1E /* Nimble.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
