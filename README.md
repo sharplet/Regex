@@ -43,8 +43,18 @@ if let subject = greeting.match("hello swift")?.captures[0] {
 
 ## Installation
 
+#### Carthage
+
 Put this in your Cartfile:
 
 ```
 github "sharplet/Regex"
+```
+
+#### CocoaPods
+
+Put this in your Podfile:
+
+```
+pod "Regex"
 ```
