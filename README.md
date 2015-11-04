@@ -56,5 +56,5 @@ github "sharplet/Regex"
 Put this in your Podfile:
 
 ```
-pod "Regex"
+pod "Regex", git: "https://github.com/sharplet/Regex.git"
 ```
