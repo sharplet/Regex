@@ -1,0 +1,40 @@
+# Xcode
+build/
+Carthage/Build/
+xcuserdata/
+*.xccheckout
+*.xcscmblueprint
+*.gcno
+*.gcda
+
+# Mac OS X
+.DS_Store
+
+# Vim
+*.swp
+
+# Diffs
+*.orig
+
+# AppCode
+.idea/
+
+# Builds
+DerivedData/
+*.log
+environment.xcconfig
+compile_commands.json
+
+# Reports
+coverage.xml
+CodeQualityReports/
+test-reports/
+appledoc/
+oclint-report.html
+AppleDocWarnings.txt
+AppleDocWarningsCount.txt
+Warnings*
+
+# Bundler
+.bundle/
+vendor/bundle/

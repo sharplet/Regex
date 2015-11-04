@@ -10,11 +10,19 @@
 		CE6CDF641BE239DE00AE6393 /* Regex.h in Headers */ = {isa = PBXBuildFile; fileRef = CE6CDF631BE239DE00AE6393 /* Regex.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CE6CDF6B1BE239DE00AE6393 /* Regex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6CDF601BE239DE00AE6393 /* Regex.framework */; };
 		CE6CDF701BE239DE00AE6393 /* RegexSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CDF6F1BE239DE00AE6393 /* RegexSpec.swift */; };
-		CE6CDF7E1BE23AB600AE6393 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6CDF7D1BE23AB600AE6393 /* Quick.framework */; };
-		CE6CDF801BE23ABA00AE6393 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6CDF7F1BE23ABA00AE6393 /* Nimble.framework */; };
 		CE6CDF821BE23BE800AE6393 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CDF811BE23BE800AE6393 /* Regex.swift */; };
 		CE6CDF841BE2C52600AE6393 /* MatchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CDF831BE2C52600AE6393 /* MatchResult.swift */; };
 		CE6CDF861BE2C64D00AE6393 /* Foundation+Ranges.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CDF851BE2C64D00AE6393 /* Foundation+Ranges.swift */; };
+		CEC768611BE9991A0066BA1E /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC768601BE9991A0066BA1E /* Nimble.framework */; };
+		CEC768631BE999210066BA1E /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC768621BE999210066BA1E /* Quick.framework */; };
+		CEC768731BE99A050066BA1E /* Regex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC768691BE99A040066BA1E /* Regex.framework */; };
+		CEC768801BE99B690066BA1E /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CDF811BE23BE800AE6393 /* Regex.swift */; };
+		CEC768811BE99B690066BA1E /* MatchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CDF831BE2C52600AE6393 /* MatchResult.swift */; };
+		CEC768821BE99B690066BA1E /* Foundation+Ranges.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CDF851BE2C64D00AE6393 /* Foundation+Ranges.swift */; };
+		CEC768831BE99B720066BA1E /* Regex.h in Headers */ = {isa = PBXBuildFile; fileRef = CE6CDF631BE239DE00AE6393 /* Regex.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CEC768841BE99B7C0066BA1E /* RegexSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CDF6F1BE239DE00AE6393 /* RegexSpec.swift */; };
+		CEC768861BE99B840066BA1E /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC768851BE99B840066BA1E /* Nimble.framework */; };
+		CEC768881BE99B880066BA1E /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC768871BE99B880066BA1E /* Quick.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +33,13 @@
 			remoteGlobalIDString = CE6CDF5F1BE239DE00AE6393;
 			remoteInfo = Regex;
 		};
+		CEC768741BE99A050066BA1E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE6CDF571BE239DE00AE6393 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEC768681BE99A040066BA1E;
+			remoteInfo = "Regex-OSX";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -34,11 +49,15 @@
 		CE6CDF6A1BE239DE00AE6393 /* RegexTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RegexTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6CDF6F1BE239DE00AE6393 /* RegexSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexSpec.swift; sourceTree = "<group>"; };
 		CE6CDF711BE239DE00AE6393 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE6CDF7D1BE23AB600AE6393 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = "../Carthage/Checkouts/Quick/build/Debug-iphoneos/Quick.framework"; sourceTree = "<group>"; };
-		CE6CDF7F1BE23ABA00AE6393 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = "../Carthage/Checkouts/Nimble/build/Debug-iphoneos/Nimble.framework"; sourceTree = "<group>"; };
 		CE6CDF811BE23BE800AE6393 /* Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
 		CE6CDF831BE2C52600AE6393 /* MatchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchResult.swift; sourceTree = "<group>"; };
 		CE6CDF851BE2C64D00AE6393 /* Foundation+Ranges.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Foundation+Ranges.swift"; sourceTree = "<group>"; };
+		CEC768601BE9991A0066BA1E /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEC768621BE999210066BA1E /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEC768691BE99A040066BA1E /* Regex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Regex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEC768721BE99A050066BA1E /* RegexTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RegexTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEC768851BE99B840066BA1E /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEC768871BE99B880066BA1E /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,9 +72,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE6CDF801BE23ABA00AE6393 /* Nimble.framework in Frameworks */,
-				CE6CDF7E1BE23AB600AE6393 /* Quick.framework in Frameworks */,
 				CE6CDF6B1BE239DE00AE6393 /* Regex.framework in Frameworks */,
+				CEC768631BE999210066BA1E /* Quick.framework in Frameworks */,
+				CEC768611BE9991A0066BA1E /* Nimble.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEC768651BE99A040066BA1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEC7686F1BE99A050066BA1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEC768731BE99A050066BA1E /* Regex.framework in Frameworks */,
+				CEC768881BE99B880066BA1E /* Quick.framework in Frameworks */,
+				CEC768861BE99B840066BA1E /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +113,8 @@
 			children = (
 				CE6CDF601BE239DE00AE6393 /* Regex.framework */,
 				CE6CDF6A1BE239DE00AE6393 /* RegexTests.xctest */,
+				CEC768691BE99A040066BA1E /* Regex.framework */,
+				CEC768721BE99A050066BA1E /* RegexTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,8 +159,10 @@
 		CE6CDF7C1BE23A6400AE6393 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CE6CDF7D1BE23AB600AE6393 /* Quick.framework */,
-				CE6CDF7F1BE23ABA00AE6393 /* Nimble.framework */,
+				CEC768871BE99B880066BA1E /* Quick.framework */,
+				CEC768851BE99B840066BA1E /* Nimble.framework */,
+				CEC768621BE999210066BA1E /* Quick.framework */,
+				CEC768601BE9991A0066BA1E /* Nimble.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -135,6 +175,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE6CDF641BE239DE00AE6393 /* Regex.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEC768661BE99A040066BA1E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEC768831BE99B720066BA1E /* Regex.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +225,42 @@
 			productReference = CE6CDF6A1BE239DE00AE6393 /* RegexTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		CEC768681BE99A040066BA1E /* Regex-OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEC7687E1BE99A050066BA1E /* Build configuration list for PBXNativeTarget "Regex-OSX" */;
+			buildPhases = (
+				CEC768641BE99A040066BA1E /* Sources */,
+				CEC768651BE99A040066BA1E /* Frameworks */,
+				CEC768661BE99A040066BA1E /* Headers */,
+				CEC768671BE99A040066BA1E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Regex-OSX";
+			productName = "Regex-OSX";
+			productReference = CEC768691BE99A040066BA1E /* Regex.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CEC768711BE99A050066BA1E /* RegexTests-OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEC7687F1BE99A050066BA1E /* Build configuration list for PBXNativeTarget "RegexTests-OSX" */;
+			buildPhases = (
+				CEC7686E1BE99A050066BA1E /* Sources */,
+				CEC7686F1BE99A050066BA1E /* Frameworks */,
+				CEC768701BE99A050066BA1E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEC768751BE99A050066BA1E /* PBXTargetDependency */,
+			);
+			name = "RegexTests-OSX";
+			productName = "Regex-OSXTests";
+			productReference = CEC768721BE99A050066BA1E /* RegexTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -185,12 +269,18 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0710;
-				ORGANIZATIONNAME = "Outware Mobile";
+				ORGANIZATIONNAME = "Adam Sharp";
 				TargetAttributes = {
 					CE6CDF5F1BE239DE00AE6393 = {
 						CreatedOnToolsVersion = 7.1;
 					};
 					CE6CDF691BE239DE00AE6393 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					CEC768681BE99A040066BA1E = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					CEC768711BE99A050066BA1E = {
 						CreatedOnToolsVersion = 7.1;
 					};
 				};
@@ -209,6 +299,8 @@
 			targets = (
 				CE6CDF5F1BE239DE00AE6393 /* Regex-iOS */,
 				CE6CDF691BE239DE00AE6393 /* RegexTests-iOS */,
+				CEC768681BE99A040066BA1E /* Regex-OSX */,
+				CEC768711BE99A050066BA1E /* RegexTests-OSX */,
 			);
 		};
 /* End PBXProject section */
@@ -222,6 +314,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		CE6CDF681BE239DE00AE6393 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEC768671BE99A040066BA1E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEC768701BE99A050066BA1E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -249,6 +355,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CEC768641BE99A040066BA1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEC768801BE99B690066BA1E /* Regex.swift in Sources */,
+				CEC768811BE99B690066BA1E /* MatchResult.swift in Sources */,
+				CEC768821BE99B690066BA1E /* Foundation+Ranges.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEC7686E1BE99A050066BA1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEC768841BE99B7C0066BA1E /* RegexSpec.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -256,6 +380,11 @@
 			isa = PBXTargetDependency;
 			target = CE6CDF5F1BE239DE00AE6393 /* Regex-iOS */;
 			targetProxy = CE6CDF6C1BE239DE00AE6393 /* PBXContainerItemProxy */;
+		};
+		CEC768751BE99A050066BA1E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEC768681BE99A040066BA1E /* Regex-OSX */;
+			targetProxy = CEC768741BE99A050066BA1E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -283,6 +412,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_BUNDLE_IDENTIFIER = "$(ORGANISATION_IDENTIFIER).$(PROJECT_NAME)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -300,10 +430,13 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				ORGANISATION_IDENTIFIER = me.sharplet;
 				PROJECT_NAME = Regex;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_PRODUCT_BUNDLE_IDENTIFIER = "$(ORGANISATION_IDENTIFIER).$(TEST_PRODUCT_NAME)";
+				TEST_PRODUCT_NAME = "$(PROJECT_NAME)Tests";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -332,6 +465,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_BUNDLE_IDENTIFIER = "$(ORGANISATION_IDENTIFIER).$(PROJECT_NAME)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -342,9 +476,12 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ORGANISATION_IDENTIFIER = me.sharplet;
 				PROJECT_NAME = Regex;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_PRODUCT_BUNDLE_IDENTIFIER = "$(ORGANISATION_IDENTIFIER).$(TEST_PRODUCT_NAME)";
+				TEST_PRODUCT_NAME = "$(PROJECT_NAME)Tests";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -362,7 +499,7 @@
 				INFOPLIST_FILE = Regex/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = au.com.outware.Regex;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(FRAMEWORK_BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -380,7 +517,7 @@
 				INFOPLIST_FILE = Regex/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = au.com.outware.Regex;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(FRAMEWORK_BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -391,8 +528,8 @@
 			buildSettings = {
 				INFOPLIST_FILE = RegexTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = au.com.outware.RegexTests;
-				PRODUCT_NAME = "$(PROJECT_NAME)Tests";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(TEST_PRODUCT_BUNDLE_IDENTIFIER)";
+				PRODUCT_NAME = "$(TEST_PRODUCT_NAME)";
 			};
 			name = Debug;
 		};
@@ -401,8 +538,76 @@
 			buildSettings = {
 				INFOPLIST_FILE = RegexTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = au.com.outware.RegexTests;
-				PRODUCT_NAME = "$(PROJECT_NAME)Tests";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(TEST_PRODUCT_BUNDLE_IDENTIFIER)";
+				PRODUCT_NAME = "$(TEST_PRODUCT_NAME)";
+			};
+			name = Release;
+		};
+		CEC7687A1BE99A050066BA1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Regex/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(FRAMEWORK_BUNDLE_IDENTIFIER)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		CEC7687B1BE99A050066BA1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Regex/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(FRAMEWORK_BUNDLE_IDENTIFIER)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		CEC7687C1BE99A050066BA1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = RegexTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(TEST_PRODUCT_BUNDLE_IDENTIFIER)";
+				PRODUCT_NAME = "$(TEST_PRODUCT_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		CEC7687D1BE99A050066BA1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = RegexTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(TEST_PRODUCT_BUNDLE_IDENTIFIER)";
+				PRODUCT_NAME = "$(TEST_PRODUCT_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -432,6 +637,24 @@
 			buildConfigurations = (
 				CE6CDF781BE239DE00AE6393 /* Debug */,
 				CE6CDF791BE239DE00AE6393 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEC7687E1BE99A050066BA1E /* Build configuration list for PBXNativeTarget "Regex-OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEC7687A1BE99A050066BA1E /* Debug */,
+				CEC7687B1BE99A050066BA1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEC7687F1BE99A050066BA1E /* Build configuration list for PBXNativeTarget "RegexTests-OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEC7687C1BE99A050066BA1E /* Debug */,
+				CEC7687D1BE99A050066BA1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
