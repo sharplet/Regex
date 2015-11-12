@@ -66,6 +66,23 @@ final class RegexSpec: QuickSpec {
       }
     }
 
+    describe("capture ranges") {
+      it("correctly converts from the underlying index type") {
+        // U+0061 LATIN SMALL LETTER A
+        // U+0065 LATIN SMALL LETTER E
+        // U+0301 COMBINING ACUTE ACCENT
+        // U+221E INFINITY
+        // U+1D11E MUSICAL SYMBOL G CLEF
+        let string = "\u{61}\u{65}\u{301}\u{221E}\u{1D11E}"
+        let infinity = Regex("(\u{221E})").match(string)!.captures[0]
+        let rangeOfInfinity = string.rangeOfString(infinity)!
+        let location = string.startIndex.distanceTo(rangeOfInfinity.startIndex)
+        let length = rangeOfInfinity.count
+        expect(location).to(equal(2))
+        expect(length).to(equal(1))
+      }
+    }
+
   }
 }
 
