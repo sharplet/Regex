@@ -55,6 +55,6 @@ github "sharplet/Regex"
 
 Put this in your Podfile:
 
-```
-pod "Regex", git: "https://github.com/sharplet/Regex.git"
+```ruby
+pod "Regex", git: "https://github.com/sharplet/Regex.git", tag: "v0.2.2"
 ```
