@@ -1,5 +1,6 @@
 # Xcode
 build/
+.build/
 Carthage/Build/
 xcuserdata/
 *.xccheckout
