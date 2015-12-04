@@ -43,6 +43,20 @@ if let subject = greeting.match("hello swift")?.captures[0] {
 
 ## Installation
 
+#### Swift Package Manager
+
+Add a dependency to your `Package.swift`:
+
+```swift
+let package = Package(
+  name: "MyPackage",
+  dependencies: [
+    // other dependencies...
+    .Package(url: "https://github.com/sharplet/Regex.git", majorVersion: 0, minor: 2),
+  ]
+)
+```
+
 #### Carthage
 
 Put this in your Cartfile:
