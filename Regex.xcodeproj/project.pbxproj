@@ -7,22 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE322FB31C1651F8005741D5 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE322FAA1C1651D5005741D5 /* Quick.framework */; };
+		CE322FB41C1651FB005741D5 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE322FA91C1651D5005741D5 /* Nimble.framework */; };
+		CE322FB51C165208005741D5 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE322FAC1C1651D5005741D5 /* Quick.framework */; };
+		CE322FB61C16520B005741D5 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE322FAB1C1651D5005741D5 /* Nimble.framework */; };
+		CE322FB81C165238005741D5 /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE322FAB1C1651D5005741D5 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CE322FB91C165238005741D5 /* Quick.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE322FAC1C1651D5005741D5 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CE322FBB1C16525F005741D5 /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE322FA91C1651D5005741D5 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CE322FBC1C16525F005741D5 /* Quick.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE322FAA1C1651D5005741D5 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE6CDF641BE239DE00AE6393 /* Regex.h in Headers */ = {isa = PBXBuildFile; fileRef = CE6CDF631BE239DE00AE6393 /* Regex.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CE6CDF6B1BE239DE00AE6393 /* Regex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6CDF601BE239DE00AE6393 /* Regex.framework */; };
 		CE6CDF701BE239DE00AE6393 /* RegexSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CDF6F1BE239DE00AE6393 /* RegexSpec.swift */; };
 		CE6CDF821BE23BE800AE6393 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CDF811BE23BE800AE6393 /* Regex.swift */; };
 		CE6CDF841BE2C52600AE6393 /* MatchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CDF831BE2C52600AE6393 /* MatchResult.swift */; };
 		CE6CDF861BE2C64D00AE6393 /* Foundation+Ranges.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CDF851BE2C64D00AE6393 /* Foundation+Ranges.swift */; };
-		CEC768611BE9991A0066BA1E /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC768601BE9991A0066BA1E /* Nimble.framework */; };
-		CEC768631BE999210066BA1E /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC768621BE999210066BA1E /* Quick.framework */; };
 		CEC768731BE99A050066BA1E /* Regex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC768691BE99A040066BA1E /* Regex.framework */; };
 		CEC768801BE99B690066BA1E /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CDF811BE23BE800AE6393 /* Regex.swift */; };
 		CEC768811BE99B690066BA1E /* MatchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CDF831BE2C52600AE6393 /* MatchResult.swift */; };
 		CEC768821BE99B690066BA1E /* Foundation+Ranges.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CDF851BE2C64D00AE6393 /* Foundation+Ranges.swift */; };
 		CEC768831BE99B720066BA1E /* Regex.h in Headers */ = {isa = PBXBuildFile; fileRef = CE6CDF631BE239DE00AE6393 /* Regex.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CEC768841BE99B7C0066BA1E /* RegexSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CDF6F1BE239DE00AE6393 /* RegexSpec.swift */; };
-		CEC768861BE99B840066BA1E /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC768851BE99B840066BA1E /* Nimble.framework */; };
-		CEC768881BE99B880066BA1E /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC768871BE99B880066BA1E /* Quick.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +46,38 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		CE322FB71C16522C005741D5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CE322FB81C165238005741D5 /* Nimble.framework in Embed Frameworks */,
+				CE322FB91C165238005741D5 /* Quick.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE322FBA1C165251005741D5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CE322FBB1C16525F005741D5 /* Nimble.framework in Embed Frameworks */,
+				CE322FBC1C16525F005741D5 /* Quick.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		CE322FA91C1651D5005741D5 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		CE322FAA1C1651D5005741D5 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		CE322FAB1C1651D5005741D5 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = "<group>"; };
+		CE322FAC1C1651D5005741D5 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
 		CE6CDF601BE239DE00AE6393 /* Regex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Regex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6CDF631BE239DE00AE6393 /* Regex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Regex.h; sourceTree = "<group>"; };
 		CE6CDF651BE239DE00AE6393 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,12 +87,8 @@
 		CE6CDF811BE23BE800AE6393 /* Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
 		CE6CDF831BE2C52600AE6393 /* MatchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchResult.swift; sourceTree = "<group>"; };
 		CE6CDF851BE2C64D00AE6393 /* Foundation+Ranges.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Foundation+Ranges.swift"; sourceTree = "<group>"; };
-		CEC768601BE9991A0066BA1E /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEC768621BE999210066BA1E /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC768691BE99A040066BA1E /* Regex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Regex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC768721BE99A050066BA1E /* RegexTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RegexTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEC768851BE99B840066BA1E /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEC768871BE99B880066BA1E /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,8 +104,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE6CDF6B1BE239DE00AE6393 /* Regex.framework in Frameworks */,
-				CEC768631BE999210066BA1E /* Quick.framework in Frameworks */,
-				CEC768611BE9991A0066BA1E /* Nimble.framework in Frameworks */,
+				CE322FB31C1651F8005741D5 /* Quick.framework in Frameworks */,
+				CE322FB41C1651FB005741D5 /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,8 +121,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEC768731BE99A050066BA1E /* Regex.framework in Frameworks */,
-				CEC768881BE99B880066BA1E /* Quick.framework in Frameworks */,
-				CEC768861BE99B840066BA1E /* Nimble.framework in Frameworks */,
+				CE322FB51C165208005741D5 /* Quick.framework in Frameworks */,
+				CE322FB61C16520B005741D5 /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,10 +190,10 @@
 		CE6CDF7C1BE23A6400AE6393 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CEC768871BE99B880066BA1E /* Quick.framework */,
-				CEC768851BE99B840066BA1E /* Nimble.framework */,
-				CEC768621BE999210066BA1E /* Quick.framework */,
-				CEC768601BE9991A0066BA1E /* Nimble.framework */,
+				CE322FA91C1651D5005741D5 /* Nimble.framework */,
+				CE322FAA1C1651D5005741D5 /* Quick.framework */,
+				CE322FAB1C1651D5005741D5 /* Nimble.framework */,
+				CE322FAC1C1651D5005741D5 /* Quick.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -214,6 +245,7 @@
 				CE6CDF661BE239DE00AE6393 /* Sources */,
 				CE6CDF671BE239DE00AE6393 /* Frameworks */,
 				CE6CDF681BE239DE00AE6393 /* Resources */,
+				CE322FBA1C165251005741D5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -250,6 +282,7 @@
 				CEC7686E1BE99A050066BA1E /* Sources */,
 				CEC7686F1BE99A050066BA1E /* Frameworks */,
 				CEC768701BE99A050066BA1E /* Resources */,
+				CE322FB71C16522C005741D5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -496,6 +529,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -514,6 +552,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -526,6 +569,10 @@
 		CE6CDF781BE239DE00AE6393 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(TEST_PRODUCT_BUNDLE_IDENTIFIER)";
@@ -536,6 +583,10 @@
 		CE6CDF791BE239DE00AE6393 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(TEST_PRODUCT_BUNDLE_IDENTIFIER)";
@@ -588,6 +639,10 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -602,6 +657,10 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
