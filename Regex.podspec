@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/sharplet/Regex"
   s.license      = "LICENSE.txt"
   s.author       = "Adam Sharp"
-  s.source       = { :git => "https://github.com/sharplet/Regex.git", :tag => "v#{s.version}" }
+  s.source       = { :git => "https://github.com/sharplet/Regex.git", :tag => s.version.to_s }
   s.source_files = "Source/**/*.swift"
   s.ios.deployment_target = "8.0"
   s.osx.deployment_target = "10.9"
