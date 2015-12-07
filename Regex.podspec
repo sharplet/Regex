@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name         = "Regex"
+  s.name         = File.basename(__FILE__, ".podspec")
   s.version      = %x(git describe --tags --abbrev=0).chomp.sub(/^v/, '')
   s.summary      = %x(curl -s https://api.github.com/repos/sharplet/Regex | ruby -rjson -e 'puts JSON.parse($stdin.read).fetch("description")').chomp
   s.homepage     = "https://github.com/sharplet/Regex"
