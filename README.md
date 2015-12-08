@@ -2,6 +2,8 @@
 
 Pattern match like a boss.
 
+
+
 ## Usage
 
 Create:
@@ -41,6 +43,8 @@ if let subject = greeting.match("hello swift")?.captures[0] {
 }
 ```
 
+
+
 ## Installation
 
 #### Swift Package Manager
@@ -72,3 +76,46 @@ Put this in your Podfile:
 ```ruby
 pod "STRegex"
 ```
+
+
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+
+
+## Development Setup
+
+Development is currently only supported on Mac OS X. An Xcode project is
+provided for your convenience.
+
+Regex depends on Carthage for development:
+
+```
+$ brew install carthage
+```
+
+`xcpretty` is also recommended, for prettifying test output:
+
+```
+$ gem install xcpretty
+```
+
+After cloning the project, first set up your environment:
+
+```
+$ rake setup
+```
+
+Build and run the tests to ensure everything works:
+
+```
+$ rake
+```
+
+
+
+## License
+
+See [LICENSE.txt](LICENSE.txt).
