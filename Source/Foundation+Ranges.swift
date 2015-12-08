@@ -1,5 +1,3 @@
-//  Copyright © 2015 Outware Mobile. All rights reserved.
-
 internal extension NSTextCheckingResult {
   var ranges: [NSRange] {
     return 0.stride(to: numberOfRanges, by: 1).map(rangeAtIndex)
