@@ -81,6 +81,14 @@ final class RegexSpec: QuickSpec {
       }
     }
 
+    describe("matching at line anchors") {
+      it("can anchor matches to the start of each line") {
+        let regex = Regex("(?m)^foo")
+        let multilineString = "foo\nbar\nfoo\nbaz"
+        expect(regex.allMatches(multilineString).count).to(equal(2))
+      }
+    }
+
   }
 }
 

@@ -2,6 +2,7 @@ public struct Options: OptionSetType {
 
   public static let IgnoreCase = Options(rawValue: 1)
   public static let IgnoreMetacharacters = Options(rawValue: 1 << 1)
+  public static let AnchorsMatchLines = Options(rawValue: 1 << 2)
 
   // MARK: OptionSetType
 
@@ -19,6 +20,7 @@ internal extension Options {
     var options = NSRegularExpressionOptions()
     if contains(.IgnoreCase) { options.insert(.CaseInsensitive) }
     if contains(.IgnoreMetacharacters) { options.insert(.IgnoreMetacharacters) }
+    if contains(.AnchorsMatchLines) { options.insert(.AnchorsMatchLines) }
     return options
   }
 

@@ -21,6 +21,14 @@ final class OptionsSpec: QuickSpec {
       }
     }
 
+    describe(".AnchorsMatchLines") {
+      it("can anchor matches to the start of each line") {
+        let regex = Regex("^foo", options: .AnchorsMatchLines)
+        let multilineString = "foo\nbar\nfoo\nbaz"
+        expect(regex.allMatches(multilineString).count).to(equal(2))
+      }
+    }
+
   }
 }
 
