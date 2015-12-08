@@ -15,6 +15,10 @@
 		CE322FB91C165238005741D5 /* Quick.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE322FAC1C1651D5005741D5 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE322FBB1C16525F005741D5 /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE322FA91C1651D5005741D5 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE322FBC1C16525F005741D5 /* Quick.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE322FAA1C1651D5005741D5 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CE4BE2941C168183005E4D4F /* OptionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE322FBD1C168146005741D5 /* OptionsSpec.swift */; };
+		CE4BE2951C168183005E4D4F /* OptionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE322FBD1C168146005741D5 /* OptionsSpec.swift */; };
+		CE4BE2971C1682CF005E4D4F /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4BE2961C1682CF005E4D4F /* Options.swift */; };
+		CE4BE2981C168507005E4D4F /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4BE2961C1682CF005E4D4F /* Options.swift */; };
 		CE6CDF641BE239DE00AE6393 /* Regex.h in Headers */ = {isa = PBXBuildFile; fileRef = CE6CDF631BE239DE00AE6393 /* Regex.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CE6CDF6B1BE239DE00AE6393 /* Regex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6CDF601BE239DE00AE6393 /* Regex.framework */; };
 		CE6CDF701BE239DE00AE6393 /* RegexSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CDF6F1BE239DE00AE6393 /* RegexSpec.swift */; };
@@ -78,6 +82,8 @@
 		CE322FAA1C1651D5005741D5 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		CE322FAB1C1651D5005741D5 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = "<group>"; };
 		CE322FAC1C1651D5005741D5 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
+		CE322FBD1C168146005741D5 /* OptionsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsSpec.swift; sourceTree = "<group>"; };
+		CE4BE2961C1682CF005E4D4F /* Options.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
 		CE6CDF601BE239DE00AE6393 /* Regex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Regex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6CDF631BE239DE00AE6393 /* Regex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Regex.h; sourceTree = "<group>"; };
 		CE6CDF651BE239DE00AE6393 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -155,6 +161,7 @@
 			children = (
 				CE6CDF811BE23BE800AE6393 /* Regex.swift */,
 				CE6CDF831BE2C52600AE6393 /* MatchResult.swift */,
+				CE4BE2961C1682CF005E4D4F /* Options.swift */,
 				CE6CDF851BE2C64D00AE6393 /* Foundation+Ranges.swift */,
 				CE6CDF7A1BE23A1D00AE6393 /* Supporting Files */,
 			);
@@ -165,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				CE6CDF6F1BE239DE00AE6393 /* RegexSpec.swift */,
+				CE322FBD1C168146005741D5 /* OptionsSpec.swift */,
 				CE6CDF7B1BE23A2E00AE6393 /* Supporting Files */,
 			);
 			path = Tests;
@@ -374,6 +382,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE4BE2971C1682CF005E4D4F /* Options.swift in Sources */,
 				CE6CDF841BE2C52600AE6393 /* MatchResult.swift in Sources */,
 				CE6CDF821BE23BE800AE6393 /* Regex.swift in Sources */,
 				CE6CDF861BE2C64D00AE6393 /* Foundation+Ranges.swift in Sources */,
@@ -385,6 +394,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE6CDF701BE239DE00AE6393 /* RegexSpec.swift in Sources */,
+				CE4BE2941C168183005E4D4F /* OptionsSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +402,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE4BE2981C168507005E4D4F /* Options.swift in Sources */,
 				CEC768801BE99B690066BA1E /* Regex.swift in Sources */,
 				CEC768811BE99B690066BA1E /* MatchResult.swift in Sources */,
 				CEC768821BE99B690066BA1E /* Foundation+Ranges.swift in Sources */,
@@ -403,6 +414,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEC768841BE99B7C0066BA1E /* RegexSpec.swift in Sources */,
+				CE4BE2951C168183005E4D4F /* OptionsSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

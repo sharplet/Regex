@@ -43,6 +43,15 @@ if let subject = greeting.match("hello swift")?.captures[0] {
 }
 ```
 
+Options:
+
+```swift
+let totallyUniqueExamples = Regex("^(hello|foo).*$", options: [.IgnoreCase, .AnchorsMatchLines])
+let multilineText = "hello world\ngoodbye world\nFOOBAR\n"
+let matchingLines = totallyUniqueExamples.allMatches(multilineText).map { $0.matchedString }
+// ["hello world", "FOOBAR"]
+```
+
 
 
 ## Installation

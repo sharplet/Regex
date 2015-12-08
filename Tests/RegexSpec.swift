@@ -81,6 +81,21 @@ final class RegexSpec: QuickSpec {
       }
     }
 
+    describe("matching at line anchors") {
+      it("can anchor matches to the start of each line") {
+        let regex = Regex("(?m)^foo")
+        let multilineString = "foo\nbar\nfoo\nbaz"
+        expect(regex.allMatches(multilineString).count).to(equal(2))
+      }
+
+      it("validates that the example in the README is correct") {
+        let totallyUniqueExamples = Regex("^(hello|foo).*$", options: [.IgnoreCase, .AnchorsMatchLines])
+        let multilineText = "hello world\ngoodbye world\nFOOBAR\n"
+        let matchingLines = totallyUniqueExamples.allMatches(multilineText).map { $0.matchedString }
+        expect(matchingLines).to(equal(["hello world", "FOOBAR"]))
+      }
+    }
+
   }
 }
 
