@@ -4,8 +4,8 @@ public struct Regex: StringLiteralConvertible, CustomStringConvertible, CustomDe
 
   private let regex: NSRegularExpression
 
-  public init(_ pattern: String) {
-    regex = try! NSRegularExpression(pattern: pattern, options: [])
+  public init(_ pattern: String, options: Options = []) {
+    regex = try! NSRegularExpression(pattern: pattern, options: options.toNSRegularExpressionOptions())
   }
 
   public init(stringLiteral value: String) {
