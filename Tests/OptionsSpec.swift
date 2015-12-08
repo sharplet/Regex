@@ -13,6 +13,14 @@ final class OptionsSpec: QuickSpec {
       }
     }
 
+    describe(".IgnoreMetacharacters") {
+      it("treats metacharacters as literals") {
+        let regex = Regex("foo(bar)", options: .IgnoreMetacharacters)
+        expect(regex.matches("foobar")).to(beFalse())
+        expect(regex.matches("foo(bar)")).to(beTrue())
+      }
+    }
+
   }
 }
 
