@@ -81,7 +81,7 @@ pod "STRegex"
 
 ## Contributing
 
-See [CONTRIBUTING.md][].
+See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 
 
@@ -118,4 +118,4 @@ $ rake
 
 ## License
 
-See [LICENSE.txt][].
+See [LICENSE.txt](LICENSE.txt).
