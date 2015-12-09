@@ -1,7 +1,7 @@
 language: objective-c
 osx_image: xcode7.1
 install:
-  - brew install carthage
+  - brew update && brew install carthage
   - gem install xcpretty
 before_script: rake setup
 script: rake test build:all
