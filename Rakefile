@@ -1,6 +1,40 @@
+require_relative "lib/suite_task"
+
 desc "Set up the project for development"
 task :setup do
   sh "carthage bootstrap --platform iphoneos,macosx"
+end
+
+namespace :build do
+  desc "Build for all platforms"
+  suite :all => [:pod, :framework, :package]
+
+  desc "Build and validate the podspec"
+  task :pod do
+    sh "pod lib lint *.podspec --no-clean"
+  end
+
+  desc "Build the framework"
+  task :framework do
+    sh "carthage build --no-skip-current"
+  end
+
+  desc "Build the Swift package"
+  task :package do
+    if ENV["TRAVIS"] == "true"
+      puts "warning: Skipping swift build while Swift 3 is in development"
+      next
+    end
+    sh "swift build"
+  end
+end
+
+desc "Clean built products"
+task :clean do
+  Dir["build/", "Carthage/Build/*/Regex.framework*"].each do |f|
+    rm_rf(f)
+  end
+  sh "swift build --clean"
 end
 
 namespace :test do
