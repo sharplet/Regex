@@ -7,7 +7,7 @@ end
 
 namespace :build do
   desc "Build for all platforms"
-  suite :build => [:pod, :framework, :package]
+  suite :all => [:pod, :framework, :package]
 
   desc "Build and validate the podspec"
   task :pod do
