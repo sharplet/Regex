@@ -21,6 +21,10 @@ namespace :build do
 
   desc "Build the Swift package"
   task :package do
+    if ENV["CI"] == "1"
+      puts "warning: Skipping swift build while Swift 3 is in development"
+      next
+    end
     sh "swift build"
   end
 end
