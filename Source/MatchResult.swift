@@ -4,7 +4,7 @@ public struct MatchResult {
 
   // MARK: Accessing match results
 
-  public var captures: [String] {
+  public var captures: [String?] {
     return _result.captures
   }
 
@@ -33,19 +33,20 @@ private final class _MatchResult {
     self.result = result
   }
 
-  lazy var captures: [String] = {
-    return self.captureRanges.map(self.substringFromRange)
+  lazy var captures: [String?] = {
+    return self.captureRanges.map { $0.map(self.substringFromRange) }
   }()
 
-  lazy var captureRanges: [Range<String.UTF16Index>] = {
+  lazy var captureRanges: [Range<String.UTF16Index>?] = {
     return self.result.ranges.dropFirst().map(self.rangeFromNSRange)
   }()
 
   lazy var matchedString: String = {
-    return self.substringFromRange(self.rangeFromNSRange(self.result.range))
+    return self.substringFromRange(self.rangeFromNSRange(self.result.range)!)
   }()
 
-  private func rangeFromNSRange(range: NSRange) -> Range<String.UTF16Index> {
+  private func rangeFromNSRange(range: NSRange) -> Range<String.UTF16Index>? {
+    guard range.location != NSNotFound else { return nil }
     let start = string.startIndex.advancedBy(range.location)
     let end = start.advancedBy(range.length)
     return start..<end

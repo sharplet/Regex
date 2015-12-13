@@ -34,7 +34,7 @@ final class RegexSpec: QuickSpec {
 
       it("can match a regex multiple times in the same string") {
         let regex = Regex("(foo)")
-        expect(regex.allMatches("foo foo foo").flatMap { $0.captures }).to(equal(["foo", "foo", "foo"]))
+        expect(regex.allMatches("foo foo foo").flatMap { $0.captures }.flatMap { $0 }).to(equal(["foo", "foo", "foo"]))
       }
 
       it("supports the match operator") {
@@ -64,6 +64,19 @@ final class RegexSpec: QuickSpec {
       }
     }
 
+    describe("optional capture groups") {
+      let regex = Regex("(a)?(b)")
+
+      it("maintains the position of captures regardless of optionality") {
+        expect(regex.match("ab")?.captures[1]).to(equal("b"))
+        expect(regex.match("b")?.captures[1]).to(equal("b"))
+      }
+
+      it("returns nil for an unmatched capture") {
+        expect(regex.match("b")?.captures[0]).to(beNil())
+      }
+    }
+
     describe("capture ranges") {
       it("correctly converts from the underlying index type") {
         // U+0061 LATIN SMALL LETTER A
@@ -72,7 +85,7 @@ final class RegexSpec: QuickSpec {
         // U+221E INFINITY
         // U+1D11E MUSICAL SYMBOL G CLEF
         let string = "\u{61}\u{65}\u{301}\u{221E}\u{1D11E}"
-        let infinity = Regex("(\u{221E})").match(string)!.captures[0]
+        let infinity = Regex("(\u{221E})").match(string)!.captures[0]!
         let rangeOfInfinity = string.rangeOfString(infinity)!
         let location = string.startIndex.distanceTo(rangeOfInfinity.startIndex)
         let length = rangeOfInfinity.count
@@ -114,7 +127,7 @@ private func capture(captures: String..., from string: String) -> NonNilMatcherF
     failureMessage.stringValue = "expected <\(regex)> to capture <\(captures)> from <\(string)>"
 
     for expected in captures {
-      guard let match = regex.match(string) where match.captures.contains(expected)
+      guard let match = regex.match(string) where match.captures.contains({ $0 == expected })
       else { return false }
     }
 
