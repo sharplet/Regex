@@ -15,7 +15,11 @@ public struct Regex: StringLiteralConvertible, CustomStringConvertible, CustomDe
   ///   patterns. If the input string is an invalid regular expression, this
   ///   initialiser will raise a fatal error.
   public init(_ pattern: String, options: Options = []) {
-    regex = try! NSRegularExpression(pattern: pattern, options: options.toNSRegularExpressionOptions())
+    do {
+      regex = try NSRegularExpression(pattern: pattern, options: options.toNSRegularExpressionOptions())
+    } catch {
+      fatalError("expected a valid regex: \(error)")
+    }
   }
 
   public init(stringLiteral value: String) {
