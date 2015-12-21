@@ -4,6 +4,16 @@ public struct Regex: StringLiteralConvertible, CustomStringConvertible, CustomDe
 
   private let regex: NSRegularExpression
 
+  /// Create a `Regex` based on a pattern string.
+  ///
+  /// - parameters:
+  ///     - pattern: A pattern string describing the regex.
+  ///     - options: Configure regular expression matching options.
+  ///       For details, see `Regex.Options`.
+  ///
+  /// - note: You should always use string literals when defining regex
+  ///   patterns. If the input string is an invalid regular expression, this
+  ///   initialiser will raise a fatal error.
   public init(_ pattern: String, options: Options = []) {
     regex = try! NSRegularExpression(pattern: pattern, options: options.toNSRegularExpressionOptions())
   }
