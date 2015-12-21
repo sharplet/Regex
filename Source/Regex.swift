@@ -36,14 +36,29 @@ public struct Regex: StringLiteralConvertible, CustomStringConvertible, CustomDe
 
   // MARK: Matching
 
+  /// Returns `true` if the regex matches `string`, otherwise returns `false`.
   public func matches(string: String) -> Bool {
     return match(string) != nil
   }
 
+  /// If the regex matches `string`, returns a `MatchResult` describing the
+  /// first matched string and any captures. If there are no matches, returns
+  /// `nil`.
+  ///
+  /// - parameter string: The string to match against.
+  ///
+  /// - returns: An optional `MatchResult` describing the first match, or `nil`.
   public func match(string: String) -> MatchResult? {
     return regex.firstMatchInString(string, options: [], range: string.entireRange).map { MatchResult(string.utf16, $0) }
   }
 
+  /// If the regex matches `string`, returns an array of `MatchResult`, describing
+  /// every match inside `string`. If there are no matches, returns an empty
+  /// array.
+  ///
+  /// - parameter string: The string to match against.
+  ///
+  /// - returns: An array of `MatchResult` describing every match in `string`.
   public func allMatches(string: String) -> [MatchResult] {
     return regex.matchesInString(string, options: [], range: string.entireRange).map { MatchResult(string.utf16, $0) }
   }
