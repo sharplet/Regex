@@ -1,5 +1,3 @@
-import Foundation
-
 /// `Options` defines alternate behaviours of regular expressions when matching.
 public struct Options: OptionSetType {
 
@@ -50,3 +48,5 @@ internal extension Options {
   }
 
 }
+
+import Foundation
