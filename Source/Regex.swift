@@ -75,10 +75,28 @@ public struct Regex: StringLiteralConvertible, CustomStringConvertible, CustomDe
 
 }
 
+// MARK: Pattern matching
+
+/// Match `regex` on the left with some `string` on the right. Equivalent to
+/// `regex.matches(string)`, and allows for the use of a `Regex` in pattern
+/// matching contexts, e.g.:
+///
+///     switch Regex("hello (\\w+)") {
+///     case "hello world":
+///       // successful match
+///     }
 public func ~=(regex: Regex, string: String) -> Bool {
   return regex.matches(string)
 }
 
+/// Match `string` on the left with some `regex` on the right. Equivalent to
+/// `regex.matches(string)`, and allows for the use of a `Regex` in pattern
+/// matching contexts, e.g.:
+///
+///     switch "hello world" {
+///     case Regex("hello (\\w+)"):
+///       // successful match
+///     }
 public func ~=(string: String, regex: Regex) -> Bool {
   return regex.matches(string)
 }
