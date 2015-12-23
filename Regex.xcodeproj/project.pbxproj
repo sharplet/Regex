@@ -31,6 +31,11 @@
 		CEC768821BE99B690066BA1E /* Foundation+Ranges.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CDF851BE2C64D00AE6393 /* Foundation+Ranges.swift */; };
 		CEC768831BE99B720066BA1E /* Regex.h in Headers */ = {isa = PBXBuildFile; fileRef = CE6CDF631BE239DE00AE6393 /* Regex.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CEC768841BE99B7C0066BA1E /* RegexSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CDF6F1BE239DE00AE6393 /* RegexSpec.swift */; };
+		CED611CB1C2A28CB008D212A /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CDF811BE23BE800AE6393 /* Regex.swift */; };
+		CED611CC1C2A28CB008D212A /* MatchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CDF831BE2C52600AE6393 /* MatchResult.swift */; };
+		CED611CD1C2A28CB008D212A /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4BE2961C1682CF005E4D4F /* Options.swift */; };
+		CED611CE1C2A28CB008D212A /* Foundation+Ranges.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CDF851BE2C64D00AE6393 /* Foundation+Ranges.swift */; };
+		CED611D01C2A28D5008D212A /* Regex.h in Headers */ = {isa = PBXBuildFile; fileRef = CE6CDF631BE239DE00AE6393 /* Regex.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +100,7 @@
 		CE6CDF851BE2C64D00AE6393 /* Foundation+Ranges.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Foundation+Ranges.swift"; sourceTree = "<group>"; };
 		CEC768691BE99A040066BA1E /* Regex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Regex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC768721BE99A050066BA1E /* RegexTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RegexTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CED611C31C2A281E008D212A /* Regex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Regex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +138,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CED611BF1C2A281E008D212A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -152,6 +165,7 @@
 				CE6CDF6A1BE239DE00AE6393 /* RegexTests.xctest */,
 				CEC768691BE99A040066BA1E /* Regex.framework */,
 				CEC768721BE99A050066BA1E /* RegexTests.xctest */,
+				CED611C31C2A281E008D212A /* Regex.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -225,6 +239,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CED611C01C2A281E008D212A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CED611D01C2A28D5008D212A /* Regex.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -261,7 +283,7 @@
 				CE6CDF6D1BE239DE00AE6393 /* PBXTargetDependency */,
 			);
 			name = "RegexTests-iOS";
-			productName = RegexTests;
+			productName = "RegexTests-iOS";
 			productReference = CE6CDF6A1BE239DE00AE6393 /* RegexTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
@@ -279,7 +301,7 @@
 			dependencies = (
 			);
 			name = "Regex-OSX";
-			productName = "Regex-OSX";
+			productName = Regex;
 			productReference = CEC768691BE99A040066BA1E /* Regex.framework */;
 			productType = "com.apple.product-type.framework";
 		};
@@ -298,9 +320,27 @@
 				CEC768751BE99A050066BA1E /* PBXTargetDependency */,
 			);
 			name = "RegexTests-OSX";
-			productName = "Regex-OSXTests";
+			productName = "RegexTests-OSX";
 			productReference = CEC768721BE99A050066BA1E /* RegexTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CED611C21C2A281E008D212A /* Regex-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CED611C81C2A281F008D212A /* Build configuration list for PBXNativeTarget "Regex-watchOS" */;
+			buildPhases = (
+				CED611BE1C2A281E008D212A /* Sources */,
+				CED611BF1C2A281E008D212A /* Frameworks */,
+				CED611C01C2A281E008D212A /* Headers */,
+				CED611C11C2A281E008D212A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Regex-watchOS";
+			productName = Regex;
+			productReference = CED611C31C2A281E008D212A /* Regex.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -324,6 +364,9 @@
 					CEC768711BE99A050066BA1E = {
 						CreatedOnToolsVersion = 7.1;
 					};
+					CED611C21C2A281E008D212A = {
+						CreatedOnToolsVersion = 7.2;
+					};
 				};
 			};
 			buildConfigurationList = CE6CDF5A1BE239DE00AE6393 /* Build configuration list for PBXProject "Regex" */;
@@ -342,6 +385,7 @@
 				CE6CDF691BE239DE00AE6393 /* RegexTests-iOS */,
 				CEC768681BE99A040066BA1E /* Regex-OSX */,
 				CEC768711BE99A050066BA1E /* RegexTests-OSX */,
+				CED611C21C2A281E008D212A /* Regex-watchOS */,
 			);
 		};
 /* End PBXProject section */
@@ -369,6 +413,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		CEC768701BE99A050066BA1E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CED611C11C2A281E008D212A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -418,6 +469,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CED611BE1C2A281E008D212A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CED611CB1C2A28CB008D212A /* Regex.swift in Sources */,
+				CED611CC1C2A28CB008D212A /* MatchResult.swift in Sources */,
+				CED611CD1C2A28CB008D212A /* Options.swift in Sources */,
+				CED611CE1C2A28CB008D212A /* Foundation+Ranges.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -438,6 +500,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -485,6 +548,7 @@
 				TEST_PRODUCT_NAME = "$(PROJECT_NAME)Tests";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
@@ -492,6 +556,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -532,6 +597,7 @@
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
@@ -583,6 +649,7 @@
 		CE6CDF781BE239DE00AE6393 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -597,6 +664,7 @@
 		CE6CDF791BE239DE00AE6393 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -649,6 +717,7 @@
 		CEC7687C1BE99A050066BA1E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -667,6 +736,7 @@
 		CEC7687D1BE99A050066BA1E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -679,6 +749,44 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "$(TEST_PRODUCT_BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = "$(TEST_PRODUCT_NAME)";
 				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		CED611C91C2A281F008D212A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Source/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(FRAMEWORK_BUNDLE_IDENTIFIER)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Debug;
+		};
+		CED611CA1C2A281F008D212A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Source/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(FRAMEWORK_BUNDLE_IDENTIFIER)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
 			};
 			name = Release;
 		};
@@ -729,6 +837,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		CED611C81C2A281F008D212A /* Build configuration list for PBXNativeTarget "Regex-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CED611C91C2A281F008D212A /* Debug */,
+				CED611CA1C2A281F008D212A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
