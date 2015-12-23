@@ -2,7 +2,7 @@ require_relative "lib/suite_task"
 
 desc "Set up the project for development"
 task :setup do
-  sh "carthage bootstrap --platform iphoneos,macosx"
+  sh "carthage bootstrap"
 end
 
 namespace :build do
