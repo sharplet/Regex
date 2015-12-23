@@ -2,7 +2,7 @@ require_relative "lib/suite_task"
 
 desc "Set up the project for development"
 task :setup do
-  sh "carthage bootstrap --platform iphoneos,macosx"
+  sh "carthage bootstrap"
 end
 
 namespace :build do
@@ -55,9 +55,14 @@ namespace :test do
   task :ios do
     pretty "xcodebuild test -scheme Regex-iOS -destination 'platform=iOS Simulator,name=iPhone 6s'"
   end
+
+  desc "Run tests on tvOS Simulator"
+  task :tvos do
+    pretty "xcodebuild test -scheme Regex-tvOS -destination 'platform=tvOS Simulator,name=Apple TV 1080p'"
+  end
 end
 
 desc "Run all tests"
-task :test => ["test:osx", "test:ios"]
+task :test => ["test:osx", "test:ios", "test:tvos"]
 
 task :default => :test
