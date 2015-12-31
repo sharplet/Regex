@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE26D9EE1C34D96A003CFB54 /* ThreadLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE26D9ED1C34D96A003CFB54 /* ThreadLocal.swift */; };
+		CE26D9EF1C34D96A003CFB54 /* ThreadLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE26D9ED1C34D96A003CFB54 /* ThreadLocal.swift */; };
+		CE26D9F01C34D96A003CFB54 /* ThreadLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE26D9ED1C34D96A003CFB54 /* ThreadLocal.swift */; };
+		CE26D9F11C34D96A003CFB54 /* ThreadLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE26D9ED1C34D96A003CFB54 /* ThreadLocal.swift */; };
 		CE322FB31C1651F8005741D5 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE322FAA1C1651D5005741D5 /* Quick.framework */; };
 		CE322FB41C1651FB005741D5 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE322FA91C1651D5005741D5 /* Nimble.framework */; };
 		CE322FB51C165208005741D5 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE322FAC1C1651D5005741D5 /* Quick.framework */; };
@@ -114,6 +118,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CE26D9ED1C34D96A003CFB54 /* ThreadLocal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadLocal.swift; sourceTree = "<group>"; };
 		CE322FA91C1651D5005741D5 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		CE322FAA1C1651D5005741D5 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		CE322FAB1C1651D5005741D5 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = "<group>"; };
@@ -231,6 +236,7 @@
 				CE6CDF831BE2C52600AE6393 /* MatchResult.swift */,
 				CE4BE2961C1682CF005E4D4F /* Options.swift */,
 				CE6CDF851BE2C64D00AE6393 /* Foundation+Ranges.swift */,
+				CE26D9ED1C34D96A003CFB54 /* ThreadLocal.swift */,
 				CE6CDF7A1BE23A1D00AE6393 /* Supporting Files */,
 			);
 			path = Source;
@@ -559,6 +565,7 @@
 				CE4BE2971C1682CF005E4D4F /* Options.swift in Sources */,
 				CE6CDF841BE2C52600AE6393 /* MatchResult.swift in Sources */,
 				CE6CDF821BE23BE800AE6393 /* Regex.swift in Sources */,
+				CE26D9EE1C34D96A003CFB54 /* ThreadLocal.swift in Sources */,
 				CE6CDF861BE2C64D00AE6393 /* Foundation+Ranges.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -579,6 +586,7 @@
 				CE4BE2981C168507005E4D4F /* Options.swift in Sources */,
 				CEC768801BE99B690066BA1E /* Regex.swift in Sources */,
 				CEC768811BE99B690066BA1E /* MatchResult.swift in Sources */,
+				CE26D9EF1C34D96A003CFB54 /* ThreadLocal.swift in Sources */,
 				CEC768821BE99B690066BA1E /* Foundation+Ranges.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -599,6 +607,7 @@
 				CED611CB1C2A28CB008D212A /* Regex.swift in Sources */,
 				CED611CC1C2A28CB008D212A /* MatchResult.swift in Sources */,
 				CED611CD1C2A28CB008D212A /* Options.swift in Sources */,
+				CE26D9F01C34D96A003CFB54 /* ThreadLocal.swift in Sources */,
 				CED611CE1C2A28CB008D212A /* Foundation+Ranges.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -610,6 +619,7 @@
 				CED611ED1C2A2CC4008D212A /* Regex.swift in Sources */,
 				CED611EE1C2A2CC4008D212A /* MatchResult.swift in Sources */,
 				CED611EF1C2A2CC4008D212A /* Options.swift in Sources */,
+				CE26D9F11C34D96A003CFB54 /* ThreadLocal.swift in Sources */,
 				CED611F01C2A2CC4008D212A /* Foundation+Ranges.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
