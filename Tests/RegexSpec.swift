@@ -109,6 +109,24 @@ final class RegexSpec: QuickSpec {
       }
     }
 
+    describe("last match") {
+      it("is available in a pattern matching context") {
+        switch "hello" {
+        case Regex("l+"):
+          expect(Regex.lastMatch?.matchedString).to(equal("ll"))
+        default:
+          fail("expected regex to match")
+        }
+      }
+
+      it("resets the last match to nil when a match fails") {
+        "foo" ~= Regex("foo")
+        expect(Regex.lastMatch).notTo(beNil())
+        "foo" ~= Regex("bar")
+        expect(Regex.lastMatch).to(beNil())
+      }
+    }
+
   }
 }
 

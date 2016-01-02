@@ -43,6 +43,23 @@ if let subject = greeting.match("hello swift")?.captures[0] {
 }
 ```
 
+Accessing the last match:
+
+```swift
+switch text {
+case Regex("hello (\\w+)"):
+  if let friend = Regex.lastMatch?.captures[0] {
+    print("lovely to meet you, \(friend)!")
+  }
+case Regex("goodbye (\\w+)"):
+  if let traitor = Regex.lastMatch?.captures[0] {
+    print("so sorry to see you go, \(traitor)!")
+  }
+default:
+  break
+}
+```
+
 Options:
 
 ```swift
