@@ -328,6 +328,7 @@
 				CE6CDF5C1BE239DE00AE6393 /* Frameworks */,
 				CE6CDF5D1BE239DE00AE6393 /* Headers */,
 				CE6CDF5E1BE239DE00AE6393 /* Resources */,
+				CE41D9C41C3D28EA00AE0CF8 /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -365,6 +366,7 @@
 				CEC768651BE99A040066BA1E /* Frameworks */,
 				CEC768661BE99A040066BA1E /* Headers */,
 				CEC768671BE99A040066BA1E /* Resources */,
+				CE41D9C51C3D2C7D00AE0CF8 /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -402,6 +404,7 @@
 				CED611BF1C2A281E008D212A /* Frameworks */,
 				CED611C01C2A281E008D212A /* Headers */,
 				CED611C11C2A281E008D212A /* Resources */,
+				CE41D9C61C3D2C9600AE0CF8 /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -420,6 +423,7 @@
 				CED611D21C2A2C2E008D212A /* Frameworks */,
 				CED611D31C2A2C2E008D212A /* Headers */,
 				CED611D41C2A2C2E008D212A /* Resources */,
+				CE41D9C71C3D2CB400AE0CF8 /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -556,6 +560,69 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CE41D9C41C3D28EA00AE0CF8 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/bin/env rake swiftlint";
+			showEnvVarsInLog = 0;
+		};
+		CE41D9C51C3D2C7D00AE0CF8 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/bin/env rake swiftlint";
+			showEnvVarsInLog = 0;
+		};
+		CE41D9C61C3D2C9600AE0CF8 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/bin/env rake swiftlint";
+			showEnvVarsInLog = 0;
+		};
+		CE41D9C71C3D2CB400AE0CF8 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/bin/env rake swiftlint";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE6CDF5B1BE239DE00AE6393 /* Sources */ = {
