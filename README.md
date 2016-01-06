@@ -119,7 +119,7 @@ provided for your convenience.
 Regex depends on Carthage for development:
 
 ```
-$ brew install carthage
+$ brew update && brew install carthage
 ```
 
 Regex uses [SwiftLint](https://github.com/realm/SwiftLint) to validate code style.
