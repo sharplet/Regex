@@ -38,6 +38,10 @@ public struct Regex: StringLiteralConvertible, CustomStringConvertible, CustomDe
 
   /// Returns `true` if the regex matches `string`, otherwise returns `false`.
   ///
+  /// - parameter string: The string to test.
+  ///
+  /// - returns: `true` if the regular expression matches, otherwise `false`.
+  ///
   /// - note: If the match is successful, `Regex.lastMatch` will be set with the
   ///   result of the match.
   public func matches(string: String) -> Bool {
@@ -121,7 +125,13 @@ public struct Regex: StringLiteralConvertible, CustomStringConvertible, CustomDe
 ///     case "hello world":
 ///       // successful match
 ///     }
-public func ~=(regex: Regex, string: String) -> Bool {
+///
+/// - parameters:
+///     - regex: The regular expression to match against.
+///     - string: The string to test.
+///
+/// - returns: `true` if the regular expression matches, otherwise `false`.
+public func ~= (regex: Regex, string: String) -> Bool {
   return regex.matches(string)
 }
 
@@ -133,7 +143,13 @@ public func ~=(regex: Regex, string: String) -> Bool {
 ///     case Regex("hello (\\w+)"):
 ///       // successful match
 ///     }
-public func ~=(string: String, regex: Regex) -> Bool {
+///
+/// - parameters:
+///     - regex: The regular expression to match against.
+///     - string: The string to test.
+///
+/// - returns: `true` if the regular expression matches, otherwise `false`.
+public func ~= (string: String, regex: Regex) -> Bool {
   return regex.matches(string)
 }
 

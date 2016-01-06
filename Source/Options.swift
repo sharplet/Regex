@@ -39,6 +39,8 @@ public struct Options: OptionSetType {
 internal extension Options {
 
   /// Transform an instance of `Regex.Options` into the equivalent `NSRegularExpressionOptions`.
+  ///
+  /// - returns: The equivalent `NSRegularExpressionOptions`.
   func toNSRegularExpressionOptions() -> NSRegularExpressionOptions {
     var options = NSRegularExpressionOptions()
     if contains(.IgnoreCase) { options.insert(.CaseInsensitive) }

@@ -131,22 +131,23 @@ final class RegexSpec: QuickSpec {
 }
 
 private func match(string: String) -> NonNilMatcherFunc<Regex> {
-  return NonNilMatcherFunc { actual, failureMessage in
-    let regex: Regex! = try! actual.evaluate()
+  return NonNilMatcherFunc { actual, failureMessage throws in
+    let regex: Regex! = try actual.evaluate()
     failureMessage.stringValue = "expected <\(regex)> to match <\(string)>"
     return regex.matches(string)
   }
 }
 
 private func capture(captures: String..., from string: String) -> NonNilMatcherFunc<Regex> {
-  return NonNilMatcherFunc { actual, failureMessage in
-    let regex: Regex! = try! actual.evaluate()
+  return NonNilMatcherFunc { actual, failureMessage throws in
+    let regex: Regex! = try actual.evaluate()
 
     failureMessage.stringValue = "expected <\(regex)> to capture <\(captures)> from <\(string)>"
 
     for expected in captures {
-      guard let match = regex.match(string) where match.captures.contains({ $0 == expected })
-      else { return false }
+      guard let match = regex.match(string) where match.captures.contains({ $0 == expected }) else {
+        return false
+      }
     }
 
     return true
