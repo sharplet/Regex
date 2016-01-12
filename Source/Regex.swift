@@ -2,7 +2,7 @@ public struct Regex: StringLiteralConvertible, CustomStringConvertible, CustomDe
 
   // MARK: Initialisation
 
-  private let regex: NSRegularExpression
+  private let regularExpression: NSRegularExpression
 
   /// Create a `Regex` based on a pattern string.
   ///
@@ -16,7 +16,7 @@ public struct Regex: StringLiteralConvertible, CustomStringConvertible, CustomDe
   ///   initialiser will raise a fatal error.
   public init(_ pattern: String, options: Options = []) {
     do {
-      regex = try NSRegularExpression(pattern: pattern, options: options.toNSRegularExpressionOptions())
+      regularExpression = try NSRegularExpression(pattern: pattern, options: options.toNSRegularExpressionOptions())
     } catch {
       fatalError("expected a valid regex: \(error)")
     }
@@ -54,7 +54,7 @@ public struct Regex: StringLiteralConvertible, CustomStringConvertible, CustomDe
   ///
   /// - note: If the match is successful, the result is also stored in `Regex.lastMatch`.
   public func match(string: String) -> MatchResult? {
-    let match = regex.firstMatchInString(string, options: [], range: string.entireRange).map { MatchResult(string.utf16, $0) }
+    let match = regularExpression.firstMatchInString(string, options: [], range: string.entireRange).map { MatchResult(string.utf16, $0) }
     Regex._lastMatch = match
     return match
   }
@@ -69,7 +69,7 @@ public struct Regex: StringLiteralConvertible, CustomStringConvertible, CustomDe
   ///
   /// - note: If there is at least one match, the first is stored in `Regex.lastMatch`.
   public func allMatches(string: String) -> [MatchResult] {
-    let matches = regex.matchesInString(string, options: [], range: string.entireRange).map { MatchResult(string.utf16, $0) }
+    let matches = regularExpression.matchesInString(string, options: [], range: string.entireRange).map { MatchResult(string.utf16, $0) }
     if let firstMatch = matches.first { Regex._lastMatch = firstMatch }
     return matches
   }
@@ -102,7 +102,7 @@ public struct Regex: StringLiteralConvertible, CustomStringConvertible, CustomDe
   // MARK: Describing
 
   public var description: String {
-    return regex.pattern
+    return regularExpression.pattern
   }
 
   public var debugDescription: String {
