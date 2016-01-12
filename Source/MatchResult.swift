@@ -24,6 +24,20 @@ public struct MatchResult {
     return _result.matchedString
   }
 
+  /// The range of the matched string.
+  ///
+  /// - note: This property currently assumes that it is always possible to
+  ///   create a valid character range based on the underlying UTF-16 range.
+  ///   If for some reason this turns out not to be true, it will trap.
+  ///
+  /// - returns: The character range of the matched string.
+  internal var range: Range<String.Index> {
+    let utf16range = _result.range
+    let start = String.Index(utf16range.startIndex, within: _string)!
+    let end = String.Index(utf16range.endIndex, within: _string)!
+    return start..<end
+  }
+
   /// The matching string for each capture group in the regular expression
   /// (if any).
   ///
@@ -63,6 +77,10 @@ private final class _MatchResult {
   private init(_ string: String.UTF16View, _ result: NSTextCheckingResult) {
     self.string = string
     self.result = result
+  }
+
+  var range: Range<String.UTF16Index> {
+    return rangeFromNSRange(result.range)!
   }
 
   lazy var captures: [String?] = {
