@@ -2,7 +2,7 @@ public struct Regex: StringLiteralConvertible, CustomStringConvertible, CustomDe
 
   // MARK: Initialisation
 
-  private let regularExpression: NSRegularExpression
+  internal let regularExpression: NSRegularExpression
 
   /// Create a `Regex` based on a pattern string.
   ///

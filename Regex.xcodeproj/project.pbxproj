@@ -52,6 +52,13 @@
 		CED611F11C2A2CC9008D212A /* Regex.h in Headers */ = {isa = PBXBuildFile; fileRef = CE6CDF631BE239DE00AE6393 /* Regex.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CED611F21C2A2D3C008D212A /* RegexSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CDF6F1BE239DE00AE6393 /* RegexSpec.swift */; };
 		CED611F31C2A2D3C008D212A /* OptionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE322FBD1C168146005741D5 /* OptionsSpec.swift */; };
+		CEDA44A11C45045B00B78CAF /* String+ReplaceMatching.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA44A01C45045B00B78CAF /* String+ReplaceMatching.swift */; };
+		CEDA44A21C45045B00B78CAF /* String+ReplaceMatching.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA44A01C45045B00B78CAF /* String+ReplaceMatching.swift */; };
+		CEDA44A31C45045B00B78CAF /* String+ReplaceMatching.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA44A01C45045B00B78CAF /* String+ReplaceMatching.swift */; };
+		CEDA44A41C45045B00B78CAF /* String+ReplaceMatching.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA44A01C45045B00B78CAF /* String+ReplaceMatching.swift */; };
+		CEDA44A61C4507C900B78CAF /* StringReplacementSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA44A51C4507C900B78CAF /* StringReplacementSpec.swift */; };
+		CEDA44A71C4507C900B78CAF /* StringReplacementSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA44A51C4507C900B78CAF /* StringReplacementSpec.swift */; };
+		CEDA44A81C4507C900B78CAF /* StringReplacementSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA44A51C4507C900B78CAF /* StringReplacementSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,6 +148,8 @@
 		CED611DF1C2A2C2E008D212A /* RegexTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RegexTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED611F41C2A2D7C008D212A /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/tvOS/Nimble.framework; sourceTree = "<group>"; };
 		CED611F51C2A2D7C008D212A /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/tvOS/Quick.framework; sourceTree = "<group>"; };
+		CEDA44A01C45045B00B78CAF /* String+ReplaceMatching.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+ReplaceMatching.swift"; sourceTree = "<group>"; };
+		CEDA44A51C4507C900B78CAF /* StringReplacementSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringReplacementSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +244,7 @@
 				CE6CDF811BE23BE800AE6393 /* Regex.swift */,
 				CE6CDF831BE2C52600AE6393 /* MatchResult.swift */,
 				CE4BE2961C1682CF005E4D4F /* Options.swift */,
+				CEDA44A01C45045B00B78CAF /* String+ReplaceMatching.swift */,
 				CE6CDF851BE2C64D00AE6393 /* Foundation+Ranges.swift */,
 				CE26D9ED1C34D96A003CFB54 /* ThreadLocal.swift */,
 				CE6CDF7A1BE23A1D00AE6393 /* Supporting Files */,
@@ -247,6 +257,7 @@
 			children = (
 				CE6CDF6F1BE239DE00AE6393 /* RegexSpec.swift */,
 				CE322FBD1C168146005741D5 /* OptionsSpec.swift */,
+				CEDA44A51C4507C900B78CAF /* StringReplacementSpec.swift */,
 				CE6CDF7B1BE23A2E00AE6393 /* Supporting Files */,
 			);
 			path = Tests;
@@ -564,6 +575,7 @@
 			files = (
 				CE4BE2971C1682CF005E4D4F /* Options.swift in Sources */,
 				CE6CDF841BE2C52600AE6393 /* MatchResult.swift in Sources */,
+				CEDA44A11C45045B00B78CAF /* String+ReplaceMatching.swift in Sources */,
 				CE6CDF821BE23BE800AE6393 /* Regex.swift in Sources */,
 				CE26D9EE1C34D96A003CFB54 /* ThreadLocal.swift in Sources */,
 				CE6CDF861BE2C64D00AE6393 /* Foundation+Ranges.swift in Sources */,
@@ -574,6 +586,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEDA44A61C4507C900B78CAF /* StringReplacementSpec.swift in Sources */,
 				CE6CDF701BE239DE00AE6393 /* RegexSpec.swift in Sources */,
 				CE4BE2941C168183005E4D4F /* OptionsSpec.swift in Sources */,
 			);
@@ -585,6 +598,7 @@
 			files = (
 				CE4BE2981C168507005E4D4F /* Options.swift in Sources */,
 				CEC768801BE99B690066BA1E /* Regex.swift in Sources */,
+				CEDA44A21C45045B00B78CAF /* String+ReplaceMatching.swift in Sources */,
 				CEC768811BE99B690066BA1E /* MatchResult.swift in Sources */,
 				CE26D9EF1C34D96A003CFB54 /* ThreadLocal.swift in Sources */,
 				CEC768821BE99B690066BA1E /* Foundation+Ranges.swift in Sources */,
@@ -595,6 +609,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEDA44A71C4507C900B78CAF /* StringReplacementSpec.swift in Sources */,
 				CEC768841BE99B7C0066BA1E /* RegexSpec.swift in Sources */,
 				CE4BE2951C168183005E4D4F /* OptionsSpec.swift in Sources */,
 			);
@@ -606,6 +621,7 @@
 			files = (
 				CED611CB1C2A28CB008D212A /* Regex.swift in Sources */,
 				CED611CC1C2A28CB008D212A /* MatchResult.swift in Sources */,
+				CEDA44A31C45045B00B78CAF /* String+ReplaceMatching.swift in Sources */,
 				CED611CD1C2A28CB008D212A /* Options.swift in Sources */,
 				CE26D9F01C34D96A003CFB54 /* ThreadLocal.swift in Sources */,
 				CED611CE1C2A28CB008D212A /* Foundation+Ranges.swift in Sources */,
@@ -618,6 +634,7 @@
 			files = (
 				CED611ED1C2A2CC4008D212A /* Regex.swift in Sources */,
 				CED611EE1C2A2CC4008D212A /* MatchResult.swift in Sources */,
+				CEDA44A41C45045B00B78CAF /* String+ReplaceMatching.swift in Sources */,
 				CED611EF1C2A2CC4008D212A /* Options.swift in Sources */,
 				CE26D9F11C34D96A003CFB54 /* ThreadLocal.swift in Sources */,
 				CED611F01C2A2CC4008D212A /* Foundation+Ranges.swift in Sources */,
@@ -628,6 +645,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEDA44A81C4507C900B78CAF /* StringReplacementSpec.swift in Sources */,
 				CED611F21C2A2D3C008D212A /* RegexSpec.swift in Sources */,
 				CED611F31C2A2D3C008D212A /* OptionsSpec.swift in Sources */,
 			);

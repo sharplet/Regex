@@ -58,6 +58,10 @@ public struct MatchResult {
 
   // MARK: Internal initialisers
 
+  internal var matchResult: NSTextCheckingResult {
+    return _result.result
+  }
+
   private let _result: _MatchResult
   private let _string: String
 
