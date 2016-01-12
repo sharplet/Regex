@@ -54,7 +54,7 @@ public struct Regex: StringLiteralConvertible, CustomStringConvertible, CustomDe
   ///
   /// - note: If the match is successful, the result is also stored in `Regex.lastMatch`.
   public func match(string: String) -> MatchResult? {
-    let match = regularExpression.firstMatchInString(string, options: [], range: string.entireRange).map { MatchResult(string.utf16, $0) }
+    let match = regularExpression.firstMatchInString(string, options: [], range: string.entireRange).map { MatchResult(string, $0) }
     Regex._lastMatch = match
     return match
   }
@@ -69,7 +69,7 @@ public struct Regex: StringLiteralConvertible, CustomStringConvertible, CustomDe
   ///
   /// - note: If there is at least one match, the first is stored in `Regex.lastMatch`.
   public func allMatches(string: String) -> [MatchResult] {
-    let matches = regularExpression.matchesInString(string, options: [], range: string.entireRange).map { MatchResult(string.utf16, $0) }
+    let matches = regularExpression.matchesInString(string, options: [], range: string.entireRange).map { MatchResult(string, $0) }
     if let firstMatch = matches.first { Regex._lastMatch = firstMatch }
     return matches
   }

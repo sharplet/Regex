@@ -45,9 +45,11 @@ public struct MatchResult {
   // MARK: Internal initialisers
 
   private let _result: _MatchResult
+  private let _string: String
 
-  internal init(_ string: String.UTF16View, _ result: NSTextCheckingResult) {
-    self._result = _MatchResult(string, result)
+  internal init(_ string: String, _ result: NSTextCheckingResult) {
+    self._result = _MatchResult(string.utf16, result)
+    self._string = string
   }
 
 }
