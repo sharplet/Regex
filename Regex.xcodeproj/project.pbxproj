@@ -26,6 +26,10 @@
 		CE4BE2951C168183005E4D4F /* OptionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE322FBD1C168146005741D5 /* OptionsSpec.swift */; };
 		CE4BE2971C1682CF005E4D4F /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4BE2961C1682CF005E4D4F /* Options.swift */; };
 		CE4BE2981C168507005E4D4F /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4BE2961C1682CF005E4D4F /* Options.swift */; };
+		CE5DC0791C46274D00916168 /* SequenceType+TakeFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5DC0781C46274D00916168 /* SequenceType+TakeFirst.swift */; };
+		CE5DC07A1C46274D00916168 /* SequenceType+TakeFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5DC0781C46274D00916168 /* SequenceType+TakeFirst.swift */; };
+		CE5DC07B1C46274D00916168 /* SequenceType+TakeFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5DC0781C46274D00916168 /* SequenceType+TakeFirst.swift */; };
+		CE5DC07C1C46274D00916168 /* SequenceType+TakeFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5DC0781C46274D00916168 /* SequenceType+TakeFirst.swift */; };
 		CE6CDF641BE239DE00AE6393 /* Regex.h in Headers */ = {isa = PBXBuildFile; fileRef = CE6CDF631BE239DE00AE6393 /* Regex.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CE6CDF6B1BE239DE00AE6393 /* Regex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6CDF601BE239DE00AE6393 /* Regex.framework */; };
 		CE6CDF701BE239DE00AE6393 /* RegexSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CDF6F1BE239DE00AE6393 /* RegexSpec.swift */; };
@@ -137,6 +141,7 @@
 		CE322FAC1C1651D5005741D5 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
 		CE322FBD1C168146005741D5 /* OptionsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsSpec.swift; sourceTree = "<group>"; };
 		CE4BE2961C1682CF005E4D4F /* Options.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
+		CE5DC0781C46274D00916168 /* SequenceType+TakeFirst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SequenceType+TakeFirst.swift"; sourceTree = "<group>"; };
 		CE6CDF601BE239DE00AE6393 /* Regex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Regex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6CDF631BE239DE00AE6393 /* Regex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Regex.h; sourceTree = "<group>"; };
 		CE6CDF651BE239DE00AE6393 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -252,6 +257,7 @@
 				CE4BE2961C1682CF005E4D4F /* Options.swift */,
 				CEDA44A01C45045B00B78CAF /* String+ReplaceMatching.swift */,
 				CE6CDF851BE2C64D00AE6393 /* Foundation+Ranges.swift */,
+				CE5DC0781C46274D00916168 /* SequenceType+TakeFirst.swift */,
 				CE26D9ED1C34D96A003CFB54 /* ThreadLocal.swift */,
 				CE6CDF7A1BE23A1D00AE6393 /* Supporting Files */,
 			);
@@ -581,6 +587,7 @@
 			files = (
 				CE4BE2971C1682CF005E4D4F /* Options.swift in Sources */,
 				CE6CDF841BE2C52600AE6393 /* MatchResult.swift in Sources */,
+				CE5DC0791C46274D00916168 /* SequenceType+TakeFirst.swift in Sources */,
 				CEDA44A11C45045B00B78CAF /* String+ReplaceMatching.swift in Sources */,
 				CE6CDF821BE23BE800AE6393 /* Regex.swift in Sources */,
 				CE0803141C459A24004F442F /* MatchSequence.swift in Sources */,
@@ -605,6 +612,7 @@
 			files = (
 				CE4BE2981C168507005E4D4F /* Options.swift in Sources */,
 				CEC768801BE99B690066BA1E /* Regex.swift in Sources */,
+				CE5DC07A1C46274D00916168 /* SequenceType+TakeFirst.swift in Sources */,
 				CEDA44A21C45045B00B78CAF /* String+ReplaceMatching.swift in Sources */,
 				CEC768811BE99B690066BA1E /* MatchResult.swift in Sources */,
 				CE0803151C459A24004F442F /* MatchSequence.swift in Sources */,
@@ -629,6 +637,7 @@
 			files = (
 				CED611CB1C2A28CB008D212A /* Regex.swift in Sources */,
 				CED611CC1C2A28CB008D212A /* MatchResult.swift in Sources */,
+				CE5DC07B1C46274D00916168 /* SequenceType+TakeFirst.swift in Sources */,
 				CEDA44A31C45045B00B78CAF /* String+ReplaceMatching.swift in Sources */,
 				CED611CD1C2A28CB008D212A /* Options.swift in Sources */,
 				CE0803161C459A24004F442F /* MatchSequence.swift in Sources */,
@@ -643,6 +652,7 @@
 			files = (
 				CED611ED1C2A2CC4008D212A /* Regex.swift in Sources */,
 				CED611EE1C2A2CC4008D212A /* MatchResult.swift in Sources */,
+				CE5DC07C1C46274D00916168 /* SequenceType+TakeFirst.swift in Sources */,
 				CEDA44A41C45045B00B78CAF /* String+ReplaceMatching.swift in Sources */,
 				CED611EF1C2A2CC4008D212A /* Options.swift in Sources */,
 				CE0803171C459A24004F442F /* MatchSequence.swift in Sources */,
