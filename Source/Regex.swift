@@ -74,6 +74,27 @@ public struct Regex: StringLiteralConvertible, CustomStringConvertible, CustomDe
     return matches
   }
 
+  /// Creates lazily-enumerated sequence of regular expression matches in a given search
+  /// string. The search is lazy in that in that each match only consumes as much
+  /// of the search string as necessary (i.e., the entire string won't be searched
+  /// if only a single match is generated).
+  ///
+  ///     let matches = Regex("a").enumerateMatches("aaa")
+  ///     matches.map { $0.matchedString } // ["a", "a", "a"]
+  ///
+  /// The convenience methods `match(_:)` and `allMatches(_:)` are available for
+  /// eagerly enumerating only the first match, or all matches, respectively.
+  ///
+  /// - parameter string: The string to match against.
+  ///
+  /// - returns: A `MatchSequence` whose generator yields successive
+  ///   `MatchResult`s as they are found in the search string.
+  ///
+  /// - note: Iterating over the elements in the returned sequence has no effect on `Regex.lastMatch`.
+  public func enumerateMatches(string: String) -> MatchSequence {
+    return MatchSequence(regularExpression, string)
+  }
+
   // MARK: Accessing the last match
 
   /// After any match, the result will be stored in this property for later use.
