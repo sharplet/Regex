@@ -62,6 +62,12 @@ final class RegexSpec: QuickSpec {
 
         expect(matched).to(beTrue())
       }
+
+      it("consumes the string with each match, with no overlapping matches") {
+        let regex = Regex("aa")
+        let matches = regex.allMatches("aaaaa")
+        expect(matches.count).to(equal(2))
+      }
     }
 
     describe("optional capture groups") {
