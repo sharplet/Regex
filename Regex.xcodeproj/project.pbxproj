@@ -30,6 +30,17 @@
 		CE5DC07A1C46274D00916168 /* SequenceType+TakeFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5DC0781C46274D00916168 /* SequenceType+TakeFirst.swift */; };
 		CE5DC07B1C46274D00916168 /* SequenceType+TakeFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5DC0781C46274D00916168 /* SequenceType+TakeFirst.swift */; };
 		CE5DC07C1C46274D00916168 /* SequenceType+TakeFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5DC0781C46274D00916168 /* SequenceType+TakeFirst.swift */; };
+		CE5DC07E1C462F9100916168 /* GrepSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5DC07D1C462F9100916168 /* GrepSpec.swift */; };
+		CE5DC07F1C462F9100916168 /* GrepSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5DC07D1C462F9100916168 /* GrepSpec.swift */; };
+		CE5DC0801C462F9100916168 /* GrepSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5DC07D1C462F9100916168 /* GrepSpec.swift */; };
+		CE5DC0821C46305700916168 /* String+Grep.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5DC0811C46305700916168 /* String+Grep.swift */; };
+		CE5DC0831C46305700916168 /* String+Grep.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5DC0811C46305700916168 /* String+Grep.swift */; };
+		CE5DC0841C46305700916168 /* String+Grep.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5DC0811C46305700916168 /* String+Grep.swift */; };
+		CE5DC0851C46305700916168 /* String+Grep.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5DC0811C46305700916168 /* String+Grep.swift */; };
+		CE5DC0871C465C3600916168 /* SequenceType+Grep.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5DC0861C465C3600916168 /* SequenceType+Grep.swift */; };
+		CE5DC0881C465C3600916168 /* SequenceType+Grep.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5DC0861C465C3600916168 /* SequenceType+Grep.swift */; };
+		CE5DC0891C465C3600916168 /* SequenceType+Grep.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5DC0861C465C3600916168 /* SequenceType+Grep.swift */; };
+		CE5DC08A1C465C3600916168 /* SequenceType+Grep.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5DC0861C465C3600916168 /* SequenceType+Grep.swift */; };
 		CE6CDF641BE239DE00AE6393 /* Regex.h in Headers */ = {isa = PBXBuildFile; fileRef = CE6CDF631BE239DE00AE6393 /* Regex.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CE6CDF6B1BE239DE00AE6393 /* Regex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6CDF601BE239DE00AE6393 /* Regex.framework */; };
 		CE6CDF701BE239DE00AE6393 /* RegexSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CDF6F1BE239DE00AE6393 /* RegexSpec.swift */; };
@@ -142,6 +153,9 @@
 		CE322FBD1C168146005741D5 /* OptionsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsSpec.swift; sourceTree = "<group>"; };
 		CE4BE2961C1682CF005E4D4F /* Options.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
 		CE5DC0781C46274D00916168 /* SequenceType+TakeFirst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SequenceType+TakeFirst.swift"; sourceTree = "<group>"; };
+		CE5DC07D1C462F9100916168 /* GrepSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrepSpec.swift; sourceTree = "<group>"; };
+		CE5DC0811C46305700916168 /* String+Grep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Grep.swift"; sourceTree = "<group>"; };
+		CE5DC0861C465C3600916168 /* SequenceType+Grep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SequenceType+Grep.swift"; sourceTree = "<group>"; };
 		CE6CDF601BE239DE00AE6393 /* Regex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Regex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6CDF631BE239DE00AE6393 /* Regex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Regex.h; sourceTree = "<group>"; };
 		CE6CDF651BE239DE00AE6393 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -255,6 +269,8 @@
 				CE0803131C459A24004F442F /* MatchSequence.swift */,
 				CE6CDF831BE2C52600AE6393 /* MatchResult.swift */,
 				CE4BE2961C1682CF005E4D4F /* Options.swift */,
+				CE5DC0861C465C3600916168 /* SequenceType+Grep.swift */,
+				CE5DC0811C46305700916168 /* String+Grep.swift */,
 				CEDA44A01C45045B00B78CAF /* String+ReplaceMatching.swift */,
 				CE6CDF851BE2C64D00AE6393 /* Foundation+Ranges.swift */,
 				CE5DC0781C46274D00916168 /* SequenceType+TakeFirst.swift */,
@@ -269,6 +285,7 @@
 			children = (
 				CE6CDF6F1BE239DE00AE6393 /* RegexSpec.swift */,
 				CE322FBD1C168146005741D5 /* OptionsSpec.swift */,
+				CE5DC07D1C462F9100916168 /* GrepSpec.swift */,
 				CEDA44A51C4507C900B78CAF /* StringReplacementSpec.swift */,
 				CE6CDF7B1BE23A2E00AE6393 /* Supporting Files */,
 			);
@@ -591,7 +608,9 @@
 				CEDA44A11C45045B00B78CAF /* String+ReplaceMatching.swift in Sources */,
 				CE6CDF821BE23BE800AE6393 /* Regex.swift in Sources */,
 				CE0803141C459A24004F442F /* MatchSequence.swift in Sources */,
+				CE5DC0821C46305700916168 /* String+Grep.swift in Sources */,
 				CE26D9EE1C34D96A003CFB54 /* ThreadLocal.swift in Sources */,
+				CE5DC0871C465C3600916168 /* SequenceType+Grep.swift in Sources */,
 				CE6CDF861BE2C64D00AE6393 /* Foundation+Ranges.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -603,6 +622,7 @@
 				CEDA44A61C4507C900B78CAF /* StringReplacementSpec.swift in Sources */,
 				CE6CDF701BE239DE00AE6393 /* RegexSpec.swift in Sources */,
 				CE4BE2941C168183005E4D4F /* OptionsSpec.swift in Sources */,
+				CE5DC07E1C462F9100916168 /* GrepSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -616,7 +636,9 @@
 				CEDA44A21C45045B00B78CAF /* String+ReplaceMatching.swift in Sources */,
 				CEC768811BE99B690066BA1E /* MatchResult.swift in Sources */,
 				CE0803151C459A24004F442F /* MatchSequence.swift in Sources */,
+				CE5DC0831C46305700916168 /* String+Grep.swift in Sources */,
 				CE26D9EF1C34D96A003CFB54 /* ThreadLocal.swift in Sources */,
+				CE5DC0881C465C3600916168 /* SequenceType+Grep.swift in Sources */,
 				CEC768821BE99B690066BA1E /* Foundation+Ranges.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -628,6 +650,7 @@
 				CEDA44A71C4507C900B78CAF /* StringReplacementSpec.swift in Sources */,
 				CEC768841BE99B7C0066BA1E /* RegexSpec.swift in Sources */,
 				CE4BE2951C168183005E4D4F /* OptionsSpec.swift in Sources */,
+				CE5DC07F1C462F9100916168 /* GrepSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -641,7 +664,9 @@
 				CEDA44A31C45045B00B78CAF /* String+ReplaceMatching.swift in Sources */,
 				CED611CD1C2A28CB008D212A /* Options.swift in Sources */,
 				CE0803161C459A24004F442F /* MatchSequence.swift in Sources */,
+				CE5DC0841C46305700916168 /* String+Grep.swift in Sources */,
 				CE26D9F01C34D96A003CFB54 /* ThreadLocal.swift in Sources */,
+				CE5DC0891C465C3600916168 /* SequenceType+Grep.swift in Sources */,
 				CED611CE1C2A28CB008D212A /* Foundation+Ranges.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -656,7 +681,9 @@
 				CEDA44A41C45045B00B78CAF /* String+ReplaceMatching.swift in Sources */,
 				CED611EF1C2A2CC4008D212A /* Options.swift in Sources */,
 				CE0803171C459A24004F442F /* MatchSequence.swift in Sources */,
+				CE5DC0851C46305700916168 /* String+Grep.swift in Sources */,
 				CE26D9F11C34D96A003CFB54 /* ThreadLocal.swift in Sources */,
+				CE5DC08A1C465C3600916168 /* SequenceType+Grep.swift in Sources */,
 				CED611F01C2A2CC4008D212A /* Foundation+Ranges.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -668,6 +695,7 @@
 				CEDA44A81C4507C900B78CAF /* StringReplacementSpec.swift in Sources */,
 				CED611F21C2A2D3C008D212A /* RegexSpec.swift in Sources */,
 				CED611F31C2A2D3C008D212A /* OptionsSpec.swift in Sources */,
+				CE5DC0801C462F9100916168 /* GrepSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
