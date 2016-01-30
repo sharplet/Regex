@@ -19,14 +19,14 @@ extension String {
     replaceFirstMatching(Regex(pattern), with: template)
   }
 
-  public func stringByReplacingFirstMatching(regex: Regex, with template: String) -> String {
+  public func replacingFirstMatching(regex: Regex, with template: String) -> String {
     var string = self
     string.replaceFirstMatching(regex, with: template)
     return string
   }
 
-  public func stringByReplacingFirstMatching(pattern: String, with template: String) -> String {
-    return stringByReplacingFirstMatching(Regex(pattern), with: template)
+  public func replacingFirstMatching(pattern: String, with template: String) -> String {
+    return replacingFirstMatching(Regex(pattern), with: template)
   }
 
   // MARK: Replacing all matches
@@ -48,14 +48,14 @@ extension String {
     replaceAllMatching(Regex(pattern), with: template)
   }
 
-  public func stringByReplacingAllMatching(regex: Regex, with template: String) -> String {
+  public func replacingAllMatching(regex: Regex, with template: String) -> String {
     var string = self
     string.replaceAllMatching(regex, with: template)
     return string
   }
 
-  public func stringByReplacingAllMatching(pattern: String, with template: String) -> String {
-    return stringByReplacingAllMatching(Regex(pattern), with: template)
+  public func replacingAllMatching(pattern: String, with template: String) -> String {
+    return replacingAllMatching(Regex(pattern), with: template)
   }
 
 }
