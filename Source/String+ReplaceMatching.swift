@@ -12,8 +12,9 @@ extension String {
   /// - note: To include the literal string "$1" in the replacement string,
   ///   you must escape the "$": `\$1`.
   ///
-  /// - parameter regex: A regular expression to match against `self`.
-  /// - parameter template: A template string used to replace matches.
+  /// - parameters:
+  ///     - regex: A regular expression to match against `self`.
+  ///     - template: A template string used to replace matches.
   public mutating func replaceFirstMatching(regex: Regex, with template: String) {
     if let match = regex.match(self) {
       let replacement = regex
@@ -40,8 +41,9 @@ extension String {
   /// - requires: `pattern` is a valid regular expression. Invalid regular
   ///   expressions will cause this method to trap.
   ///
-  /// - parameter pattern: A regular expression pattern to match against `self`.
-  /// - parameter template: A template string used to replace matches.
+  /// - parameters:
+  ///     - pattern: A regular expression pattern to match against `self`.
+  ///     - template: A template string used to replace matches.
   public mutating func replaceFirstMatching(pattern: String, with template: String) {
     replaceFirstMatching(Regex(pattern), with: template)
   }
@@ -60,8 +62,9 @@ extension String {
   /// - note: To include the literal string "$1" in the replacement string,
   ///   you must escape the "$": `\$1`.
   ///
-  /// - parameter regex: A regular expression to match against `self`.
-  /// - parameter template: A template string used to replace matches.
+  /// - parameters:
+  ///     - regex: A regular expression to match against `self`.
+  ///     - template: A template string used to replace matches.
   ///
   /// - returns: A string with the first match of `regex` replaced by `template`.
   public func replacingFirstMatching(regex: Regex, with template: String) -> String {
@@ -83,8 +86,9 @@ extension String {
   /// - requires: `pattern` is a valid regular expression. Invalid regular
   ///   expressions will cause this method to trap.
   ///
-  /// - parameter pattern: A regular expression pattern to match against `self`.
-  /// - parameter template: A template string used to replace matches.
+  /// - parameters:
+  ///     - pattern: A regular expression pattern to match against `self`.
+  ///     - template: A template string used to replace matches.
   ///
   /// - returns: A string with the first match of `pattern` replaced by `template`.
   public func replacingFirstMatching(pattern: String, with template: String) -> String {
@@ -104,8 +108,9 @@ extension String {
   /// - note: To include the literal string "$1" in the replacement string,
   ///   you must escape the "$": `\$1`.
   ///
-  /// - parameter regex: A regular expression to match against `self`.
-  /// - parameter template: A template string used to replace matches.
+  /// - parameters:
+  ///     - regex: A regular expression to match against `self`.
+  ///     - template: A template string used to replace matches.
   public mutating func replaceAllMatching(regex: Regex, with template: String) {
     for match in regex.allMatches(self).reverse() {
       let replacement = regex
@@ -132,8 +137,9 @@ extension String {
   /// - requires: `pattern` is a valid regular expression. Invalid regular
   ///   expressions will cause this method to trap.
   ///
-  /// - parameter pattern: A regular expression pattern to match against `self`.
-  /// - parameter template: A template string used to replace matches.
+  /// - parameters:
+  ///     - pattern: A regular expression pattern to match against `self`.
+  ///     - template: A template string used to replace matches.
   public mutating func replaceAllMatching(pattern: String, with template: String) {
     replaceAllMatching(Regex(pattern), with: template)
   }
@@ -152,8 +158,9 @@ extension String {
   /// - note: To include the literal string "$1" in the replacement string,
   ///   you must escape the "$": `\$1`.
   ///
-  /// - parameter regex: A regular expression to match against `self`.
-  /// - parameter template: A template string used to replace matches.
+  /// - parameters:
+  ///     - regex: A regular expression to match against `self`.
+  ///     - template: A template string used to replace matches.
   ///
   /// - returns: A string with all matches of `regex` replaced by `template`.
   public func replacingAllMatching(regex: Regex, with template: String) -> String {
@@ -175,8 +182,9 @@ extension String {
   /// - requires: `pattern` is a valid regular expression. Invalid regular
   ///   expressions will cause this method to trap.
   ///
-  /// - parameter pattern: A regular expression pattern to match against `self`.
-  /// - parameter template: A template string used to replace matches.
+  /// - parameters:
+  ///     - pattern: A regular expression pattern to match against `self`.
+  ///     - template: A template string used to replace matches.
   ///
   /// - returns: A string with all matches of `pattern` replaced by `template`.
   public func replacingAllMatching(pattern: String, with template: String) -> String {
