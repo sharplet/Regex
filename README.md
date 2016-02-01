@@ -10,8 +10,6 @@ Create:
 
 ```swift
 let greeting = Regex("hello (world|universe)")
-
-let magic: Regex = "(.*)"
 ```
 
 Match:
@@ -36,7 +34,7 @@ default:
 Capture:
 
 ```swift
-let greeting: Regex = "hello (world|universe|swift)"
+let greeting = Regex("hello (world|universe|swift)")
 
 if let subject = greeting.match("hello swift")?.captures[0] {
   print("ohai \(subject)")

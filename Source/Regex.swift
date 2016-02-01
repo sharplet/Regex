@@ -1,5 +1,4 @@
-// swiftlint:disable:next line_length
-public struct Regex: StringLiteralConvertible, CustomStringConvertible, CustomDebugStringConvertible {
+public struct Regex: CustomStringConvertible, CustomDebugStringConvertible {
 
   // MARK: Initialisation
 
@@ -23,18 +22,6 @@ public struct Regex: StringLiteralConvertible, CustomStringConvertible, CustomDe
     } catch {
       fatalError("expected a valid regex: \(error)")
     }
-  }
-
-  public init(stringLiteral value: String) {
-    self.init(value)
-  }
-
-  public init(extendedGraphemeClusterLiteral value: String) {
-    self.init(value)
-  }
-
-  public init(unicodeScalarLiteral value: String) {
-    self.init(value)
   }
 
   // MARK: Matching

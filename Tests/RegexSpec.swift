@@ -2,11 +2,6 @@ final class RegexSpec: QuickSpec {
   override func spec() {
 
     describe("Regex") {
-      it("is string literal convertible") {
-        let regex: Regex = "foo"
-        expect(regex).notTo(beNil())
-      }
-
       it("matches with no capture groups") {
         let regex = Regex("now you're matching with regex")
         expect(regex).to(match("now you're matching with regex"))
