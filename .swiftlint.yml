@@ -1,5 +1,4 @@
 disabled_rules:
   - function_body_length
-  - line_length
 excluded:
   - Carthage

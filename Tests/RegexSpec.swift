@@ -34,7 +34,11 @@ final class RegexSpec: QuickSpec {
 
       it("can match a regex multiple times in the same string") {
         let regex = Regex("(foo)")
-        expect(regex.allMatches("foo foo foo").flatMap { $0.captures }.flatMap { $0 }).to(equal(["foo", "foo", "foo"]))
+        let matches = regex
+          .allMatches("foo foo foo")
+          .flatMap { $0.captures }
+          .flatMap { $0 }
+        expect(matches).to(equal(["foo", "foo", "foo"]))
       }
 
       it("supports the match operator") {
@@ -102,7 +106,9 @@ final class RegexSpec: QuickSpec {
       }
 
       it("validates that the example in the README is correct") {
-        let totallyUniqueExamples = Regex("^(hello|foo).*$", options: [.IgnoreCase, .AnchorsMatchLines])
+        let totallyUniqueExamples = Regex(
+          "^(hello|foo).*$",
+          options: [.IgnoreCase, .AnchorsMatchLines])
         let multilineText = "hello world\ngoodbye world\nFOOBAR\n"
         let matchingLines = totallyUniqueExamples.allMatches(multilineText).map { $0.matchedString }
         expect(matchingLines).to(equal(["hello world", "FOOBAR"]))
