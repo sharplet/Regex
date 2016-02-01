@@ -31,7 +31,7 @@ end
 
 desc "Run swiftlint if available"
 task :swiftlint do
-  system "which swiftlint", [:out, :err] => "/dev/null" and exec "swiftlint"
+  system "which -s swiftlint" and exec "swiftlint"
 end
 
 desc "Clean built products"
