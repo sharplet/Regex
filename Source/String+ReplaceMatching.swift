@@ -9,8 +9,8 @@ extension String {
   /// the variable `$0` will be replaced with the entire matched substring, `$1`
   /// with the first capture group, etc.
   ///
-  /// - note: To include the literal string "$1" in the replacement string,
-  ///   you must escape the "$": `\$1`.
+  /// For example, to include the literal string "$1" in the replacement string,
+  /// you must escape the "$": `\$1`.
   ///
   /// - parameters:
   ///     - regex: A regular expression to match against `self`.
@@ -37,8 +37,8 @@ extension String {
   /// the variable `$0` will be replaced with the entire matched substring, `$1`
   /// with the first capture group, etc.
   ///
-  /// - note: To include the literal string "$1" in the replacement string,
-  ///   you must escape the "$": `\$1`.
+  /// For example, to include the literal string "$1" in the replacement string,
+  /// you must escape the "$": `\$1`.
   ///
   /// - requires: `pattern` is a valid regular expression. Invalid regular
   ///   expressions will cause this method to trap.
@@ -61,8 +61,8 @@ extension String {
   /// the variable `$0` will be replaced with the entire matched substring, `$1`
   /// with the first capture group, etc.
   ///
-  /// - note: To include the literal string "$1" in the replacement string,
-  ///   you must escape the "$": `\$1`.
+  /// For example, to include the literal string "$1" in the replacement string,
+  /// you must escape the "$": `\$1`.
   ///
   /// - parameters:
   ///     - regex: A regular expression to match against `self`.
@@ -84,8 +84,8 @@ extension String {
   /// the variable `$0` will be replaced with the entire matched substring, `$1`
   /// with the first capture group, etc.
   ///
-  /// - note: To include the literal string "$1" in the replacement string,
-  ///   you must escape the "$": `\$1`.
+  /// For example, to include the literal string "$1" in the replacement string,
+  /// you must escape the "$": `\$1`.
   ///
   /// - requires: `pattern` is a valid regular expression. Invalid regular
   ///   expressions will cause this method to trap.
@@ -109,8 +109,8 @@ extension String {
   /// the variable `$0` will be replaced with the entire matched substring, `$1`
   /// with the first capture group, etc.
   ///
-  /// - note: To include the literal string "$1" in the replacement string,
-  ///   you must escape the "$": `\$1`.
+  /// For example, to include the literal string "$1" in the replacement string,
+  /// you must escape the "$": `\$1`.
   ///
   /// - parameters:
   ///     - regex: A regular expression to match against `self`.
@@ -137,8 +137,8 @@ extension String {
   /// the variable `$0` will be replaced with the entire matched substring, `$1`
   /// with the first capture group, etc.
   ///
-  /// - note: To include the literal string "$1" in the replacement string,
-  ///   you must escape the "$": `\$1`.
+  /// For example, to include the literal string "$1" in the replacement string,
+  /// you must escape the "$": `\$1`.
   ///
   /// - requires: `pattern` is a valid regular expression. Invalid regular
   ///   expressions will cause this method to trap.
@@ -161,8 +161,8 @@ extension String {
   /// the variable `$0` will be replaced with the entire matched substring, `$1`
   /// with the first capture group, etc.
   ///
-  /// - note: To include the literal string "$1" in the replacement string,
-  ///   you must escape the "$": `\$1`.
+  /// For example, to include the literal string "$1" in the replacement string,
+  /// you must escape the "$": `\$1`.
   ///
   /// - parameters:
   ///     - regex: A regular expression to match against `self`.
@@ -184,8 +184,8 @@ extension String {
   /// the variable `$0` will be replaced with the entire matched substring, `$1`
   /// with the first capture group, etc.
   ///
-  /// - note: To include the literal string "$1" in the replacement string,
-  ///   you must escape the "$": `\$1`.
+  /// For example, to include the literal string "$1" in the replacement string,
+  /// you must escape the "$": `\$1`.
   ///
   /// - requires: `pattern` is a valid regular expression. Invalid regular
   ///   expressions will cause this method to trap.
