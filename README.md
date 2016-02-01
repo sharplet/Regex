@@ -43,6 +43,13 @@ if let subject = greeting.match("hello swift")?.captures[0] {
 }
 ```
 
+Find and replace:
+
+```swift
+"hello world".replacingFirstMatching("h(ello) (\\w+)", with: "H$1, $2!")
+// "Hello, world!"
+```
+
 Accessing the last match:
 
 ```swift

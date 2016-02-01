@@ -29,6 +29,13 @@ final class StringReplacementSpec: QuickSpec {
       }
     }
 
+    describe("README example") {
+      it("reformats a greeting") {
+        let result = "hello world".replacingFirstMatching("h(ello) (\\w+)", with: "H$1, $2!")
+        expect(result).to(equal("Hello, world!"))
+      }
+    }
+
   }
 }
 
