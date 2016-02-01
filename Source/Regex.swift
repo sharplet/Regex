@@ -6,6 +6,8 @@ public struct Regex: CustomStringConvertible, CustomDebugStringConvertible {
 
   /// Create a `Regex` based on a pattern string.
   ///
+  /// If `pattern` is not a valid regular expression, returns `nil`.
+  ///
   /// - parameters:
   ///     - pattern: A pattern string describing the regex.
   ///     - options: Configure regular expression matching options.
@@ -14,13 +16,13 @@ public struct Regex: CustomStringConvertible, CustomDebugStringConvertible {
   /// - note: You should always use string literals when defining regex
   ///   patterns. If the input string is an invalid regular expression, this
   ///   initialiser will raise a fatal error.
-  public init(_ pattern: String, options: Options = []) {
+  public init?(_ pattern: String, options: Options = []) {
     do {
       regularExpression = try NSRegularExpression(
         pattern: pattern,
         options: options.toNSRegularExpressionOptions())
     } catch {
-      fatalError("expected a valid regex: \(error)")
+      return nil
     }
   }
 

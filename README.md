@@ -9,7 +9,7 @@ Pattern match like a boss.
 Create:
 
 ```swift
-let greeting = Regex("hello (world|universe)")
+let greeting = Regex("hello (world|universe)")!
 ```
 
 Match:
@@ -24,7 +24,7 @@ _Pattern_ match:
 
 ```swift
 switch someTextFromTheInternet {
-case Regex("DROP DATABASE (.+)"):
+case Regex("DROP DATABASE (.+)")!:
   // TODO: patch security hole
 default:
   break
@@ -52,11 +52,11 @@ Accessing the last match:
 
 ```swift
 switch text {
-case Regex("hello (\\w+)"):
+case Regex("hello (\\w+)")!:
   if let friend = Regex.lastMatch?.captures[0] {
     print("lovely to meet you, \(friend)!")
   }
-case Regex("goodbye (\\w+)"):
+case Regex("goodbye (\\w+)")!:
   if let traitor = Regex.lastMatch?.captures[0] {
     print("so sorry to see you go, \(traitor)!")
   }
@@ -68,7 +68,7 @@ default:
 Options:
 
 ```swift
-let totallyUniqueExamples = Regex("^(hello|foo).*$", options: [.IgnoreCase, .AnchorsMatchLines])
+let totallyUniqueExamples = Regex("^(hello|foo).*$", options: [.IgnoreCase, .AnchorsMatchLines])!
 let multilineText = "hello world\ngoodbye world\nFOOBAR\n"
 let matchingLines = totallyUniqueExamples.allMatches(multilineText).map { $0.matchedString }
 // ["hello world", "FOOBAR"]

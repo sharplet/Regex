@@ -47,7 +47,7 @@ extension String {
   ///     - pattern: A regular expression pattern to match against `self`.
   ///     - template: A template string used to replace matches.
   public mutating func replaceFirstMatching(pattern: String, with template: String) {
-    replaceFirstMatching(Regex(pattern), with: template)
+    replaceFirstMatching(Regex(pattern)!, with: template)
   }
 
 
@@ -96,7 +96,7 @@ extension String {
   ///
   /// - returns: A string with the first match of `pattern` replaced by `template`.
   public func replacingFirstMatching(pattern: String, with template: String) -> String {
-    return replacingFirstMatching(Regex(pattern), with: template)
+    return replacingFirstMatching(Regex(pattern)!, with: template)
   }
 
 
@@ -147,7 +147,7 @@ extension String {
   ///     - pattern: A regular expression pattern to match against `self`.
   ///     - template: A template string used to replace matches.
   public mutating func replaceAllMatching(pattern: String, with template: String) {
-    replaceAllMatching(Regex(pattern), with: template)
+    replaceAllMatching(Regex(pattern)!, with: template)
   }
 
 
@@ -196,7 +196,7 @@ extension String {
   ///
   /// - returns: A string with all matches of `pattern` replaced by `template`.
   public func replacingAllMatching(pattern: String, with template: String) -> String {
-    return replacingAllMatching(Regex(pattern), with: template)
+    return replacingAllMatching(Regex(pattern)!, with: template)
   }
 
 }
