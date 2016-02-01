@@ -29,6 +29,11 @@ namespace :build do
   end
 end
 
+desc "Run swiftlint if available"
+task :swiftlint do
+  system "which -s swiftlint" and exec "swiftlint"
+end
+
 desc "Clean built products"
 task :clean do
   Dir["build/", "Carthage/Build/*/Regex.framework*"].each do |f|
@@ -39,8 +44,8 @@ end
 
 namespace :test do
   def pretty(cmd)
-    if system("which", "xcpretty", [:out, :err] => "/dev/null")
-      sh("/bin/sh", "-o", "pipefail", "-c", "#{cmd} | xcpretty")
+    if system("which -s xcpretty")
+      sh("/bin/sh", "-o", "pipefail", "-c", "env NSUnbufferedIO=YES #{cmd} | xcpretty")
     else
       sh(cmd)
     end

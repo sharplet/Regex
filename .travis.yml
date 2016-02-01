@@ -1,6 +1,6 @@
 language: objective-c
 osx_image: xcode7.2
 install:
-  - brew update && brew install carthage
   - gem install xcpretty
+  - carthage bootstrap
 script: rake test build:all

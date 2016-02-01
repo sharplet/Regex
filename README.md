@@ -119,7 +119,16 @@ provided for your convenience.
 Regex depends on Carthage for development:
 
 ```
-$ brew install carthage
+$ brew update && brew install carthage
+```
+
+Regex uses [SwiftLint](https://github.com/realm/SwiftLint) to validate code style.
+SwiftLint is automatically run against pull requests using [Hound CI](https://houndci.com/).
+
+To enable SwiftLint warnings in Xcode, just make sure it's installed and available on Xcode's PATH:
+
+```
+$ brew install swiftlint
 ```
 
 `xcpretty` is also recommended, for prettifying test output:
