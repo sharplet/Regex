@@ -83,9 +83,9 @@ private final class _MatchResult {
     self.result = result
   }
 
-  var range: Range<String.UTF16Index> {
-    return rangeFromNSRange(result.range)!
-  }
+  lazy var range: Range<String.UTF16Index> = {
+    return self.rangeFromNSRange(self.result.range)!
+  }()
 
   lazy var captures: [String?] = {
     return self.captureRanges.map { $0.map(self.substringFromRange) }
