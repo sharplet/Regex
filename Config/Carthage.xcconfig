@@ -1,0 +1,7 @@
+FRAMEWORK_SEARCH_PATHS[sdk=appletvos*] = $(PROJECT_DIR)/Carthage/Build/tvOS
+FRAMEWORK_SEARCH_PATHS[sdk=appletvsimulator*] = $(PROJECT_DIR)/Carthage/Build/tvOS
+FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*] = $(PROJECT_DIR)/Carthage/Build/iOS
+FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*] = $(PROJECT_DIR)/Carthage/Build/iOS
+FRAMEWORK_SEARCH_PATHS[sdk=macosx*] = $(PROJECT_DIR)/Carthage/Build/Mac
+FRAMEWORK_SEARCH_PATHS[sdk=watchos*] = $(PROJECT_DIR)/Carthage/Build/watchOS
+FRAMEWORK_SEARCH_PATHS[sdk=watchsimulator*] = $(PROJECT_DIR)/Carthage/Build/watchOS
