@@ -1,6 +1,6 @@
 extension String {
 
-  // MARK: Replacing the first match
+  // MARK: Replacing the first match (mutating)
 
   /// If `regex` matches at least one substring, replace the first match with
   /// `template`.
@@ -46,6 +46,10 @@ extension String {
     replaceFirstMatching(Regex(pattern), with: template)
   }
 
+
+
+  // MARK: Replacing the first match (nonmutating)
+
   /// Returns a new string where the first match of `regex` is replaced with
   /// `template`.
   ///
@@ -87,7 +91,9 @@ extension String {
     return replacingFirstMatching(Regex(pattern), with: template)
   }
 
-  // MARK: Replacing all matches
+
+
+  // MARK: Replacing all matches (mutating)
 
   /// Replace each substring matched by `regex` with `template`.
   ///
@@ -131,6 +137,10 @@ extension String {
   public mutating func replaceAllMatching(pattern: String, with template: String) {
     replaceAllMatching(Regex(pattern), with: template)
   }
+
+
+
+  // MARK: Replacing all matches (nonmutating)
 
   /// Returns a new string where each substring matched by `regex` is replaced
   /// with `template`.
