@@ -63,6 +63,19 @@ final class RegexSpec: QuickSpec {
       }
     }
 
+    describe("initialiser failure") {
+      it("makes the last error available via a property") {
+        let _ = Regex("*invalid*")
+        expect(Regex.error).notTo(beNil())
+      }
+
+      it("clears the last error when successfully constructing a regex") {
+        let _ = Regex("*invalid*")
+        let _ = Regex("valid")
+        expect(Regex.error).to(beNil())
+      }
+    }
+
     describe("optional capture groups") {
       let regex = Regex("(a)?(b)")!
 

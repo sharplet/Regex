@@ -21,9 +21,33 @@ public struct Regex: CustomStringConvertible, CustomDebugStringConvertible {
       regularExpression = try NSRegularExpression(
         pattern: pattern,
         options: options.toNSRegularExpressionOptions())
+      Regex._error = nil
     } catch {
+      Regex._error = error
       return nil
     }
+  }
+
+  // MARK: Error handling
+
+  /// After a call to `Regex.init` fails, the error associated with the failure
+  /// will be stored here:
+  ///
+  ///     guard let ohno = Regex("*invalid*") else {
+  ///       print(Regex.error)
+  ///       return nil
+  ///     }
+  ///
+  /// This property uses thread-local storage, and thus is thread safe.
+  public static var error: ErrorType? {
+    return _error
+  }
+
+  private static let _errorKey = "me.sharplet.Regex.error"
+
+  private static var _error: ErrorType? {
+    get { return ThreadLocal(_errorKey).value }
+    set { ThreadLocal(_errorKey).value = newValue }
   }
 
   // MARK: Matching
