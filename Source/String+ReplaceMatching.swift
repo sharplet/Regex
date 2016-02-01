@@ -31,6 +31,8 @@ extension String {
   /// If the regular expression described by `pattern` matches at least one
   /// substring, replace the first match with `template`.
   ///
+  /// Convenience overload that accepts a `String` instead of a `Regex`.
+  ///
   /// The template string may be a literal string, or include template variables:
   /// the variable `$0` will be replaced with the entire matched substring, `$1`
   /// with the first capture group, etc.
@@ -75,6 +77,8 @@ extension String {
 
   /// Returns a new string where the first match of the regular expression
   /// described by `pattern` is replaced with `template`.
+  ///
+  /// Convenience overload that accepts a `String` instead of a `Regex`.
   ///
   /// The template string may be a literal string, or include template variables:
   /// the variable `$0` will be replaced with the entire matched substring, `$1`
@@ -127,6 +131,8 @@ extension String {
   /// Replace each substring matched by the regular expression described in
   /// `pattern` with `template`.
   ///
+  /// Convenience overload that accepts a `String` instead of a `Regex`.
+  ///
   /// The template string may be a literal string, or include template variables:
   /// the variable `$0` will be replaced with the entire matched substring, `$1`
   /// with the first capture group, etc.
@@ -171,6 +177,8 @@ extension String {
 
   /// Returns a new string where each substring matched by the regular
   /// expression described in `pattern` is replaced with `template`.
+  ///
+  /// Convenience overload that accepts a `String` instead of a `Regex`.
   ///
   /// The template string may be a literal string, or include template variables:
   /// the variable `$0` will be replaced with the entire matched substring, `$1`
