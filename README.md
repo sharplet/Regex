@@ -9,7 +9,22 @@ Pattern match like a boss.
 Create:
 
 ```swift
-let greeting = Regex("hello (world|universe)")!
+// Use `Regex.init(_:)` to build a regex from a static pattern
+
+let greeting = Regex("hello (world|universe)")
+
+// Use `Regex.init(string:)` to construct a regex from dynamic data, and
+// gracefully handle invalid input
+
+var validations: [String: Regex]
+
+for (name, pattern) in config.loadValidations() {
+  do {
+    validations[name] = try Regex(string: pattern)
+  } catch {
+    print("error building validation \(name): \(error)")
+  }
+}
 ```
 
 Match:
@@ -24,7 +39,7 @@ _Pattern_ match:
 
 ```swift
 switch someTextFromTheInternet {
-case Regex("DROP DATABASE (.+)")!:
+case Regex("DROP DATABASE (.+)"):
   // TODO: patch security hole
 default:
   break
@@ -52,11 +67,11 @@ Accessing the last match:
 
 ```swift
 switch text {
-case Regex("hello (\\w+)")!:
+case Regex("hello (\\w+)"):
   if let friend = Regex.lastMatch?.captures[0] {
     print("lovely to meet you, \(friend)!")
   }
-case Regex("goodbye (\\w+)")!:
+case Regex("goodbye (\\w+)"):
   if let traitor = Regex.lastMatch?.captures[0] {
     print("so sorry to see you go, \(traitor)!")
   }
@@ -68,7 +83,7 @@ default:
 Options:
 
 ```swift
-let totallyUniqueExamples = Regex("^(hello|foo).*$", options: [.IgnoreCase, .AnchorsMatchLines])!
+let totallyUniqueExamples = Regex("^(hello|foo).*$", options: [.IgnoreCase, .AnchorsMatchLines])
 let multilineText = "hello world\ngoodbye world\nFOOBAR\n"
 let matchingLines = totallyUniqueExamples.allMatches(multilineText).map { $0.matchedString }
 // ["hello world", "FOOBAR"]

@@ -31,7 +31,7 @@ extension String {
   /// If the regular expression described by `pattern` matches at least one
   /// substring, replace the first match with `template`.
   ///
-  /// Convenience overload that accepts a `String` instead of a `Regex`.
+  /// Convenience overload that accepts a `StaticString` instead of a `Regex`.
   ///
   /// The template string may be a literal string, or include template variables:
   /// the variable `$0` will be replaced with the entire matched substring, `$1`
@@ -46,8 +46,8 @@ extension String {
   /// - parameters:
   ///     - pattern: A regular expression pattern to match against `self`.
   ///     - template: A template string used to replace matches.
-  public mutating func replaceFirstMatching(pattern: String, with template: String) {
-    replaceFirstMatching(Regex(pattern)!, with: template)
+  public mutating func replaceFirstMatching(pattern: StaticString, with template: String) {
+    replaceFirstMatching(Regex(pattern), with: template)
   }
 
 
@@ -78,7 +78,7 @@ extension String {
   /// Returns a new string where the first match of the regular expression
   /// described by `pattern` is replaced with `template`.
   ///
-  /// Convenience overload that accepts a `String` instead of a `Regex`.
+  /// Convenience overload that accepts a `StaticString` instead of a `Regex`.
   ///
   /// The template string may be a literal string, or include template variables:
   /// the variable `$0` will be replaced with the entire matched substring, `$1`
@@ -95,8 +95,8 @@ extension String {
   ///     - template: A template string used to replace matches.
   ///
   /// - returns: A string with the first match of `pattern` replaced by `template`.
-  public func replacingFirstMatching(pattern: String, with template: String) -> String {
-    return replacingFirstMatching(Regex(pattern)!, with: template)
+  public func replacingFirstMatching(pattern: StaticString, with template: String) -> String {
+    return replacingFirstMatching(Regex(pattern), with: template)
   }
 
 
@@ -131,7 +131,7 @@ extension String {
   /// Replace each substring matched by the regular expression described in
   /// `pattern` with `template`.
   ///
-  /// Convenience overload that accepts a `String` instead of a `Regex`.
+  /// Convenience overload that accepts a `StaticString` instead of a `Regex`.
   ///
   /// The template string may be a literal string, or include template variables:
   /// the variable `$0` will be replaced with the entire matched substring, `$1`
@@ -146,8 +146,8 @@ extension String {
   /// - parameters:
   ///     - pattern: A regular expression pattern to match against `self`.
   ///     - template: A template string used to replace matches.
-  public mutating func replaceAllMatching(pattern: String, with template: String) {
-    replaceAllMatching(Regex(pattern)!, with: template)
+  public mutating func replaceAllMatching(pattern: StaticString, with template: String) {
+    replaceAllMatching(Regex(pattern), with: template)
   }
 
 
@@ -178,7 +178,7 @@ extension String {
   /// Returns a new string where each substring matched by the regular
   /// expression described in `pattern` is replaced with `template`.
   ///
-  /// Convenience overload that accepts a `String` instead of a `Regex`.
+  /// Convenience overload that accepts a `StaticString` instead of a `Regex`.
   ///
   /// The template string may be a literal string, or include template variables:
   /// the variable `$0` will be replaced with the entire matched substring, `$1`
@@ -195,8 +195,8 @@ extension String {
   ///     - template: A template string used to replace matches.
   ///
   /// - returns: A string with all matches of `pattern` replaced by `template`.
-  public func replacingAllMatching(pattern: String, with template: String) -> String {
-    return replacingAllMatching(Regex(pattern)!, with: template)
+  public func replacingAllMatching(pattern: StaticString, with template: String) -> String {
+    return replacingAllMatching(Regex(pattern), with: template)
   }
 
 }

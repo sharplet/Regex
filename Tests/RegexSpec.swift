@@ -23,12 +23,12 @@ final class RegexSpec: QuickSpec {
       }
 
       it("provides access to the entire matched string") {
-        let regex = Regex("foo (bar|baz)")!
+        let regex = Regex("foo (bar|baz)")
         expect(regex.match("foo bar")?.matchedString).to(equal("foo bar"))
       }
 
       it("can match a regex multiple times in the same string") {
-        let regex = Regex("(foo)")!
+        let regex = Regex("(foo)")
         let matches = regex
           .allMatches("foo foo foo")
           .flatMap { $0.captures }
@@ -40,7 +40,7 @@ final class RegexSpec: QuickSpec {
         let matched: Bool
 
         switch "eat some food" {
-        case Regex("foo")!:
+        case Regex("foo"):
           matched = true
         default:
           matched = false
@@ -52,7 +52,7 @@ final class RegexSpec: QuickSpec {
       it("supports the match operator in reverse") {
         let matched: Bool
 
-        switch Regex("foo")! {
+        switch Regex("foo") {
         case "fool me twice":
           matched = true
         default:
@@ -63,21 +63,8 @@ final class RegexSpec: QuickSpec {
       }
     }
 
-    describe("initialiser failure") {
-      it("makes the last error available via a property") {
-        let _ = Regex("*invalid*")
-        expect(Regex.error).notTo(beNil())
-      }
-
-      it("clears the last error when successfully constructing a regex") {
-        let _ = Regex("*invalid*")
-        let _ = Regex("valid")
-        expect(Regex.error).to(beNil())
-      }
-    }
-
     describe("optional capture groups") {
-      let regex = Regex("(a)?(b)")!
+      let regex = Regex("(a)?(b)")
 
       it("maintains the position of captures regardless of optionality") {
         expect(regex.match("ab")?.captures[1]).to(equal("b"))
@@ -97,7 +84,7 @@ final class RegexSpec: QuickSpec {
         // U+221E INFINITY
         // U+1D11E MUSICAL SYMBOL G CLEF
         let string = "\u{61}\u{65}\u{301}\u{221E}\u{1D11E}"
-        let infinity = Regex("(\u{221E})")!.match(string)!.captures[0]!
+        let infinity = Regex("(\u{221E})").match(string)!.captures[0]!
         let rangeOfInfinity = string.rangeOfString(infinity)!
         let location = string.startIndex.distanceTo(rangeOfInfinity.startIndex)
         let length = rangeOfInfinity.count
@@ -108,7 +95,7 @@ final class RegexSpec: QuickSpec {
 
     describe("matching at line anchors") {
       it("can anchor matches to the start of each line") {
-        let regex = Regex("(?m)^foo")!
+        let regex = Regex("(?m)^foo")
         let multilineString = "foo\nbar\nfoo\nbaz"
         expect(regex.allMatches(multilineString).count).to(equal(2))
       }
@@ -116,7 +103,7 @@ final class RegexSpec: QuickSpec {
       it("validates that the example in the README is correct") {
         let totallyUniqueExamples = Regex(
           "^(hello|foo).*$",
-          options: [.IgnoreCase, .AnchorsMatchLines])!
+          options: [.IgnoreCase, .AnchorsMatchLines])
         let multilineText = "hello world\ngoodbye world\nFOOBAR\n"
         let matchingLines = totallyUniqueExamples.allMatches(multilineText).map { $0.matchedString }
         expect(matchingLines).to(equal(["hello world", "FOOBAR"]))
@@ -126,7 +113,7 @@ final class RegexSpec: QuickSpec {
     describe("last match") {
       it("is available in a pattern matching context") {
         switch "hello" {
-        case Regex("l+")!:
+        case Regex("l+"):
           expect(Regex.lastMatch?.matchedString).to(equal("ll"))
         default:
           fail("expected regex to match")
@@ -134,9 +121,9 @@ final class RegexSpec: QuickSpec {
       }
 
       it("resets the last match to nil when a match fails") {
-        "foo" ~= Regex("foo")!
+        "foo" ~= Regex("foo")
         expect(Regex.lastMatch).notTo(beNil())
-        "foo" ~= Regex("bar")!
+        "foo" ~= Regex("bar")
         expect(Regex.lastMatch).to(beNil())
       }
     }
