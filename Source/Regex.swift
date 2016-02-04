@@ -6,21 +6,41 @@ public struct Regex: CustomStringConvertible, CustomDebugStringConvertible {
 
   /// Create a `Regex` based on a pattern string.
   ///
+  /// If `pattern` is not a valid regular expression, an error is thrown
+  /// describing the failure.
+  ///
   /// - parameters:
   ///     - pattern: A pattern string describing the regex.
   ///     - options: Configure regular expression matching options.
   ///       For details, see `Regex.Options`.
   ///
-  /// - note: You should always use string literals when defining regex
-  ///   patterns. If the input string is an invalid regular expression, this
-  ///   initialiser will raise a fatal error.
-  public init(_ pattern: String, options: Options = []) {
+  /// - throws: A value of `ErrorType` describing the invalid regular expression.
+  public init(string pattern: String, options: Options = []) throws {
+    regularExpression = try NSRegularExpression(
+      pattern: pattern,
+      options: options.toNSRegularExpressionOptions())
+  }
+
+  /// Create a `Regex` based on a static pattern string.
+  ///
+  /// Unlike `Regex.init(string:)` this initialiser is not failable. If `pattern`
+  /// is an invalid regular expression, it is considered programmer error rather
+  /// than a recoverable runtime error, so this initialiser instead raises a
+  /// precondition failure.
+  ///
+  /// - requires: `pattern` is a valid regular expression.
+  ///
+  /// - parameters:
+  ///     - pattern: A pattern string describing the regex.
+  ///     - options: Configure regular expression matching options.
+  ///       For details, see `Regex.Options`.
+  public init(_ pattern: StaticString, options: Options = []) {
     do {
       regularExpression = try NSRegularExpression(
-        pattern: pattern,
+        pattern: pattern.stringValue,
         options: options.toNSRegularExpressionOptions())
     } catch {
-      fatalError("expected a valid regex: \(error)")
+      preconditionFailure("unexpected error creating regex: \(error)")
     }
   }
 

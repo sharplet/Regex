@@ -9,7 +9,22 @@ Pattern match like a boss.
 Create:
 
 ```swift
+// Use `Regex.init(_:)` to build a regex from a static pattern
+
 let greeting = Regex("hello (world|universe)")
+
+// Use `Regex.init(string:)` to construct a regex from dynamic data, and
+// gracefully handle invalid input
+
+var validations: [String: Regex]
+
+for (name, pattern) in config.loadValidations() {
+  do {
+    validations[name] = try Regex(string: pattern)
+  } catch {
+    print("error building validation \(name): \(error)")
+  }
+}
 ```
 
 Match:
