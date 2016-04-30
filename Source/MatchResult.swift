@@ -33,8 +33,8 @@ public struct MatchResult {
   /// - returns: The character range of the matched string.
   internal var range: Range<String.Index> {
     let utf16range = _result.range
-    let start = String.Index(utf16range.startIndex, within: _string)!
-    let end = String.Index(utf16range.endIndex, within: _string)!
+    let start = String.Index(utf16range.lowerBound, within: _string)!
+    let end = String.Index(utf16range.upperBound, within: _string)!
     return start..<end
   }
 
@@ -76,38 +76,54 @@ public struct MatchResult {
 private final class _MatchResult {
 
   private let string: String.UTF16View
+#if swift(>=3.0)
+  fileprivate let result: NSTextCheckingResult
+#else
   private let result: NSTextCheckingResult
+#endif
 
+#if swift(>=3.0)
+  fileprivate init(_ string: String.UTF16View, _ result: NSTextCheckingResult) {
+    self.string = string
+    self.result = result
+  }
+#else
   private init(_ string: String.UTF16View, _ result: NSTextCheckingResult) {
     self.string = string
     self.result = result
   }
+#endif
 
   lazy var range: Range<String.UTF16Index> = {
-    return self.rangeFromNSRange(self.result.range)!
+    return self.rangeFromNSRange(self.string, self.result.range)!
   }()
 
   lazy var captures: [String?] = {
-    return self.captureRanges.map { $0.map(self.substringFromRange) }
+    return self.captureRanges.map { $0.map { self.substringFromRange(self.string, $0) } }
   }()
 
   lazy var captureRanges: [Range<String.UTF16Index>?] = {
-    return self.result.ranges.dropFirst().map(self.rangeFromNSRange)
+    return self.result.ranges.dropFirst().map { self.rangeFromNSRange(self.string, $0) }
   }()
 
   lazy var matchedString: String = {
-    return self.substringFromRange(self.rangeFromNSRange(self.result.range)!)
+    return self.substringFromRange(self.string, self.rangeFromNSRange(self.string, self.result.range)!)
   }()
 
-  private func rangeFromNSRange(range: NSRange) -> Range<String.UTF16Index>? {
+  private let rangeFromNSRange: (String.UTF16View, NSRange) -> Range<String.UTF16Index>? = { string, range in
     guard range.location != NSNotFound else { return nil }
+#if swift(>=3.0)
+    let start = string.startIndex.advanced(by: range.location)
+    let end = start.advanced(by: range.length)
+#else
     let start = string.startIndex.advancedBy(range.location)
     let end = start.advancedBy(range.length)
+#endif
     return start..<end
   }
 
-  private func substringFromRange(range: Range<String.UTF16Index>) -> String {
-    return String(string[range])
+  private let substringFromRange: (String.UTF16View, Range<String.UTF16Index>) -> String = { string, range in
+    return string[range].description
   }
 
 }
