@@ -2,7 +2,7 @@ require_relative "lib/suite_task"
 
 desc "Set up the project for development"
 task :setup do
-  sh "carthage bootstrap"
+  sh "carthage bootstrap --no-build"
 end
 
 namespace :build do

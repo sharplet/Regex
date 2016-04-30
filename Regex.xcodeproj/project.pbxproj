@@ -7,17 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A6BF6FE1CD555880081B164 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BF6FC1CD555880081B164 /* Nimble.framework */; };
+		4A6BF6FF1CD555880081B164 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BF6FD1CD555880081B164 /* Quick.framework */; };
+		4A6BF7001CD555C20081B164 /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BF6FC1CD555880081B164 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4A6BF7011CD555C50081B164 /* Quick.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BF6FD1CD555880081B164 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4A6BF7041CD5570A0081B164 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BF7021CD5570A0081B164 /* Nimble.framework */; };
+		4A6BF7051CD5570A0081B164 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BF7031CD5570A0081B164 /* Quick.framework */; };
+		4A6BF7061CD557510081B164 /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BF7021CD5570A0081B164 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4A6BF7071CD557510081B164 /* Quick.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BF7031CD5570A0081B164 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4A6BF70A1CD557620081B164 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BF7081CD557620081B164 /* Nimble.framework */; };
+		4A6BF70B1CD557620081B164 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BF7091CD557620081B164 /* Quick.framework */; };
+		4A6BF70C1CD557910081B164 /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BF7081CD557620081B164 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4A6BF70D1CD557910081B164 /* Quick.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BF7091CD557620081B164 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE26D9EE1C34D96A003CFB54 /* ThreadLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE26D9ED1C34D96A003CFB54 /* ThreadLocal.swift */; };
 		CE26D9EF1C34D96A003CFB54 /* ThreadLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE26D9ED1C34D96A003CFB54 /* ThreadLocal.swift */; };
 		CE26D9F01C34D96A003CFB54 /* ThreadLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE26D9ED1C34D96A003CFB54 /* ThreadLocal.swift */; };
 		CE26D9F11C34D96A003CFB54 /* ThreadLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE26D9ED1C34D96A003CFB54 /* ThreadLocal.swift */; };
-		CE322FB31C1651F8005741D5 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE322FAA1C1651D5005741D5 /* Quick.framework */; };
-		CE322FB41C1651FB005741D5 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE322FA91C1651D5005741D5 /* Nimble.framework */; };
-		CE322FB51C165208005741D5 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE322FAC1C1651D5005741D5 /* Quick.framework */; };
-		CE322FB61C16520B005741D5 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE322FAB1C1651D5005741D5 /* Nimble.framework */; };
-		CE322FB91C165238005741D5 /* Quick.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE322FAC1C1651D5005741D5 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CE322FBB1C16525F005741D5 /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE322FA91C1651D5005741D5 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CE322FBC1C16525F005741D5 /* Quick.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE322FAA1C1651D5005741D5 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE4BE2941C168183005E4D4F /* OptionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE322FBD1C168146005741D5 /* OptionsSpec.swift */; };
 		CE4BE2951C168183005E4D4F /* OptionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE322FBD1C168146005741D5 /* OptionsSpec.swift */; };
 		CE4BE2971C1682CF005E4D4F /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4BE2961C1682CF005E4D4F /* Options.swift */; };
@@ -28,17 +33,12 @@
 		CE6CDF821BE23BE800AE6393 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CDF811BE23BE800AE6393 /* Regex.swift */; };
 		CE6CDF841BE2C52600AE6393 /* MatchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CDF831BE2C52600AE6393 /* MatchResult.swift */; };
 		CE6CDF861BE2C64D00AE6393 /* Foundation+Ranges.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CDF851BE2C64D00AE6393 /* Foundation+Ranges.swift */; };
-		CEC12F9B1C2A30670077B1C4 /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE322FAB1C1651D5005741D5 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CEC768731BE99A050066BA1E /* Regex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC768691BE99A040066BA1E /* Regex.framework */; };
 		CEC768801BE99B690066BA1E /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CDF811BE23BE800AE6393 /* Regex.swift */; };
 		CEC768811BE99B690066BA1E /* MatchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CDF831BE2C52600AE6393 /* MatchResult.swift */; };
 		CEC768821BE99B690066BA1E /* Foundation+Ranges.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CDF851BE2C64D00AE6393 /* Foundation+Ranges.swift */; };
 		CEC768831BE99B720066BA1E /* Regex.h in Headers */ = {isa = PBXBuildFile; fileRef = CE6CDF631BE239DE00AE6393 /* Regex.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CEC768841BE99B7C0066BA1E /* RegexSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CDF6F1BE239DE00AE6393 /* RegexSpec.swift */; };
-		CECE2FFB1C2A2E8200EEE11D /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED611F41C2A2D7C008D212A /* Nimble.framework */; };
-		CECE2FFC1C2A2E8500EEE11D /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CED611F41C2A2D7C008D212A /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CECE2FFD1C2A2E8A00EEE11D /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED611F51C2A2D7C008D212A /* Quick.framework */; };
-		CECE2FFE1C2A2E8D00EEE11D /* Quick.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CED611F51C2A2D7C008D212A /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CED611CB1C2A28CB008D212A /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CDF811BE23BE800AE6393 /* Regex.swift */; };
 		CED611CC1C2A28CB008D212A /* MatchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CDF831BE2C52600AE6393 /* MatchResult.swift */; };
 		CED611CD1C2A28CB008D212A /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4BE2961C1682CF005E4D4F /* Options.swift */; };
@@ -92,8 +92,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CE322FB91C165238005741D5 /* Quick.framework in Embed Frameworks */,
-				CEC12F9B1C2A30670077B1C4 /* Nimble.framework in Embed Frameworks */,
+				4A6BF7001CD555C20081B164 /* Nimble.framework in Embed Frameworks */,
+				4A6BF7011CD555C50081B164 /* Quick.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,8 +104,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CE322FBB1C16525F005741D5 /* Nimble.framework in Embed Frameworks */,
-				CE322FBC1C16525F005741D5 /* Quick.framework in Embed Frameworks */,
+				4A6BF7061CD557510081B164 /* Nimble.framework in Embed Frameworks */,
+				4A6BF7071CD557510081B164 /* Quick.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -116,8 +116,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CECE2FFC1C2A2E8500EEE11D /* Nimble.framework in Embed Frameworks */,
-				CECE2FFE1C2A2E8D00EEE11D /* Quick.framework in Embed Frameworks */,
+				4A6BF70C1CD557910081B164 /* Nimble.framework in Embed Frameworks */,
+				4A6BF70D1CD557910081B164 /* Quick.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -126,11 +126,13 @@
 
 /* Begin PBXFileReference section */
 		05A5B69D1C5EDD3C00097E4A /* Carthage.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Carthage.xcconfig; sourceTree = "<group>"; };
+		4A6BF6FC1CD555880081B164 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A6BF6FD1CD555880081B164 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A6BF7021CD5570A0081B164 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A6BF7031CD5570A0081B164 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A6BF7081CD557620081B164 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A6BF7091CD557620081B164 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE26D9ED1C34D96A003CFB54 /* ThreadLocal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadLocal.swift; sourceTree = "<group>"; };
-		CE322FA91C1651D5005741D5 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
-		CE322FAA1C1651D5005741D5 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
-		CE322FAB1C1651D5005741D5 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = "<group>"; };
-		CE322FAC1C1651D5005741D5 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
 		CE322FBD1C168146005741D5 /* OptionsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsSpec.swift; sourceTree = "<group>"; };
 		CE4BE2961C1682CF005E4D4F /* Options.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
 		CE6CDF601BE239DE00AE6393 /* Regex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Regex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,8 +149,6 @@
 		CED611C31C2A281E008D212A /* Regex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Regex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED611D61C2A2C2E008D212A /* Regex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Regex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED611DF1C2A2C2E008D212A /* RegexTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RegexTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CED611F41C2A2D7C008D212A /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/tvOS/Nimble.framework; sourceTree = "<group>"; };
-		CED611F51C2A2D7C008D212A /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/tvOS/Quick.framework; sourceTree = "<group>"; };
 		CEDA44A01C45045B00B78CAF /* String+ReplaceMatching.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+ReplaceMatching.swift"; sourceTree = "<group>"; };
 		CEDA44A51C4507C900B78CAF /* StringReplacementSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringReplacementSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -165,9 +165,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A6BF7041CD5570A0081B164 /* Nimble.framework in Frameworks */,
+				4A6BF7051CD5570A0081B164 /* Quick.framework in Frameworks */,
 				CE6CDF6B1BE239DE00AE6393 /* Regex.framework in Frameworks */,
-				CE322FB31C1651F8005741D5 /* Quick.framework in Frameworks */,
-				CE322FB41C1651FB005741D5 /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,9 +182,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A6BF6FE1CD555880081B164 /* Nimble.framework in Frameworks */,
+				4A6BF6FF1CD555880081B164 /* Quick.framework in Frameworks */,
 				CEC768731BE99A050066BA1E /* Regex.framework in Frameworks */,
-				CE322FB51C165208005741D5 /* Quick.framework in Frameworks */,
-				CE322FB61C16520B005741D5 /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,9 +206,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A6BF70A1CD557620081B164 /* Nimble.framework in Frameworks */,
+				4A6BF70B1CD557620081B164 /* Quick.framework in Frameworks */,
 				CED611E01C2A2C2E008D212A /* Regex.framework in Frameworks */,
-				CECE2FFB1C2A2E8200EEE11D /* Nimble.framework in Frameworks */,
-				CECE2FFD1C2A2E8A00EEE11D /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,12 +293,12 @@
 		CE6CDF7C1BE23A6400AE6393 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CED611F41C2A2D7C008D212A /* Nimble.framework */,
-				CED611F51C2A2D7C008D212A /* Quick.framework */,
-				CE322FA91C1651D5005741D5 /* Nimble.framework */,
-				CE322FAA1C1651D5005741D5 /* Quick.framework */,
-				CE322FAB1C1651D5005741D5 /* Nimble.framework */,
-				CE322FAC1C1651D5005741D5 /* Quick.framework */,
+				4A6BF7081CD557620081B164 /* Nimble.framework */,
+				4A6BF7091CD557620081B164 /* Quick.framework */,
+				4A6BF7021CD5570A0081B164 /* Nimble.framework */,
+				4A6BF7031CD5570A0081B164 /* Quick.framework */,
+				4A6BF6FC1CD555880081B164 /* Nimble.framework */,
+				4A6BF6FD1CD555880081B164 /* Quick.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
