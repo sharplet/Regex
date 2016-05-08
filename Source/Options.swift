@@ -26,6 +26,13 @@ public struct Options: OptionSetType {
   ///     foo.allMatches("foo\nbar\nfoo\n").count // 2
   public static let AnchorsMatchLines = Options(rawValue: 1 << 2)
 
+  /// Usually, "." matches all characters except newlines (\n). Using this
+  /// this options will allow "." to match newLines
+  ///
+  ///     let newLines = Regex("test.test", options: .DotMatchesLineSeparators)
+  ///     newLines.allMatches("test\ntest").count // 1
+  public static let DotMatchesLineSeparators = Options(rawValue: 1 << 3)
+
   // MARK: OptionSetType
 
   public let rawValue: Int
@@ -46,6 +53,7 @@ internal extension Options {
     if contains(.IgnoreCase) { options.insert(.CaseInsensitive) }
     if contains(.IgnoreMetacharacters) { options.insert(.IgnoreMetacharacters) }
     if contains(.AnchorsMatchLines) { options.insert(.AnchorsMatchLines) }
+	if contains(.DotMatchesLineSeparators) { options.insert(.DotMatchesLineSeparators) }
     return options
   }
 
