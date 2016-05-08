@@ -28,6 +28,14 @@ final class OptionsSpec: QuickSpec {
         expect(regex.allMatches(multilineString).count).to(equal(2))
       }
     }
+	
+	describe(".DotMatchesLineSeparators") {
+      it("allows dot to match newlines") {
+		let regex = Regex("test.test", options: .DotMatchesLineSeparators)
+		let multilineString = "test\ntest"
+		expect(regex.allMatches(multilineString).count).to(equal(1))
+	  }
+	}
 
   }
 }
