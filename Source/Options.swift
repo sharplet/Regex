@@ -30,7 +30,7 @@ public struct Options: OptionSetType {
   /// this options will allow "." to match newLines
   ///
   ///     let newLines = Regex("test.test", options: .DotMatchesLineSeparators)
-  ///     newLines.allMatches(multilineString).count // 1
+  ///     newLines.allMatches("test\ntest").count // 1
   public static let DotMatchesLineSeparators = Options(rawValue: 1 << 3)
 
   // MARK: OptionSetType
