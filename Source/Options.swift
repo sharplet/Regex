@@ -25,7 +25,7 @@ public struct Options: OptionSetType {
   ///     let foo = Regex("^foo", options: .AnchorsMatchLines)
   ///     foo.allMatches("foo\nbar\nfoo\n").count // 2
   public static let AnchorsMatchLines = Options(rawValue: 1 << 2)
-	
+
   /// Usually, "." matches all characters except newlines (\n). Using this
   /// this options will allow "." to match newLines
   ///
