@@ -2,7 +2,7 @@ require_relative "lib/suite_task"
 
 desc "Set up the project for development"
 task :setup do
-  sh "carthage bootstrap"
+  sh "carthage bootstrap --no-build"
 end
 
 namespace :build do
@@ -11,7 +11,7 @@ namespace :build do
 
   desc "Build and validate the podspec"
   task :pod do
-    sh "pod lib lint *.podspec --no-clean"
+    sh "pod lib lint *.podspec --quick --no-clean"
   end
 
   desc "Build the framework"
@@ -53,21 +53,26 @@ namespace :test do
 
   desc "Run tests on OS X"
   task :osx do
-    pretty "xcodebuild test -scheme Regex-OSX"
+    pretty "xcodebuild build-for-testing test-without-building -workspace Regex.xcworkspace -scheme Regex-OSX"
   end
 
   desc "Run tests on iOS Simulator"
   task :ios do
-    pretty "xcodebuild test -scheme Regex-iOS -destination 'platform=iOS Simulator,name=iPhone 6s'"
+    pretty "xcodebuild build-for-testing test-without-building -workspace Regex.xcworkspace -scheme Regex-iOS -destination 'platform=iOS Simulator,name=iPhone 6s'"
   end
 
   desc "Run tests on tvOS Simulator"
   task :tvos do
-    pretty "xcodebuild test -scheme Regex-tvOS -destination 'platform=tvOS Simulator,name=Apple TV 1080p'"
+    pretty "xcodebuild build-for-testing test-without-building -workspace Regex.xcworkspace -scheme Regex-tvOS -destination 'platform=tvOS Simulator,name=Apple TV 1080p'"
+  end
+
+  desc "Build for watchOS Simulator"
+  task :watchos do
+    pretty "xcodebuild build -workspace Regex.xcworkspace -scheme Regex-watchOS -destination 'platform=watchOS Simulator,name=Apple Watch - 42mm'"
   end
 end
 
 desc "Run all tests"
-task :test => ["test:osx", "test:ios", "test:tvos"]
+task :test => ["test:osx", "test:ios", "test:tvos", "test:watchos"]
 
 task :default => :test
