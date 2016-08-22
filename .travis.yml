@@ -2,5 +2,5 @@ language: objective-c
 osx_image: xcode8
 install:
   - gem install xcpretty
-  - carthage bootstrap
+  - rake setup
 script: rake test build:all
