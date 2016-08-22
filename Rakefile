@@ -11,7 +11,7 @@ namespace :build do
 
   desc "Build and validate the podspec"
   task :pod do
-    sh "pod lib lint *.podspec --no-clean"
+    sh "pod lib lint *.podspec --quick --no-clean"
   end
 
   desc "Build the framework"
