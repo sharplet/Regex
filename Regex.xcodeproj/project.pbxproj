@@ -486,24 +486,31 @@
 				TargetAttributes = {
 					CE6CDF5F1BE239DE00AE6393 = {
 						CreatedOnToolsVersion = 7.1;
+						LastSwiftMigration = 0800;
 					};
 					CE6CDF691BE239DE00AE6393 = {
 						CreatedOnToolsVersion = 7.1;
+						LastSwiftMigration = 0800;
 					};
 					CEC768681BE99A040066BA1E = {
 						CreatedOnToolsVersion = 7.1;
+						LastSwiftMigration = 0800;
 					};
 					CEC768711BE99A050066BA1E = {
 						CreatedOnToolsVersion = 7.1;
+						LastSwiftMigration = 0800;
 					};
 					CED611C21C2A281E008D212A = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0800;
 					};
 					CED611D51C2A2C2E008D212A = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0800;
 					};
 					CED611DE1C2A2C2E008D212A = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -797,6 +804,7 @@
 				PROJECT_NAME = Regex;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_PRODUCT_BUNDLE_IDENTIFIER = "$(ORGANISATION_IDENTIFIER).$(TEST_PRODUCT_NAME)";
 				TEST_PRODUCT_NAME = "$(PROJECT_NAME)Tests";
@@ -847,6 +855,7 @@
 				ORGANISATION_IDENTIFIER = me.sharplet;
 				PROJECT_NAME = Regex;
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_PRODUCT_BUNDLE_IDENTIFIER = "$(ORGANISATION_IDENTIFIER).$(TEST_PRODUCT_NAME)";
 				TEST_PRODUCT_NAME = "$(PROJECT_NAME)Tests";
