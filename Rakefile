@@ -53,17 +53,17 @@ namespace :test do
 
   desc "Run tests on OS X"
   task :osx do
-    pretty "xcodebuild test -workspace Regex.xcworkspace -scheme Regex-OSX"
+    pretty "xcodebuild build-for-testing test-without-building -workspace Regex.xcworkspace -scheme Regex-OSX"
   end
 
   desc "Run tests on iOS Simulator"
   task :ios do
-    pretty "xcodebuild test -workspace Regex.xcworkspace -scheme Regex-iOS -destination 'platform=iOS Simulator,name=iPhone 6s'"
+    pretty "xcodebuild build-for-testing test-without-building -workspace Regex.xcworkspace -scheme Regex-iOS -destination 'platform=iOS Simulator,name=iPhone 6s'"
   end
 
   desc "Run tests on tvOS Simulator"
   task :tvos do
-    pretty "xcodebuild test -workspace Regex.xcworkspace -scheme Regex-tvOS -destination 'platform=tvOS Simulator,name=Apple TV 1080p'"
+    pretty "xcodebuild build-for-testing test-without-building -workspace Regex.xcworkspace -scheme Regex-tvOS -destination 'platform=tvOS Simulator,name=Apple TV 1080p'"
   end
 
   desc "Build for watchOS Simulator"
