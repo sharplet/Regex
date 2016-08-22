@@ -65,9 +65,14 @@ namespace :test do
   task :tvos do
     pretty "xcodebuild test -workspace Regex.xcworkspace -scheme Regex-tvOS -destination 'platform=tvOS Simulator,name=Apple TV 1080p'"
   end
+
+  desc "Build for watchOS Simulator"
+  task :watchos do
+    pretty "xcodebuild build -workspace Regex.xcworkspace -scheme Regex-watchOS -destination 'platform=watchOS Simulator,name=Apple Watch - 42mm'"
+  end
 end
 
 desc "Run all tests"
-task :test => ["test:osx", "test:ios", "test:tvos"]
+task :test => ["test:osx", "test:ios", "test:tvos", "test:watchos"]
 
 task :default => :test
