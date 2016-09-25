@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A5986951D987E85009B35C5 /* Range+Compatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5986941D987E85009B35C5 /* Range+Compatibility.swift */; };
+		4A5986961D987E85009B35C5 /* Range+Compatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5986941D987E85009B35C5 /* Range+Compatibility.swift */; };
+		4A5986971D987E85009B35C5 /* Range+Compatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5986941D987E85009B35C5 /* Range+Compatibility.swift */; };
+		4A5986981D987E85009B35C5 /* Range+Compatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5986941D987E85009B35C5 /* Range+Compatibility.swift */; };
 		4A6BF6FE1CD555880081B164 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BF6FC1CD555880081B164 /* Nimble.framework */; };
 		4A6BF6FF1CD555880081B164 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BF6FD1CD555880081B164 /* Quick.framework */; };
 		4A6BF7001CD555C20081B164 /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BF6FC1CD555880081B164 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -126,6 +130,7 @@
 
 /* Begin PBXFileReference section */
 		05A5B69D1C5EDD3C00097E4A /* Carthage.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Carthage.xcconfig; sourceTree = "<group>"; };
+		4A5986941D987E85009B35C5 /* Range+Compatibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Range+Compatibility.swift"; sourceTree = "<group>"; };
 		4A6BF6FC1CD555880081B164 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A6BF6FD1CD555880081B164 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A6BF7021CD5570A0081B164 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -254,6 +259,7 @@
 				CE6CDF811BE23BE800AE6393 /* Regex.swift */,
 				CE6CDF831BE2C52600AE6393 /* MatchResult.swift */,
 				CE4BE2961C1682CF005E4D4F /* Options.swift */,
+				4A5986941D987E85009B35C5 /* Range+Compatibility.swift */,
 				CEDA44A01C45045B00B78CAF /* String+ReplaceMatching.swift */,
 				CE6CDF851BE2C64D00AE6393 /* Foundation+Ranges.swift */,
 				CE26D9ED1C34D96A003CFB54 /* ThreadLocal.swift */,
@@ -349,7 +355,6 @@
 				CE6CDF5C1BE239DE00AE6393 /* Frameworks */,
 				CE6CDF5D1BE239DE00AE6393 /* Headers */,
 				CE6CDF5E1BE239DE00AE6393 /* Resources */,
-				CE41D9C41C3D28EA00AE0CF8 /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -387,7 +392,6 @@
 				CEC768651BE99A040066BA1E /* Frameworks */,
 				CEC768661BE99A040066BA1E /* Headers */,
 				CEC768671BE99A040066BA1E /* Resources */,
-				CE41D9C51C3D2C7D00AE0CF8 /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -425,7 +429,6 @@
 				CED611BF1C2A281E008D212A /* Frameworks */,
 				CED611C01C2A281E008D212A /* Headers */,
 				CED611C11C2A281E008D212A /* Resources */,
-				CE41D9C61C3D2C9600AE0CF8 /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -444,7 +447,6 @@
 				CED611D21C2A2C2E008D212A /* Frameworks */,
 				CED611D31C2A2C2E008D212A /* Headers */,
 				CED611D41C2A2C2E008D212A /* Resources */,
-				CE41D9C71C3D2CB400AE0CF8 /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -589,75 +591,13 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		CE41D9C41C3D28EA00AE0CF8 /* Swiftlint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = Swiftlint;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/bin/env rake swiftlint";
-			showEnvVarsInLog = 0;
-		};
-		CE41D9C51C3D2C7D00AE0CF8 /* Swiftlint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = Swiftlint;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/bin/env rake swiftlint";
-			showEnvVarsInLog = 0;
-		};
-		CE41D9C61C3D2C9600AE0CF8 /* Swiftlint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = Swiftlint;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/bin/env rake swiftlint";
-			showEnvVarsInLog = 0;
-		};
-		CE41D9C71C3D2CB400AE0CF8 /* Swiftlint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = Swiftlint;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/bin/env rake swiftlint";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		CE6CDF5B1BE239DE00AE6393 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				CE4BE2971C1682CF005E4D4F /* Options.swift in Sources */,
+				4A5986951D987E85009B35C5 /* Range+Compatibility.swift in Sources */,
 				CE6CDF841BE2C52600AE6393 /* MatchResult.swift in Sources */,
 				CEDA44A11C45045B00B78CAF /* String+ReplaceMatching.swift in Sources */,
 				CE6CDF821BE23BE800AE6393 /* Regex.swift in Sources */,
@@ -681,6 +621,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE4BE2981C168507005E4D4F /* Options.swift in Sources */,
+				4A5986961D987E85009B35C5 /* Range+Compatibility.swift in Sources */,
 				CEC768801BE99B690066BA1E /* Regex.swift in Sources */,
 				CEDA44A21C45045B00B78CAF /* String+ReplaceMatching.swift in Sources */,
 				CEC768811BE99B690066BA1E /* MatchResult.swift in Sources */,
@@ -704,6 +645,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CED611CB1C2A28CB008D212A /* Regex.swift in Sources */,
+				4A5986971D987E85009B35C5 /* Range+Compatibility.swift in Sources */,
 				CED611CC1C2A28CB008D212A /* MatchResult.swift in Sources */,
 				CEDA44A31C45045B00B78CAF /* String+ReplaceMatching.swift in Sources */,
 				CED611CD1C2A28CB008D212A /* Options.swift in Sources */,
@@ -717,6 +659,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CED611ED1C2A2CC4008D212A /* Regex.swift in Sources */,
+				4A5986981D987E85009B35C5 /* Range+Compatibility.swift in Sources */,
 				CED611EE1C2A2CC4008D212A /* MatchResult.swift in Sources */,
 				CEDA44A41C45045B00B78CAF /* String+ReplaceMatching.swift in Sources */,
 				CED611EF1C2A2CC4008D212A /* Options.swift in Sources */,

@@ -37,7 +37,7 @@ public struct Regex: CustomStringConvertible, CustomDebugStringConvertible {
   public init(_ pattern: StaticString, options: Options = []) {
     do {
       regularExpression = try NSRegularExpression(
-        pattern: pattern.stringValue,
+        pattern: pattern.description,
         options: options.toNSRegularExpressionOptions())
     } catch {
       preconditionFailure("unexpected error creating regex: \(error)")
@@ -54,8 +54,18 @@ public struct Regex: CustomStringConvertible, CustomDebugStringConvertible {
   ///
   /// - note: If the match is successful, `Regex.lastMatch` will be set with the
   ///   result of the match.
+#if swift(>=3.0)
+  public func matches(_ string: String) -> Bool {
+    return _matches(self, string)
+  }
+#else
   public func matches(string: String) -> Bool {
-    return match(string) != nil
+    return _matches(self, string)
+  }
+#endif
+
+  private let _matches: (Regex, String) -> Bool = { regex, string in
+    return regex.match(string) != nil
   }
 
   /// If the regex matches `string`, returns a `MatchResult` describing the
@@ -67,6 +77,15 @@ public struct Regex: CustomStringConvertible, CustomDebugStringConvertible {
   /// - returns: An optional `MatchResult` describing the first match, or `nil`.
   ///
   /// - note: If the match is successful, the result is also stored in `Regex.lastMatch`.
+#if swift(>=3.0)
+  public func match(_ string: String) -> MatchResult? {
+    let match = regularExpression
+      .firstMatch(in: string, range: string.entireRange)
+      .map { MatchResult(string, $0) }
+    Regex._lastMatch = match
+    return match
+  }
+#else
   public func match(string: String) -> MatchResult? {
     let match = regularExpression
       .firstMatchInString(string, options: [], range: string.entireRange)
@@ -74,6 +93,7 @@ public struct Regex: CustomStringConvertible, CustomDebugStringConvertible {
     Regex._lastMatch = match
     return match
   }
+#endif
 
   /// If the regex matches `string`, returns an array of `MatchResult`, describing
   /// every match inside `string`. If there are no matches, returns an empty
@@ -84,6 +104,15 @@ public struct Regex: CustomStringConvertible, CustomDebugStringConvertible {
   /// - returns: An array of `MatchResult` describing every match in `string`.
   ///
   /// - note: If there is at least one match, the first is stored in `Regex.lastMatch`.
+#if swift(>=3.0)
+  public func allMatches(_ string: String) -> [MatchResult] {
+    let matches = regularExpression
+      .matches(in: string, range: string.entireRange)
+      .map { MatchResult(string, $0) }
+    if let firstMatch = matches.first { Regex._lastMatch = firstMatch }
+    return matches
+  }
+#else
   public func allMatches(string: String) -> [MatchResult] {
     let matches = regularExpression
       .matchesInString(string, options: [], range: string.entireRange)
@@ -91,6 +120,7 @@ public struct Regex: CustomStringConvertible, CustomDebugStringConvertible {
     if let firstMatch = matches.first { Regex._lastMatch = firstMatch }
     return matches
   }
+#endif
 
   // MARK: Accessing the last match
 
