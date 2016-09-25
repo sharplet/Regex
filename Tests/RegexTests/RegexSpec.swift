@@ -24,13 +24,13 @@ final class RegexSpec: QuickSpec {
 
       it("provides access to the entire matched string") {
         let regex = Regex("foo (bar|baz)")
-        expect(regex.match("foo bar")?.matchedString).to(equal("foo bar"))
+        expect(regex.firstMatch(in: "foo bar")?.matchedString).to(equal("foo bar"))
       }
 
       it("can match a regex multiple times in the same string") {
         let regex = Regex("(foo)")
         let matches = regex
-          .allMatches("foo foo foo")
+          .allMatches(in: "foo foo foo")
           .flatMap { $0.captures }
           .flatMap { $0 }
         expect(matches).to(equal(["foo", "foo", "foo"]))
@@ -67,12 +67,12 @@ final class RegexSpec: QuickSpec {
       let regex = Regex("(a)?(b)")
 
       it("maintains the position of captures regardless of optionality") {
-        expect(regex.match("ab")?.captures[1]).to(equal("b"))
-        expect(regex.match("b")?.captures[1]).to(equal("b"))
+        expect(regex.firstMatch(in: "ab")?.captures[1]).to(equal("b"))
+        expect(regex.firstMatch(in: "b")?.captures[1]).to(equal("b"))
       }
 
       it("returns nil for an unmatched capture") {
-        expect(regex.match("b")?.captures[0]).to(beNil())
+        expect(regex.firstMatch(in: "b")?.captures[0]).to(beNil())
       }
     }
 
@@ -84,7 +84,7 @@ final class RegexSpec: QuickSpec {
         // U+221E INFINITY
         // U+1D11E MUSICAL SYMBOL G CLEF
         let string = "\u{61}\u{65}\u{301}\u{221E}\u{1D11E}"
-        let infinity = Regex("(\u{221E})").match(string)!.captures[0]!
+        let infinity = Regex("(\u{221E})").firstMatch(in: string)!.captures[0]!
         let rangeOfInfinity = string.range(of: infinity)!
         let location = string.distance(from: string.startIndex, to: rangeOfInfinity.lowerBound)
         let length = string.distance(from: rangeOfInfinity.lowerBound, to: rangeOfInfinity.upperBound)
@@ -97,15 +97,15 @@ final class RegexSpec: QuickSpec {
       it("can anchor matches to the start of each line") {
         let regex = Regex("(?m)^foo")
         let multilineString = "foo\nbar\nfoo\nbaz"
-        expect(regex.allMatches(multilineString).count).to(equal(2))
+        expect(regex.allMatches(in: multilineString).count).to(equal(2))
       }
 
       it("validates that the example in the README is correct") {
         let totallyUniqueExamples = Regex(
           "^(hello|foo).*$",
-          options: [.IgnoreCase, .AnchorsMatchLines])
+          options: [.ignoreCase, .anchorsMatchLines])
         let multilineText = "hello world\ngoodbye world\nFOOBAR\n"
-        let matchingLines = totallyUniqueExamples.allMatches(multilineText).map { $0.matchedString }
+        let matchingLines = totallyUniqueExamples.allMatches(in: multilineText).map { $0.matchedString }
         expect(matchingLines).to(equal(["hello world", "FOOBAR"]))
       }
     }
@@ -146,7 +146,7 @@ private func capture(_ captures: String..., from string: String) -> NonNilMatche
     failureMessage.stringValue = "expected <\(regex)> to capture <\(captures)> from <\(string)>"
 
     for expected in captures {
-      guard let match = regex.match(string), match.captures.contains(where: { $0 == expected }) else {
+      guard let match = regex.firstMatch(in: string), match.captures.contains(where: { $0 == expected }) else {
         return false
       }
     }

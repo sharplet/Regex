@@ -18,7 +18,7 @@ extension String {
   ///     - regex: A regular expression to match against `self`.
   ///     - template: A template string used to replace matches.
   public mutating func replaceFirstMatching(_ regex: Regex, with template: String) {
-    if let match = regex.match(self) {
+    if let match = regex.firstMatch(in: self) {
       let replacement = regex
         .regularExpression
         .replacementString(for: match.matchResult,
@@ -118,7 +118,7 @@ extension String {
   ///     - regex: A regular expression to match against `self`.
   ///     - template: A template string used to replace matches.
   public mutating func replaceAllMatching(_ regex: Regex, with template: String) {
-    for match in regex.allMatches(self).reversed() {
+    for match in regex.allMatches(in: self).reversed() {
       let replacement = regex
         .regularExpression
         .replacementString(for: match.matchResult,

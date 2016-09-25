@@ -57,7 +57,7 @@ public struct Regex: CustomStringConvertible, CustomDebugStringConvertible {
   /// - note: If the match is successful, `Regex.lastMatch` will be set with the
   ///   result of the match.
   public func matches(_ string: String) -> Bool {
-    return match(string) != nil
+    return firstMatch(in: string) != nil
   }
 
   /// If the regex matches `string`, returns a `MatchResult` describing the
@@ -69,7 +69,7 @@ public struct Regex: CustomStringConvertible, CustomDebugStringConvertible {
   /// - returns: An optional `MatchResult` describing the first match, or `nil`.
   ///
   /// - note: If the match is successful, the result is also stored in `Regex.lastMatch`.
-  public func match(_ string: String) -> MatchResult? {
+  public func firstMatch(in string: String) -> MatchResult? {
     let match = regularExpression
       .firstMatch(in: string, range: string.entireRange)
       .map { MatchResult(string, $0) }
@@ -86,7 +86,7 @@ public struct Regex: CustomStringConvertible, CustomDebugStringConvertible {
   /// - returns: An array of `MatchResult` describing every match in `string`.
   ///
   /// - note: If there is at least one match, the first is stored in `Regex.lastMatch`.
-  public func allMatches(_ string: String) -> [MatchResult] {
+  public func allMatches(in string: String) -> [MatchResult] {
     let matches = regularExpression
       .matches(in: string, range: string.entireRange)
       .map { MatchResult(string, $0) }
@@ -167,4 +167,20 @@ public func ~= (regex: Regex, string: String) -> Bool {
 /// - returns: `true` if the regular expression matches, otherwise `false`.
 public func ~= (string: String, regex: Regex) -> Bool {
   return regex.matches(string)
+}
+
+// MARK: Deprecations / Removals
+
+extension Regex {
+
+  @available(*, unavailable, renamed: "firstMatch(in:)")
+  public func match(_ string: String) -> MatchResult? {
+    fatalError()
+  }
+
+  @available(*, unavailable, renamed: "allMatches(in:)")
+  public func allMatches(_ string: String) -> [MatchResult] {
+    fatalError()
+  }
+
 }

@@ -13,11 +13,11 @@ public struct MatchResult {
   ///
   ///     let pattern = Regex("a*")
   ///
-  ///     if let match = pattern.match("aaa") {
+  ///     if let match = pattern.firstMatch(in: "aaa") {
   ///       match.matchedString // "aaa"
   ///     }
   ///
-  ///     if let match = pattern.match("bbb") {
+  ///     if let match = pattern.firstMatch(in: "bbb") {
   ///       match.matchedString // ""
   ///     }
   public var matchedString: String {
@@ -50,8 +50,8 @@ public struct MatchResult {
   ///
   ///     let regex = Regex("(a)?(b)")
   ///
-  ///     regex.match("ab")?.captures // [Optional("a"), Optional("b")]
-  ///     regex.match("b")?.captures // [nil, Optional("b")]
+  ///     regex.firstMatch(in: "ab")?.captures // [Optional("a"), Optional("b")]
+  ///     regex.firstMatch(in: "b")?.captures // [nil, Optional("b")]
   public var captures: [String?] {
     return _result.captures
   }
