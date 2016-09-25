@@ -85,9 +85,9 @@ final class RegexSpec: QuickSpec {
         // U+1D11E MUSICAL SYMBOL G CLEF
         let string = "\u{61}\u{65}\u{301}\u{221E}\u{1D11E}"
         let infinity = Regex("(\u{221E})").match(string)!.captures[0]!
-        let rangeOfInfinity = string.rangeOfString(infinity)!
-        let location = string.startIndex.distanceTo(rangeOfInfinity.startIndex)
-        let length = rangeOfInfinity.count
+        let rangeOfInfinity = string.range(of: infinity)!
+        let location = string.distance(from: string.startIndex, to: rangeOfInfinity.lowerBound)
+        let length = string.distance(from: rangeOfInfinity.lowerBound, to: rangeOfInfinity.upperBound)
         expect(location).to(equal(2))
         expect(length).to(equal(1))
       }
@@ -121,9 +121,9 @@ final class RegexSpec: QuickSpec {
       }
 
       it("resets the last match to nil when a match fails") {
-        "foo" ~= Regex("foo")
+        _ = "foo" ~= Regex("foo")
         expect(Regex.lastMatch).notTo(beNil())
-        "foo" ~= Regex("bar")
+        _ = "foo" ~= Regex("bar")
         expect(Regex.lastMatch).to(beNil())
       }
     }
@@ -131,7 +131,7 @@ final class RegexSpec: QuickSpec {
   }
 }
 
-private func match(string: String) -> NonNilMatcherFunc<Regex> {
+private func match(_ string: String) -> NonNilMatcherFunc<Regex> {
   return NonNilMatcherFunc { actual, failureMessage throws in
     let regex: Regex! = try actual.evaluate()
     failureMessage.stringValue = "expected <\(regex)> to match <\(string)>"
@@ -139,14 +139,14 @@ private func match(string: String) -> NonNilMatcherFunc<Regex> {
   }
 }
 
-private func capture(captures: String..., from string: String) -> NonNilMatcherFunc<Regex> {
+private func capture(_ captures: String..., from string: String) -> NonNilMatcherFunc<Regex> {
   return NonNilMatcherFunc { actual, failureMessage throws in
     let regex: Regex! = try actual.evaluate()
 
     failureMessage.stringValue = "expected <\(regex)> to capture <\(captures)> from <\(string)>"
 
     for expected in captures {
-      guard let match = regex.match(string) where match.captures.contains({ $0 == expected }) else {
+      guard let match = regex.match(string), match.captures.contains(where: { $0 == expected }) else {
         return false
       }
     }
