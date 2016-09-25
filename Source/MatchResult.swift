@@ -84,30 +84,31 @@ private final class _MatchResult {
   }
 
   lazy var range: Range<String.UTF16Index> = {
-    return self.rangeFromNSRange(self.result.range)!
+    return self.utf16Range(from: self.result.range)!
   }()
 
   lazy var captures: [String?] = {
-    return self.captureRanges.map { $0.map(self.substringFromRange) }
+    return self.captureRanges.map { $0.map(self.substring(from:)) }
   }()
 
   lazy var captureRanges: [Range<String.UTF16Index>?] = {
-    return self.result.ranges.dropFirst().map(self.rangeFromNSRange)
+    return self.result.ranges.dropFirst().map(self.utf16Range(from:))
   }()
 
   lazy var matchedString: String = {
-    return self.substringFromRange(self.rangeFromNSRange(self.result.range)!)
+    let range = self.utf16Range(from: self.result.range)!
+    return self.substring(from: range)
   }()
 
-  private func rangeFromNSRange(_ range: NSRange) -> Range<String.UTF16Index>? {
+  private func utf16Range(from range: NSRange) -> Range<String.UTF16Index>? {
     guard range.location != NSNotFound else { return nil }
     let start = string.startIndex.advanced(by: range.location)
     let end = start.advanced(by: range.length)
     return start..<end
   }
 
-  private func substringFromRange(_ range: Range<String.UTF16Index>) -> String {
-    return string[range].description
+  private func substring(from range: Range<String.UTF16Index>) -> String {
+    return String(describing: string[range])
   }
 
 }
