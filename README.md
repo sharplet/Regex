@@ -51,7 +51,7 @@ Capture:
 ```swift
 let greeting = Regex("hello (world|universe|swift)")
 
-if let subject = greeting.match("hello swift")?.captures[0] {
+if let subject = greeting.firstMatch(in: "hello swift")?.captures[0] {
   print("ohai \(subject)")
 }
 ```
@@ -85,7 +85,7 @@ Options:
 ```swift
 let totallyUniqueExamples = Regex("^(hello|foo).*$", options: [.IgnoreCase, .AnchorsMatchLines])
 let multilineText = "hello world\ngoodbye world\nFOOBAR\n"
-let matchingLines = totallyUniqueExamples.allMatches(multilineText).map { $0.matchedString }
+let matchingLines = totallyUniqueExamples.allMatches(in: multilineText).map { $0.matchedString }
 // ["hello world", "FOOBAR"]
 ```
 
