@@ -71,7 +71,7 @@ public struct Regex: CustomStringConvertible, CustomDebugStringConvertible {
   /// - note: If the match is successful, the result is also stored in `Regex.lastMatch`.
   public func firstMatch(in string: String) -> MatchResult? {
     let match = regularExpression
-      .firstMatch(in: string, range: string.entireRange)
+      .firstMatch(in: string, options: [], range: string.entireRange)
       .map { MatchResult(string, $0) }
     Regex._lastMatch = match
     return match
@@ -88,7 +88,7 @@ public struct Regex: CustomStringConvertible, CustomDebugStringConvertible {
   /// - note: If there is at least one match, the first is stored in `Regex.lastMatch`.
   public func allMatches(in string: String) -> [MatchResult] {
     let matches = regularExpression
-      .matches(in: string, range: string.entireRange)
+      .matches(in: string, options: [], range: string.entireRange)
       .map { MatchResult(string, $0) }
     if let firstMatch = matches.first { Regex._lastMatch = firstMatch }
     return matches
