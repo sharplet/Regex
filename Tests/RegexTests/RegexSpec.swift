@@ -61,6 +61,21 @@ final class RegexSpec: QuickSpec {
 
         expect(matched).to(beTrue())
       }
+
+      it("provides access to the matched range") {
+        let foobar = "foobar"
+        let match = Regex("f(oo)").firstMatch(in: foobar)!
+        expect(foobar[match.range]) == "foo"
+      }
+
+      it("provides access to capture ranges") {
+        let foobar = "foobar"
+        let match = Regex("f(oo)b(ar)").firstMatch(in: foobar)!
+        let firstCaptureRange = match.captureRanges[0]!
+        let secondCaptureRange = match.captureRanges[1]!
+        expect(foobar[firstCaptureRange]) == "oo"
+        expect(foobar[secondCaptureRange]) == "ar"
+      }
     }
 
     describe("optional capture groups") {
