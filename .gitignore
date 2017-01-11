@@ -1,3 +1,7 @@
+# swiftpm
+Package.pins
+Packages/
+
 # Xcode
 build/
 .build/
