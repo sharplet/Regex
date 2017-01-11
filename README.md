@@ -59,7 +59,7 @@ if let subject = greeting.firstMatch(in: "hello swift")?.captures[0] {
 Find and replace:
 
 ```swift
-"hello world".replacingFirstMatching("h(ello) (\\w+)", with: "H$1, $2!")
+"hello world".replacingFirst(matching: "h(ello) (\\w+)", with: "H$1, $2!")
 // "Hello, world!"
 ```
 
