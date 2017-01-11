@@ -24,7 +24,7 @@ public struct Regex: CustomStringConvertible, CustomDebugStringConvertible {
   public init(string pattern: String, options: Options = []) throws {
     regularExpression = try NSRegularExpression(
       pattern: pattern,
-      options: options.toNSRegularExpressionOptions())
+      options: .init(options))
   }
 
   /// Create a `Regex` based on a static pattern string.
@@ -44,7 +44,7 @@ public struct Regex: CustomStringConvertible, CustomDebugStringConvertible {
     do {
       regularExpression = try NSRegularExpression(
         pattern: pattern.description,
-        options: options.toNSRegularExpressionOptions())
+        options: .init(options))
     } catch {
       preconditionFailure("unexpected error creating regex: \(error)")
     }

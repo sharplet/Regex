@@ -45,18 +45,14 @@ public struct Options: OptionSet {
 
 }
 
-internal extension Options {
+internal extension NSRegularExpression.Options {
 
-  /// Transform an instance of `Regex.Options` into the equivalent `NSRegularExpression.Options`.
-  ///
-  /// - returns: The equivalent `NSRegularExpression.Options`.
-  func toNSRegularExpressionOptions() -> NSRegularExpression.Options {
-    var options = NSRegularExpression.Options()
-    if contains(.ignoreCase) { options.insert(.caseInsensitive) }
-    if contains(.ignoreMetacharacters) { options.insert(.ignoreMetacharacters) }
-    if contains(.anchorsMatchLines) { options.insert(.anchorsMatchLines) }
-    if contains(.dotMatchesLineSeparators) { options.insert(.dotMatchesLineSeparators) }
-    return options
+  init(_ options: Options) {
+    self = []
+    if options.contains(.ignoreCase) { insert(.caseInsensitive) }
+    if options.contains(.ignoreMetacharacters) { insert(.ignoreMetacharacters) }
+    if options.contains(.anchorsMatchLines) { insert(.anchorsMatchLines) }
+    if options.contains(.dotMatchesLineSeparators) { insert(.dotMatchesLineSeparators) }
   }
 
 }
