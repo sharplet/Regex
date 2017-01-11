@@ -72,12 +72,17 @@ namespace :test do
   end
 
   desc "Run the SwiftPM tests"
-  task :swiftpm do
-    pretty "swift test"
+  task :package do
+    begin
+      cp ".Package.test.swift", "Package.swift"
+      sh "swift test"
+    ensure
+      sh "git checkout HEAD -- Package.swift"
+    end
   end
 end
 
 desc "Run all tests"
-task :test => ["test:osx", "test:ios", "test:tvos", "test:watchos", "test:swiftpm"]
+task :test => ["test:osx", "test:ios", "test:tvos", "test:watchos", "test:package"]
 
 task :default => :test
