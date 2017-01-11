@@ -1,5 +1,9 @@
 import Foundation
 
+#if os(Linux)
+typealias NSRegularExpression = RegularExpression
+#endif
+
 public struct Regex: CustomStringConvertible, CustomDebugStringConvertible {
 
   // MARK: Initialisation
