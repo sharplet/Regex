@@ -102,7 +102,7 @@ let package = Package(
   name: "MyPackage",
   dependencies: [
     // other dependencies...
-    .Package(url: "https://github.com/sharplet/Regex.git", majorVersion: 0, minor: 4),
+    .Package(url: "https://github.com/sharplet/Regex.git", majorVersion: 1),
   ]
 )
 ```
@@ -112,7 +112,7 @@ let package = Package(
 Put this in your Cartfile:
 
 ```
-github "sharplet/Regex" ~> 0.4
+github "sharplet/Regex" ~> 1.0
 ```
 
 #### CocoaPods
@@ -120,7 +120,7 @@ github "sharplet/Regex" ~> 0.4
 Put this in your Podfile:
 
 ```ruby
-pod "STRegex", "~> 0.4.0"
+pod "STRegex", "~> 1.0"
 ```
 
 
