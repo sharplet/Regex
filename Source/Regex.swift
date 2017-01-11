@@ -20,7 +20,7 @@ public struct Regex: CustomStringConvertible, CustomDebugStringConvertible {
   ///     - options: Configure regular expression matching options.
   ///       For details, see `Regex.Options`.
   ///
-  /// - throws: A value of `ErrorType` describing the invalid regular expression.
+  /// - throws: An error describing the invalid regular expression.
   public init(string pattern: String, options: Options = []) throws {
     regularExpression = try NSRegularExpression(
       pattern: pattern,
