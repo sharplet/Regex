@@ -17,7 +17,7 @@ extension String {
   /// - parameters:
   ///     - regex: A regular expression to match against `self`.
   ///     - template: A template string used to replace matches.
-  public mutating func replaceFirstMatching(_ regex: Regex, with template: String) {
+  public mutating func replaceFirst(matching regex: Regex, with template: String) {
     if let match = regex.firstMatch(in: self) {
       let replacement = regex
         .regularExpression
@@ -48,8 +48,8 @@ extension String {
   /// - parameters:
   ///     - pattern: A regular expression pattern to match against `self`.
   ///     - template: A template string used to replace matches.
-  public mutating func replaceFirstMatching(_ pattern: StaticString, with template: String) {
-    replaceFirstMatching(Regex(pattern), with: template)
+  public mutating func replaceFirst(matching pattern: StaticString, with template: String) {
+    replaceFirst(matching: Regex(pattern), with: template)
   }
 
 
@@ -71,9 +71,9 @@ extension String {
   ///     - template: A template string used to replace matches.
   ///
   /// - returns: A string with the first match of `regex` replaced by `template`.
-  public func replacingFirstMatching(_ regex: Regex, with template: String) -> String {
+  public func replacingFirst(matching regex: Regex, with template: String) -> String {
     var string = self
-    string.replaceFirstMatching(regex, with: template)
+    string.replaceFirst(matching: regex, with: template)
     return string
   }
 
@@ -97,8 +97,8 @@ extension String {
   ///     - template: A template string used to replace matches.
   ///
   /// - returns: A string with the first match of `pattern` replaced by `template`.
-  public func replacingFirstMatching(_ pattern: StaticString, with template: String) -> String {
-    return replacingFirstMatching(Regex(pattern), with: template)
+  public func replacingFirst(matching pattern: StaticString, with template: String) -> String {
+    return replacingFirst(matching: Regex(pattern), with: template)
   }
 
 
@@ -117,7 +117,7 @@ extension String {
   /// - parameters:
   ///     - regex: A regular expression to match against `self`.
   ///     - template: A template string used to replace matches.
-  public mutating func replaceAllMatching(_ regex: Regex, with template: String) {
+  public mutating func replaceAll(matching regex: Regex, with template: String) {
     for match in regex.allMatches(in: self).reversed() {
       let replacement = regex
         .regularExpression
@@ -148,8 +148,8 @@ extension String {
   /// - parameters:
   ///     - pattern: A regular expression pattern to match against `self`.
   ///     - template: A template string used to replace matches.
-  public mutating func replaceAllMatching(_ pattern: StaticString, with template: String) {
-    replaceAllMatching(Regex(pattern), with: template)
+  public mutating func replaceAll(matching pattern: StaticString, with template: String) {
+    replaceAll(matching: Regex(pattern), with: template)
   }
 
 
@@ -171,9 +171,9 @@ extension String {
   ///     - template: A template string used to replace matches.
   ///
   /// - returns: A string with all matches of `regex` replaced by `template`.
-  public func replacingAllMatching(_ regex: Regex, with template: String) -> String {
+  public func replacingAll(matching regex: Regex, with template: String) -> String {
     var string = self
-    string.replaceAllMatching(regex, with: template)
+    string.replaceAll(matching: regex, with: template)
     return string
   }
 
@@ -197,8 +197,50 @@ extension String {
   ///     - template: A template string used to replace matches.
   ///
   /// - returns: A string with all matches of `pattern` replaced by `template`.
-  public func replacingAllMatching(_ pattern: StaticString, with template: String) -> String {
-    return replacingAllMatching(Regex(pattern), with: template)
+  public func replacingAll(matching pattern: StaticString, with template: String) -> String {
+    return replacingAll(matching: Regex(pattern), with: template)
   }
 
+}
+
+public extension String {
+  @available(*, unavailable, renamed: "replaceFirst(matching:with:)")
+  public mutating func replaceFirstMatching(_: Regex, with _: String) {
+    fatalError()
+  }
+
+  @available(*, unavailable, renamed: "replacingFirst(matching:with:)")
+  public func replacingFirstMatching(_: Regex, with _: String) -> String {
+    fatalError()
+  }
+
+  @available(*, unavailable, renamed: "replaceFirst(matching:with:)")
+  public mutating func replaceFirstMatching(_: String, with _: String) {
+    fatalError()
+  }
+
+  @available(*, unavailable, renamed: "replacingFirst(matching:with:)")
+  public func replacingFirstMatching(_: String, with _: String) -> String {
+    fatalError()
+  }
+
+  @available(*, unavailable, renamed: "replaceAll(matching:with:)")
+  public mutating func replaceAllMatching(_: Regex, with _: String) {
+    fatalError()
+  }
+
+  @available(*, unavailable, renamed: "replacingAll(matching:with:)")
+  public func replacingAllMatching(_: Regex, with _: String) -> String {
+    fatalError()
+  }
+
+  @available(*, unavailable, renamed: "replaceAll(matching:with:)")
+  public mutating func replaceAllMatching(_: String, with _: String) {
+    fatalError()
+  }
+
+  @available(*, unavailable, renamed: "replacingAll(matching:with:)")
+  public func replacingAllMatching(_: String, with _: String) -> String {
+    fatalError()
+  }
 }
