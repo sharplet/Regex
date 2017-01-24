@@ -23,7 +23,9 @@ internal final class ThreadLocal<T> {
 #endif
     }
     set {
-#if swift(>=3.0)
+#if os(Linux)
+      _currentThread.threadDictionary[key] = (newValue as? AnyObject) ?? newValue.map(Box.init)
+#elseif swift(>=3.0)
       _currentThread.threadDictionary[key] = newValue
 #else
       _currentThread.threadDictionary[key] = (newValue as? AnyObject) ?? newValue.map(Box.init)

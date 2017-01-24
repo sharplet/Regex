@@ -1,7 +1,7 @@
 #if swift(>=3.0)
-private typealias _OptionSet = OptionSet
+    private typealias _OptionSet = OptionSet
 #else
-private typealias _OptionSet = OptionSetType
+    private typealias _OptionSet = OptionSetType
 #endif
 
 /// `Options` defines alternate behaviours of regular expressions when matching.
@@ -49,10 +49,12 @@ public struct Options: _OptionSet {
 
 }
 
-#if swift(>=3.0)
-typealias _RegularExpressionOptions = NSRegularExpression.Options
+#if os(Linux)
+    typealias _RegularExpressionOptions = RegularExpression.Options
+#elseif swift(>=3.0)
+    typealias _RegularExpressionOptions = NSRegularExpression.Options
 #else
-typealias _RegularExpressionOptions = NSRegularExpressionOptions
+    typealias _RegularExpressionOptions = NSRegularExpressionOptions
 #endif
 
 internal extension Options {
