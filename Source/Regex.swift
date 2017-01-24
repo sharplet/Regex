@@ -82,7 +82,7 @@ public struct Regex: CustomStringConvertible, CustomDebugStringConvertible {
   ///
   /// - note: If the match is successful, the result is also stored in `Regex.lastMatch`.
 #if os(Linux)
-  public func match(string: String) -> MatchResult? {
+  public func match(_ string: String) -> MatchResult? {
     let match = regularExpression
       .firstMatch(in: string, options: [], range: string.entireRange)
       .map { MatchResult(string, $0) }
@@ -117,7 +117,7 @@ public struct Regex: CustomStringConvertible, CustomDebugStringConvertible {
   ///
   /// - note: If there is at least one match, the first is stored in `Regex.lastMatch`.
 #if os(Linux)
-  public func allMatches(string: String) -> [MatchResult] {
+  public func allMatches(_ string: String) -> [MatchResult] {
     let matches = regularExpression
       .matches(in: string, options: [], range: string.entireRange)
       .map { MatchResult(string, $0) }
