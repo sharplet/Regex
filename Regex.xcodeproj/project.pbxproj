@@ -491,11 +491,11 @@
 				TargetAttributes = {
 					CE6CDF5F1BE239DE00AE6393 = {
 						CreatedOnToolsVersion = 7.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0900;
 					};
 					CE6CDF691BE239DE00AE6393 = {
 						CreatedOnToolsVersion = 7.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0900;
 					};
 					CEC768681BE99A040066BA1E = {
 						CreatedOnToolsVersion = 7.1;
@@ -745,6 +745,7 @@
 				PROJECT_NAME = Regex;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_PRODUCT_BUNDLE_IDENTIFIER = "$(ORGANISATION_IDENTIFIER).$(TEST_PRODUCT_NAME)";
@@ -795,6 +796,7 @@
 				ORGANISATION_IDENTIFIER = me.sharplet;
 				PROJECT_NAME = Regex;
 				SDKROOT = iphoneos;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_PRODUCT_BUNDLE_IDENTIFIER = "$(ORGANISATION_IDENTIFIER).$(TEST_PRODUCT_NAME)";
