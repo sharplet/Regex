@@ -1,8 +1,6 @@
-import PackageDescription
+// swift-tools-version:3.1
 
-#if os(Linux) && !swift(>=3.1)
-fatalError("On Linux this package requires Swift >=3.1")
-#endif
+import PackageDescription
 
 let package = Package(
   name: "Regex"
