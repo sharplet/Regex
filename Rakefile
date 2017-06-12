@@ -70,7 +70,7 @@ namespace :test do
   desc "Run the SwiftPM tests"
   task :package do
     begin
-      cp ".Package.test.swift", "Package.swift"
+      sh "patch Package.swift swift-test.patch"
       sh "swift test"
     ensure
       sh "git checkout HEAD -- Package.swift"
