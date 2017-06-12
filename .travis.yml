@@ -10,21 +10,13 @@ matrix:
     - env: ACTION=test:tvos
     - env: ACTION=test:watchos
     - env: ACTION=build:all
-    - env: ACTION=test:package SWIFT_VERSION=3.0.2
+    - env: ACTION=test:package
+    - env: ACTION=test:package
       os: linux
       language: generic
       sudo: required
       dist: trusty
       before_install:
         - eval bin/setup-swiftenv.bash
-    - env: ACTION=test:package SWIFT_VERSION=DEVELOPMENT-SNAPSHOT-2017-01-05-a
-      os: linux
-      language: generic
-      sudo: required
-      dist: trusty
-      before_install:
-        - eval bin/setup-swiftenv.bash
-  allow_failures:
-    - env: ACTION=test:package SWIFT_VERSION=DEVELOPMENT-SNAPSHOT-2017-01-05-a
   fast_finish: true
 script: rake "$ACTION"
