@@ -1,5 +1,6 @@
 # swiftpm
 Package.pins
+Package.resolved
 Packages/
 
 # Xcode
