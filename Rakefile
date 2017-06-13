@@ -1,6 +1,6 @@
 desc "Set up the project for development"
 task :setup do
-  sh "carthage bootstrap --no-build"
+  sh "carthage bootstrap --cache-builds"
 end
 
 namespace :build do
@@ -48,17 +48,17 @@ namespace :test do
 
   desc "Run tests on OS X"
   task :osx do
-    pretty "xcodebuild build-for-testing test-without-building -workspace Regex.xcworkspace -scheme Regex-OSX"
+    pretty "xcodebuild build-for-testing test-without-building -project Regex.xcodeproj -scheme Regex-OSX"
   end
 
   desc "Run tests on iOS Simulator"
   task :ios do
-    pretty "xcodebuild build-for-testing test-without-building -workspace Regex.xcworkspace -scheme Regex-iOS -destination 'platform=iOS Simulator,name=iPhone 6s'"
+    pretty "xcodebuild build-for-testing test-without-building -project Regex.xcodeproj -scheme Regex-iOS -destination 'platform=iOS Simulator,name=iPhone 6s'"
   end
 
   desc "Run tests on tvOS Simulator"
   task :tvos do
-    pretty "xcodebuild build-for-testing test-without-building -workspace Regex.xcworkspace -scheme Regex-tvOS -destination 'platform=tvOS Simulator,name=Apple TV 1080p'"
+    pretty "xcodebuild build-for-testing test-without-building -project Regex.xcodeproj -scheme Regex-tvOS -destination 'platform=tvOS Simulator,name=Apple TV 1080p'"
   end
 
   desc "Run the SwiftPM tests"
