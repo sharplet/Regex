@@ -1,0 +1,10 @@
+#!/bin/sh
+
+set -e
+set -o pipefail
+
+if [ $# = 1 ]; then
+  swiftenv install --list-snapshots 2>/dev/null | grep "$1" | tail -1
+else
+  swiftenv install --list-snapshots 2>/dev/null | tail -1
+fi
