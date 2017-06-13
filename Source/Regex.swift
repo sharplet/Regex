@@ -169,6 +169,24 @@ public func ~= (string: String, regex: Regex) -> Bool {
   return regex.matches(string)
 }
 
+// MARK: Conformances
+
+extension Regex: Equatable {
+
+  public static func == (lhs: Regex, rhs: Regex) -> Bool {
+    return lhs.regularExpression == rhs.regularExpression
+  }
+
+}
+
+extension Regex: Hashable {
+
+  public var hashValue: Int {
+    return regularExpression.hashValue
+  }
+
+}
+
 // MARK: Deprecations / Removals
 
 extension Regex {
