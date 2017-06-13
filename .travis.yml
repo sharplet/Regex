@@ -16,7 +16,7 @@ matrix:
       language: generic
       sudo: required
       dist: trusty
-      before_install:
-        - eval bin/setup-swiftenv.bash
+      install:
+        - eval "$(cat bin/setup-swiftenv.bash)"
   fast_finish: true
 script: rake "$ACTION"
