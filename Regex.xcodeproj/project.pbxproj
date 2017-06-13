@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A2893A71EF07BA10081B24E /* CodableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2893A61EF07BA10081B24E /* CodableSpec.swift */; };
+		4A2893A81EF07BA10081B24E /* CodableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2893A61EF07BA10081B24E /* CodableSpec.swift */; };
+		4A2893A91EF07BA10081B24E /* CodableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2893A61EF07BA10081B24E /* CodableSpec.swift */; };
 		4A2BB5531EF0489E000A32F2 /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A8249751EF0445600002E42 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4A2BB5541EF0489E000A32F2 /* Quick.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A8249761EF0445600002E42 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4A2BB5551EF048A6000A32F2 /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A8249711EF0444A00002E42 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -126,6 +129,7 @@
 
 /* Begin PBXFileReference section */
 		05A5B69D1C5EDD3C00097E4A /* Carthage.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Carthage.xcconfig; sourceTree = "<group>"; };
+		4A2893A61EF07BA10081B24E /* CodableSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableSpec.swift; sourceTree = "<group>"; };
 		4A698B871E130A60006951B2 /* OptionsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsSpec.swift; sourceTree = "<group>"; };
 		4A698B881E130A60006951B2 /* RegexSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexSpec.swift; sourceTree = "<group>"; };
 		4A698B891E130A60006951B2 /* StringReplacementSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringReplacementSpec.swift; sourceTree = "<group>"; };
@@ -229,6 +233,7 @@
 				4A698B871E130A60006951B2 /* OptionsSpec.swift */,
 				4A698B881E130A60006951B2 /* RegexSpec.swift */,
 				4A698B891E130A60006951B2 /* StringReplacementSpec.swift */,
+				4A2893A61EF07BA10081B24E /* CodableSpec.swift */,
 				CE6CDF7B1BE23A2E00AE6393 /* Supporting Files */,
 			);
 			path = RegexTests;
@@ -613,6 +618,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A698B951E130A6C006951B2 /* StringReplacementSpec.swift in Sources */,
+				4A2893A71EF07BA10081B24E /* CodableSpec.swift in Sources */,
 				4A698B941E130A6C006951B2 /* RegexSpec.swift in Sources */,
 				4A698B931E130A6C006951B2 /* OptionsSpec.swift in Sources */,
 			);
@@ -636,6 +642,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A698B981E130A6D006951B2 /* StringReplacementSpec.swift in Sources */,
+				4A2893A81EF07BA10081B24E /* CodableSpec.swift in Sources */,
 				4A698B971E130A6D006951B2 /* RegexSpec.swift in Sources */,
 				4A698B961E130A6D006951B2 /* OptionsSpec.swift in Sources */,
 			);
@@ -672,6 +679,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A698B9B1E130A6E006951B2 /* StringReplacementSpec.swift in Sources */,
+				4A2893A91EF07BA10081B24E /* CodableSpec.swift in Sources */,
 				4A698B9A1E130A6E006951B2 /* RegexSpec.swift in Sources */,
 				4A698B991E130A6E006951B2 /* OptionsSpec.swift in Sources */,
 			);

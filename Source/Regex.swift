@@ -187,6 +187,22 @@ extension Regex: Hashable {
 
 }
 
+#if swift(>=3.2)
+extension Regex: Codable {
+
+  public init(from decoder: Decoder) throws {
+    let string = try decoder.singleValueContainer().decode(String.self)
+    try self.init(string: string)
+  }
+
+  public func encode(to encoder: Encoder) throws {
+    var container = encoder.singleValueContainer()
+    try container.encode(regularExpression.pattern)
+  }
+
+}
+#endif
+
 // MARK: Deprecations / Removals
 
 extension Regex {
