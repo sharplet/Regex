@@ -1,22 +1,21 @@
-require_relative "lib/suite_task"
-
 desc "Set up the project for development"
 task :setup do
   sh "carthage bootstrap --no-build"
 end
 
 namespace :build do
-  desc "Build for all platforms"
-  suite :all => [:pod, :framework, :package]
-
   desc "Build and validate the podspec"
   task :pod do
     sh "pod lib lint *.podspec --quick --no-clean"
   end
 
-  desc "Build the framework"
-  task :framework do
-    sh "carthage build --no-skip-current"
+  namespace :carthage do
+    %w[iOS macOS tvOS watchOS].each do |platform|
+      desc "Build the Carthage framework on #{platform}"
+      task platform.downcase.to_sym do
+        sh "carthage build --platform #{platform} --no-skip-current"
+      end
+    end
   end
 
   desc "Build the Swift package"
@@ -60,11 +59,6 @@ namespace :test do
   desc "Run tests on tvOS Simulator"
   task :tvos do
     pretty "xcodebuild build-for-testing test-without-building -workspace Regex.xcworkspace -scheme Regex-tvOS -destination 'platform=tvOS Simulator,name=Apple TV 1080p'"
-  end
-
-  desc "Build for watchOS Simulator"
-  task :watchos do
-    pretty "xcodebuild build -workspace Regex.xcworkspace -scheme Regex-watchOS -destination 'platform=watchOS Simulator,name=Apple Watch - 42mm'"
   end
 
   desc "Run the SwiftPM tests"

@@ -8,8 +8,12 @@ matrix:
     - env: ACTION=test:osx
     - env: ACTION=test:ios
     - env: ACTION=test:tvos
-    - env: ACTION=test:watchos
-    - env: ACTION=build:all
+    - env: ACTION=build:carthage:ios
+    - env: ACTION=build:carthage:macos
+    - env: ACTION=build:carthage:tvos
+    - env: ACTION=build:carthage:watchos
+    - env: ACTION=build:pod
+    - env: ACTION=build:package
     - env: ACTION=test:package
     - env: ACTION=test:package
       os: linux
