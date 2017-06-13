@@ -21,10 +21,6 @@ namespace :build do
 
   desc "Build the Swift package"
   task :package do
-    if ENV["TRAVIS"] == "true"
-      puts "warning: Skipping swift build while Swift 3 is in development"
-      next
-    end
     sh "swift build"
   end
 end
@@ -70,9 +66,25 @@ namespace :test do
   task :watchos do
     pretty "xcodebuild build -workspace Regex.xcworkspace -scheme Regex-watchOS -destination 'platform=watchOS Simulator,name=Apple Watch - 42mm'"
   end
+
+  desc "Run the SwiftPM tests"
+  task :package do
+    begin
+      sh "patch Package.swift swift-test.patch"
+      sh "swift test"
+    ensure
+      sh "git checkout HEAD -- Package.swift"
+    end
+  end
 end
 
 desc "Run all tests"
-task :test => ["test:osx", "test:ios", "test:tvos", "test:watchos"]
+task :test => ["test:osx", "test:ios", "test:tvos", "test:watchos", "test:package"]
+
+desc "Open project in a docker container"
+task :docker do
+  sh "docker build -t regex ."
+  exec "docker run -v $PWD:/Regex -w /Regex -it regex"
+end
 
 task :default => :test

@@ -1,12 +1,22 @@
 language: objective-c
-osx_image: xcode8
+osx_image: xcode8.3
 install:
   - gem install xcpretty
   - rake setup
-env:
-  - ACTION=test:osx
-  - ACTION=test:ios
-  - ACTION=test:tvos
-  - ACTION=test:watchos
-  - ACTION=build:all
+matrix:
+  include:
+    - env: ACTION=test:osx
+    - env: ACTION=test:ios
+    - env: ACTION=test:tvos
+    - env: ACTION=test:watchos
+    - env: ACTION=build:all
+    - env: ACTION=test:package
+    - env: ACTION=test:package
+      os: linux
+      language: generic
+      sudo: required
+      dist: trusty
+      install:
+        - eval "$(cat bin/setup-swiftenv.bash)"
+  fast_finish: true
 script: rake "$ACTION"

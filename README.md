@@ -51,7 +51,7 @@ Capture:
 ```swift
 let greeting = Regex("hello (world|universe|swift)")
 
-if let subject = greeting.match("hello swift")?.captures[0] {
+if let subject = greeting.firstMatch(in: "hello swift")?.captures[0] {
   print("ohai \(subject)")
 }
 ```
@@ -59,7 +59,7 @@ if let subject = greeting.match("hello swift")?.captures[0] {
 Find and replace:
 
 ```swift
-"hello world".replacingFirstMatching("h(ello) (\\w+)", with: "H$1, $2!")
+"hello world".replacingFirst(matching: "h(ello) (\\w+)", with: "H$1, $2!")
 // "Hello, world!"
 ```
 
@@ -85,7 +85,7 @@ Options:
 ```swift
 let totallyUniqueExamples = Regex("^(hello|foo).*$", options: [.IgnoreCase, .AnchorsMatchLines])
 let multilineText = "hello world\ngoodbye world\nFOOBAR\n"
-let matchingLines = totallyUniqueExamples.allMatches(multilineText).map { $0.matchedString }
+let matchingLines = totallyUniqueExamples.allMatches(in: multilineText).map { $0.matchedString }
 // ["hello world", "FOOBAR"]
 ```
 
@@ -102,7 +102,7 @@ let package = Package(
   name: "MyPackage",
   dependencies: [
     // other dependencies...
-    .Package(url: "https://github.com/sharplet/Regex.git", majorVersion: 0, minor: 4),
+    .Package(url: "https://github.com/sharplet/Regex.git", majorVersion: 1),
   ]
 )
 ```
@@ -112,7 +112,7 @@ let package = Package(
 Put this in your Cartfile:
 
 ```
-github "sharplet/Regex" ~> 0.4
+github "sharplet/Regex" ~> 1.0
 ```
 
 #### CocoaPods
@@ -120,7 +120,7 @@ github "sharplet/Regex" ~> 0.4
 Put this in your Podfile:
 
 ```ruby
-pod "STRegex", "~> 0.4.0"
+pod "STRegex", "~> 1.0"
 ```
 
 
@@ -145,10 +145,11 @@ $ brew update && brew install carthage
 Regex uses [SwiftLint](https://github.com/realm/SwiftLint) to validate code style.
 SwiftLint is automatically run against pull requests using [Hound CI](https://houndci.com/).
 
-To enable SwiftLint warnings in Xcode, just make sure it's installed and available on Xcode's PATH:
+To run SwiftLint locally:
 
 ```
 $ brew install swiftlint
+$ rake swiftlint
 ```
 
 `xcpretty` is also recommended, for prettifying test output:
