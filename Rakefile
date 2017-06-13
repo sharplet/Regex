@@ -1,6 +1,11 @@
 desc "Set up the project for development"
 task :setup do
-  sh "carthage bootstrap --cache-builds"
+  platform = ENV.fetch("PLATFORM", nil)
+  if platform
+    sh "carthage bootstrap --cache-builds --platform #{platform}"
+  else
+    sh "carthage bootstrap --cache-builds"
+  end
 end
 
 namespace :build do

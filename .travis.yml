@@ -3,14 +3,20 @@ osx_image: xcode8.3
 cache:
   directories:
     - Carthage
-install:
-  - gem install xcpretty
-  - rake setup
 matrix:
   include:
     - env: ACTION=test:osx
+      install:
+        - gem install xcpretty
+        - rake setup PLATFORM=macOS
     - env: ACTION=test:ios
+      install:
+        - gem install xcpretty
+        - rake setup PLATFORM=iOS
     - env: ACTION=test:tvos
+      install:
+        - gem install xcpretty
+        - rake setup PLATFORM=tvOS
     - env: ACTION=build:carthage:ios
     - env: ACTION=build:carthage:macos
     - env: ACTION=build:carthage:tvos
