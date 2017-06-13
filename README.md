@@ -98,6 +98,20 @@ let matchingLines = totallyUniqueExamples.allMatches(in: multilineText).map { $0
 Add a dependency to your `Package.swift`:
 
 ```swift
+// Swift 4
+
+let package = Package(
+  name: "MyPackage",
+  dependencies: [
+    // other dependencies...
+    .package(url: "https://github.com/sharplet/Regex.git", from: "1.0.0"),
+  ]
+)
+```
+
+```swift
+// Swift 3
+
 let package = Package(
   name: "MyPackage",
   dependencies: [
