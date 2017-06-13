@@ -81,4 +81,10 @@ end
 desc "Run all tests"
 task :test => ["test:osx", "test:ios", "test:tvos", "test:watchos", "test:package"]
 
+desc "Open project in a docker container"
+task :docker do
+  sh "docker build -t regex ."
+  exec "docker run -v $PWD:/Regex -w /Regex -it regex"
+end
+
 task :default => :test
