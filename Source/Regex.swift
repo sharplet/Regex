@@ -169,6 +169,40 @@ public func ~= (string: String, regex: Regex) -> Bool {
   return regex.matches(string)
 }
 
+// MARK: Conformances
+
+extension Regex: Equatable {
+
+  public static func == (lhs: Regex, rhs: Regex) -> Bool {
+    return lhs.regularExpression == rhs.regularExpression
+  }
+
+}
+
+extension Regex: Hashable {
+
+  public var hashValue: Int {
+    return regularExpression.hashValue
+  }
+
+}
+
+#if swift(>=3.2)
+extension Regex: Codable {
+
+  public init(from decoder: Decoder) throws {
+    let string = try decoder.singleValueContainer().decode(String.self)
+    try self.init(string: string)
+  }
+
+  public func encode(to encoder: Encoder) throws {
+    var container = encoder.singleValueContainer()
+    try container.encode(regularExpression.pattern)
+  }
+
+}
+#endif
+
 // MARK: Deprecations / Removals
 
 extension Regex {
