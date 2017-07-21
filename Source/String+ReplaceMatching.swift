@@ -52,8 +52,6 @@ extension String {
     replaceFirst(matching: Regex(pattern), with: template)
   }
 
-
-
   // MARK: Replacing the first match (nonmutating)
 
   /// Returns a new string where the first match of `regex` is replaced with
@@ -100,8 +98,6 @@ extension String {
   public func replacingFirst(matching pattern: StaticString, with template: String) -> String {
     return replacingFirst(matching: Regex(pattern), with: template)
   }
-
-
 
   // MARK: Replacing all matches (mutating)
 
@@ -151,8 +147,6 @@ extension String {
   public mutating func replaceAll(matching pattern: StaticString, with template: String) {
     replaceAll(matching: Regex(pattern), with: template)
   }
-
-
 
   // MARK: Replacing all matches (nonmutating)
 
