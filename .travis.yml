@@ -24,7 +24,7 @@ matrix:
     - env: ACTION=build:pod
     - env: ACTION=build:package
     - env: ACTION=test:package
-    - env: ACTION=test:package
+    - env: ACTION=test:package SWIFT_VERSION=4.0
       os: linux
       language: generic
       sudo: required
