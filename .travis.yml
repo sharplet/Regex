@@ -25,6 +25,8 @@ matrix:
     - env: ACTION=build:package
     - env: ACTION=test:package
     - env: ACTION=test:package SWIFT_VERSION=4.0
+      osx_image: xcode9
+    - env: ACTION=test:package
       os: linux
       language: generic
       sudo: required
