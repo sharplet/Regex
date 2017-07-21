@@ -25,13 +25,7 @@ public struct MatchResult {
   }
 
   /// The range of the matched string.
-  ///
-  /// - note: This property currently assumes that it is always possible to
-  ///   create a valid character range based on the underlying UTF-16 range.
-  ///   If for some reason this turns out not to be true, it will trap.
-  ///
-  /// - returns: The character range of the matched string.
-  internal var range: Range<String.Index> {
+  public var range: Range<String.Index> {
     let utf16range = _result.range
     let start = String.Index(utf16range.lowerBound, within: _string)!
     let end = String.Index(utf16range.upperBound, within: _string)!
