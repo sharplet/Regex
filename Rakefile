@@ -68,12 +68,7 @@ namespace :test do
 
   desc "Run the SwiftPM tests"
   task :package do
-    begin
-      sh "patch Package.swift swift-test.patch"
-      sh "swift test"
-    ensure
-      sh "git checkout HEAD -- Package.swift"
-    end
+    sh "env SWIFT_PACKAGE_TEST_REGEX=true swift test"
   end
 end
 

@@ -147,41 +147,62 @@ See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Development Setup
 
-Development is currently only supported on Mac OS X. An Xcode project is
-provided for your convenience.
+### Swift Package Manager
 
-Regex depends on Carthage for development:
+Build and run the tests:
 
 ```
-$ brew update && brew install carthage
+export SWIFT_PACKAGE_TEST_REGEX=true
+swift test
+
+# or just
+
+rake test:package
 ```
+
+If you're on a Mac, testing on Linux is supported via [Docker for Mac](https://www.docker.com/docker-mac).
+Once Docker is set up, start a Linux shell:
+
+```
+rake docker
+```
+
+And run the tests via Swift Package Manager.
+
+### Carthage & Xcode
+
+Install Carthage via Homebrew and build the dependencies:
+
+```
+brew install carthage
+rake setup
+```
+
+`xcpretty` is recommended, for prettifying test output:
+
+```
+gem install xcpretty
+```
+
+Then run the tests:
+
+```
+# one of
+rake test:osx
+rake test:ios
+rake test:tvos
+```
+
+### Linting
 
 Regex uses [SwiftLint](https://github.com/realm/SwiftLint) to validate code style.
 SwiftLint is automatically run against pull requests using [Hound CI](https://houndci.com/).
 
-To run SwiftLint locally:
+You can also run it locally:
 
 ```
 $ brew install swiftlint
 $ rake swiftlint
-```
-
-`xcpretty` is also recommended, for prettifying test output:
-
-```
-$ gem install xcpretty
-```
-
-After cloning the project, first set up your environment:
-
-```
-$ rake setup
-```
-
-Build and run the tests to ensure everything works:
-
-```
-$ rake
 ```
 
 
