@@ -32,7 +32,7 @@ end
 desc "Run swiftlint if available"
 task :swiftlint do
   return unless system "which -s swiftlint"
-  exec "swiftlint --path Source && swiftlint --path Tests"
+  exec "swiftlint"
 end
 
 desc "Clean built products"
