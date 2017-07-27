@@ -96,8 +96,8 @@ private final class _MatchResult {
 
   private func utf16Range(from range: NSRange) -> Range<String.UTF16Index>? {
     guard range.location != NSNotFound else { return nil }
-    let start = string.startIndex.advanced(by: range.location)
-    let end = start.advanced(by: range.length)
+    let start = string.index(string.startIndex, offsetBy: range.location)
+    let end = string.index(start, offsetBy: range.length)
     return start..<end
   }
 
