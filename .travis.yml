@@ -22,7 +22,6 @@ matrix:
     - env: ACTION=build:carthage:tvos
     - env: ACTION=build:carthage:watchos
     - env: ACTION=build:pod
-    - env: ACTION=build:package
     - env: ACTION=test:package
     - env: ACTION=test:package SWIFT_VERSION=4.0
       osx_image: xcode9
