@@ -79,7 +79,7 @@ task :test => ["test:osx", "test:ios", "test:tvos", "test:watchos", "test:packag
 desc "Open project in a docker container"
 task :docker do
   sh "docker build -t regex ."
-  exec "docker run -v $PWD:/Regex -w /Regex -it regex"
+  exec "docker run --privileged=true -v $PWD:/Regex -w /Regex -it regex"
 end
 
 task :default => :test
