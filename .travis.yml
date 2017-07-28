@@ -41,6 +41,7 @@ matrix:
       dist: trusty
       install:
         - eval "$(cat bin/setup-swiftenv.bash)"
-        - env SWIFT_VERSION=$(bin/latest-snapshot '^4.0') bin/swiftenv-install
+        - bin/latest-snapshot '^4.0' >.swift-version
+        - bin/swiftenv-install
   fast_finish: true
 script: rake "$ACTION"
