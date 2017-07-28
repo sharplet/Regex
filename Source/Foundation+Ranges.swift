@@ -1,6 +1,6 @@
 import Foundation
 
-#if os(Linux)
+#if !swift(>=3.2) && os(Linux)
 typealias NSTextCheckingResult = TextCheckingResult
 #endif
 
