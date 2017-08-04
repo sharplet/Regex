@@ -25,12 +25,18 @@ public struct MatchResult {
   }
 
   /// The range of the matched string.
+#if swift(>=4.0)
+  public var range: Range<String.Index> {
+    return _result.range
+  }
+#else
   public var range: Range<String.Index> {
     let utf16range = _result.range
     let start = String.Index(utf16range.lowerBound, within: _string)!
     let end = String.Index(utf16range.upperBound, within: _string)!
     return start..<end
   }
+#endif
 
   /// The matching string for each capture group in the regular expression
   /// (if any).
