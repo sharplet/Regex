@@ -106,6 +106,22 @@ final class RegexSpec: QuickSpec {
         expect(location).to(equal(2))
         expect(length).to(equal(1))
       }
+
+#if swift(>=3.2)
+      it("validates the README example for capture ranges") {
+        let lyrics = """
+          So it's gonna be forever
+          Or it's gonna go down in flames
+          """
+
+        let possibleEndings = Regex("it's gonna (.+)")
+            .allMatches(in: lyrics)
+            .flatMap { $0.captureRanges[0] }
+            .map { lyrics[$0] }
+
+        expect(possibleEndings) == ["be forever", "go down in flames"]
+      }
+#endif
     }
 
     describe("matching at line anchors") {

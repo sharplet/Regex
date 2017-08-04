@@ -83,10 +83,48 @@ default:
 Options:
 
 ```swift
-let totallyUniqueExamples = Regex("^(hello|foo).*$", options: [.IgnoreCase, .AnchorsMatchLines])
+let totallyUniqueExamples = Regex("^(hello|foo).*$", options: [.ignoreCase, .anchorsMatchLines])
 let multilineText = "hello world\ngoodbye world\nFOOBAR\n"
 let matchingLines = totallyUniqueExamples.allMatches(in: multilineText).map { $0.matchedString }
 // ["hello world", "FOOBAR"]
+```
+
+Decode:
+
+```swift
+let json = """
+  [
+    {
+      "name" : "greeting",
+      "pattern" : "^(\\\\w+) world!$"
+    }
+  ]
+  """.data(using: .utf8)!
+
+struct Validation: Codable {
+  var name: String
+  var pattern: Regex
+}
+
+let decoder = JSONDecoder()
+try decoder.decode(Validation.self, from: json)
+// Validation(name: "greeting", pattern: /^(\w+) world!/)
+```
+
+Ranges:
+
+```swift
+let lyrics = """
+  So it's gonna be forever
+  Or it's gonna go down in flames
+  """
+
+let possibleEndings = Regex("it's gonna (.+)")
+    .allMatches(in: lyrics)
+    .flatMap { $0.captureRanges[0] }
+    .map { lyrics[$0] }
+
+// it's gonna: ["be forever", "go down in flames"]
 ```
 
 
