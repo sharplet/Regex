@@ -25,12 +25,18 @@ public struct MatchResult {
   }
 
   /// The range of the matched string.
+#if swift(>=4.0)
+  public var range: Range<String.Index> {
+    return _result.range
+  }
+#else
   public var range: Range<String.Index> {
     let utf16range = _result.range
     let start = String.Index(utf16range.lowerBound, within: _string)!
     let end = String.Index(utf16range.upperBound, within: _string)!
     return start..<end
   }
+#endif
 
   /// The matching string for each capture group in the regular expression
   /// (if any).
@@ -60,7 +66,7 @@ public struct MatchResult {
   private let _string: String
 
   internal init(_ string: String, _ result: NSTextCheckingResult) {
-    self._result = _MatchResult(string.utf16, result)
+    self._result = _MatchResult(string, result)
     self._string = string
   }
 
@@ -69,11 +75,19 @@ public struct MatchResult {
 // Use of a private class allows for lazy vars without the need for `mutating`.
 private final class _MatchResult {
 
+#if swift(>=4.0)
+  private let string: String
+#else
   private let string: String.UTF16View
+#endif
   fileprivate let result: NSTextCheckingResult
 
-  fileprivate init(_ string: String.UTF16View, _ result: NSTextCheckingResult) {
+  fileprivate init(_ string: String, _ result: NSTextCheckingResult) {
+#if swift(>=4.0)
     self.string = string
+#else
+    self.string = string.utf16
+#endif
     self.result = result
   }
 
@@ -95,10 +109,14 @@ private final class _MatchResult {
   }()
 
   private func utf16Range(from range: NSRange) -> Range<String.UTF16Index>? {
+#if swift(>=4.0)
+    return Range(range, in: string)
+#else
     guard range.location != NSNotFound else { return nil }
     let start = string.index(string.startIndex, offsetBy: range.location)
     let end = string.index(start, offsetBy: range.length)
     return start..<end
+#endif
   }
 
   private func substring(from range: Range<String.UTF16Index>) -> String {

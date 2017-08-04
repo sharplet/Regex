@@ -22,7 +22,6 @@ matrix:
     - env: ACTION=build:carthage:tvos
     - env: ACTION=build:carthage:watchos
     - env: ACTION=build:pod
-    - env: ACTION=build:package
     - env: ACTION=test:package
     - env: ACTION=test:package SWIFT_VERSION=4.0
       osx_image: xcode9
@@ -41,6 +40,7 @@ matrix:
       dist: trusty
       install:
         - eval "$(cat bin/setup-swiftenv.bash)"
-        - env SWIFT_VERSION=$(bin/latest-snapshot '^4.0') bin/swiftenv-install
+        - bin/latest-snapshot '^4.0' >.swift-version
+        - bin/swiftenv-install
   fast_finish: true
 script: rake "$ACTION"
