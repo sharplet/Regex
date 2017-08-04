@@ -25,18 +25,9 @@ public struct MatchResult {
   }
 
   /// The range of the matched string.
-#if swift(>=4.0)
   public var range: Range<String.Index> {
-    return _result.range
+    return _string.range(from: _result.range)
   }
-#else
-  public var range: Range<String.Index> {
-    let utf16range = _result.range
-    let start = String.Index(utf16range.lowerBound, within: _string)!
-    let end = String.Index(utf16range.upperBound, within: _string)!
-    return start..<end
-  }
-#endif
 
   /// The matching string for each capture group in the regular expression
   /// (if any).
@@ -56,20 +47,45 @@ public struct MatchResult {
     return _result.captures
   }
 
+  /// The ranges of each capture (if any).
+  ///
+  /// - seealso: The discussion and example for `MatchResult.captures`.
+  public var captureRanges: [Range<String.Index>?] {
+    return _captureRanges.value
+  }
+
   // MARK: Internal initialisers
 
   internal var matchResult: NSTextCheckingResult {
     return _result.result
   }
 
+  private let _captureRanges: Memo<[Range<String.Index>?]>
   private let _result: _MatchResult
   private let _string: String
 
   internal init(_ string: String, _ result: NSTextCheckingResult) {
     self._result = _MatchResult(string, result)
     self._string = string
+    self._captureRanges = Memo { [_result] in
+      _result.captureRanges.map { utf16range in
+        utf16range.map { string.range(from: $0) }
+      }
+    }
   }
 
+}
+
+private extension String {
+  func range(from utf16Range: Range<UTF16Index>) -> Range<Index> {
+#if swift(>=4.0)
+    return utf16Range
+#else
+    let start = Index(utf16Range.lowerBound, within: self)!
+    let end = Index(utf16Range.upperBound, within: self)!
+    return start..<end
+#endif
+  }
 }
 
 // Use of a private class allows for lazy vars without the need for `mutating`.
