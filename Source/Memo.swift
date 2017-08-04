@@ -37,7 +37,9 @@ internal struct Memo<T> {
 
   /// The underlying state.
   ///
-  /// The `enum` implements the basic semantics (either evaluated or un), while the `MutableBox` provides us with reference semantics for the memoized result.
+  /// The `enum` implements the basic semantics (either evaluated or un),
+  /// while the `MutableBox` provides us with reference semantics for the
+  /// memoized result.
   private let state: MutableBox<MemoState<T>>
 }
 
