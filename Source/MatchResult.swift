@@ -67,17 +67,17 @@ public struct MatchResult {
   internal init(_ string: String, _ result: NSTextCheckingResult) {
     self._result = _MatchResult(string, result)
     self._string = string
-    self._captureRanges = Memo { [_result] in
+    self._captureRanges = Memo({ [_result] in
       _result.captureRanges.map { utf16range in
         utf16range.map { string.range(from: $0) }
       }
-    }
+    })
   }
 
 }
 
 private extension String {
-  func range(from utf16Range: Range<UTF16Index>) -> Range<Index> {
+  func range(from utf16Range: Range<UTF16View.Index>) -> Range<Index> {
 #if swift(>=4.0)
     return utf16Range
 #else
@@ -107,7 +107,7 @@ private final class _MatchResult {
     self.result = result
   }
 
-  lazy var range: Range<String.UTF16Index> = {
+  lazy var range: Range<String.UTF16View.Index> = {
     return self.utf16Range(from: self.result.range)!
   }()
 
@@ -115,7 +115,7 @@ private final class _MatchResult {
     return self.captureRanges.map { $0.map(self.substring(from:)) }
   }()
 
-  lazy var captureRanges: [Range<String.UTF16Index>?] = {
+  lazy var captureRanges: [Range<String.UTF16View.Index>?] = {
     return self.result.ranges.dropFirst().map(self.utf16Range(from:))
   }()
 
@@ -124,7 +124,7 @@ private final class _MatchResult {
     return self.substring(from: range)
   }()
 
-  private func utf16Range(from range: NSRange) -> Range<String.UTF16Index>? {
+  private func utf16Range(from range: NSRange) -> Range<String.UTF16View.Index>? {
 #if swift(>=4.0)
     return Range(range, in: string)
 #else
@@ -135,7 +135,7 @@ private final class _MatchResult {
 #endif
   }
 
-  private func substring(from range: Range<String.UTF16Index>) -> String {
+  private func substring(from range: Range<String.UTF16View.Index>) -> String {
     return String(describing: string[range])
   }
 
