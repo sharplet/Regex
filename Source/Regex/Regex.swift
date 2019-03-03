@@ -181,13 +181,12 @@ extension Regex: Equatable {
 
 extension Regex: Hashable {
 
-  public var hashValue: Int {
-    return regularExpression.hashValue
+  public func hash(into hasher: inout Hasher) {
+      hasher.combine(regularExpression)
   }
 
 }
 
-#if swift(>=3.2)
 extension Regex: Codable {
 
   public init(from decoder: Decoder) throws {
@@ -201,7 +200,6 @@ extension Regex: Codable {
   }
 
 }
-#endif
 
 // MARK: Deprecations / Removals
 

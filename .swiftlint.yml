@@ -1,8 +1,10 @@
 disabled_rules:
-  - function_body_length
-  - trailing_comma
+- function_body_length
+- trailing_comma
+
 excluded:
-  - .build
-  - Carthage
+- .build
+- Carthage
+
 trailing_comma:
   mandatory_comma: true

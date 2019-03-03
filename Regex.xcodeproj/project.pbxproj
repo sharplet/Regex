@@ -7,34 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4A2893A71EF07BA10081B24E /* CodableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2893A61EF07BA10081B24E /* CodableSpec.swift */; };
-		4A2893A81EF07BA10081B24E /* CodableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2893A61EF07BA10081B24E /* CodableSpec.swift */; };
-		4A2893A91EF07BA10081B24E /* CodableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2893A61EF07BA10081B24E /* CodableSpec.swift */; };
-		4A2BB5531EF0489E000A32F2 /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A8249751EF0445600002E42 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4A2BB5541EF0489E000A32F2 /* Quick.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A8249761EF0445600002E42 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4A2BB5551EF048A6000A32F2 /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A8249711EF0444A00002E42 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4A2BB5561EF048A6000A32F2 /* Quick.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A8249721EF0444A00002E42 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4A2BB5571EF048AE000A32F2 /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A82496D1EF0442E00002E42 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4A2BB5581EF048AE000A32F2 /* Quick.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A82496E1EF0442E00002E42 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4A698B931E130A6C006951B2 /* OptionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A698B871E130A60006951B2 /* OptionsSpec.swift */; };
-		4A698B941E130A6C006951B2 /* RegexSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A698B881E130A60006951B2 /* RegexSpec.swift */; };
-		4A698B951E130A6C006951B2 /* StringReplacementSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A698B891E130A60006951B2 /* StringReplacementSpec.swift */; };
-		4A698B961E130A6D006951B2 /* OptionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A698B871E130A60006951B2 /* OptionsSpec.swift */; };
-		4A698B971E130A6D006951B2 /* RegexSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A698B881E130A60006951B2 /* RegexSpec.swift */; };
-		4A698B981E130A6D006951B2 /* StringReplacementSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A698B891E130A60006951B2 /* StringReplacementSpec.swift */; };
-		4A698B991E130A6E006951B2 /* OptionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A698B871E130A60006951B2 /* OptionsSpec.swift */; };
-		4A698B9A1E130A6E006951B2 /* RegexSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A698B881E130A60006951B2 /* RegexSpec.swift */; };
-		4A698B9B1E130A6E006951B2 /* StringReplacementSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A698B891E130A60006951B2 /* StringReplacementSpec.swift */; };
-		4A82496F1EF0442E00002E42 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A82496D1EF0442E00002E42 /* Nimble.framework */; };
-		4A8249701EF0442E00002E42 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A82496E1EF0442E00002E42 /* Quick.framework */; };
-		4A8249731EF0444A00002E42 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A8249711EF0444A00002E42 /* Nimble.framework */; };
-		4A8249741EF0444A00002E42 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A8249721EF0444A00002E42 /* Quick.framework */; };
-		4A8249771EF0445600002E42 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A8249751EF0445600002E42 /* Nimble.framework */; };
-		4A8249781EF0445600002E42 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A8249761EF0445600002E42 /* Quick.framework */; };
+		4A698B931E130A6C006951B2 /* OptionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A698B871E130A60006951B2 /* OptionsTests.swift */; };
+		4A698B961E130A6D006951B2 /* OptionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A698B871E130A60006951B2 /* OptionsTests.swift */; };
+		4A698B991E130A6E006951B2 /* OptionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A698B871E130A60006951B2 /* OptionsTests.swift */; };
 		4AC489011F34E7AC00A84B71 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC489001F34E7AC00A84B71 /* Memo.swift */; };
 		4AC489021F34E7CC00A84B71 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC489001F34E7AC00A84B71 /* Memo.swift */; };
 		4AC489031F34E7CD00A84B71 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC489001F34E7AC00A84B71 /* Memo.swift */; };
 		4AC489041F34E7CD00A84B71 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC489001F34E7AC00A84B71 /* Memo.swift */; };
+		904DE097222C8DCE00F491FA /* StringReplacementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A698B891E130A60006951B2 /* StringReplacementTests.swift */; };
+		904DE098222C8DCF00F491FA /* StringReplacementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A698B891E130A60006951B2 /* StringReplacementTests.swift */; };
+		904DE099222C8DCF00F491FA /* StringReplacementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A698B891E130A60006951B2 /* StringReplacementTests.swift */; };
+		904DE09A222C918900F491FA /* CodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2893A61EF07BA10081B24E /* CodableTests.swift */; };
+		904DE09B222C918A00F491FA /* CodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2893A61EF07BA10081B24E /* CodableTests.swift */; };
+		904DE09C222C918B00F491FA /* CodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2893A61EF07BA10081B24E /* CodableTests.swift */; };
+		904DE09D222C923A00F491FA /* RegexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A698B881E130A60006951B2 /* RegexTests.swift */; };
+		904DE09E222C923A00F491FA /* RegexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A698B881E130A60006951B2 /* RegexTests.swift */; };
+		904DE09F222C923B00F491FA /* RegexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A698B881E130A60006951B2 /* RegexTests.swift */; };
 		CE26D9EE1C34D96A003CFB54 /* ThreadLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE26D9ED1C34D96A003CFB54 /* ThreadLocal.swift */; };
 		CE26D9EF1C34D96A003CFB54 /* ThreadLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE26D9ED1C34D96A003CFB54 /* ThreadLocal.swift */; };
 		CE26D9F01C34D96A003CFB54 /* ThreadLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE26D9ED1C34D96A003CFB54 /* ThreadLocal.swift */; };
@@ -92,51 +80,12 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		CE322FB71C16522C005741D5 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				4A2BB5551EF048A6000A32F2 /* Nimble.framework in Embed Frameworks */,
-				4A2BB5561EF048A6000A32F2 /* Quick.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CE322FBA1C165251005741D5 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				4A2BB5571EF048AE000A32F2 /* Nimble.framework in Embed Frameworks */,
-				4A2BB5581EF048AE000A32F2 /* Quick.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CED611FA1C2A2DA8008D212A /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				4A2BB5531EF0489E000A32F2 /* Nimble.framework in Embed Frameworks */,
-				4A2BB5541EF0489E000A32F2 /* Quick.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		05A5B69D1C5EDD3C00097E4A /* Carthage.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Carthage.xcconfig; sourceTree = "<group>"; };
-		4A2893A61EF07BA10081B24E /* CodableSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableSpec.swift; sourceTree = "<group>"; };
-		4A698B871E130A60006951B2 /* OptionsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsSpec.swift; sourceTree = "<group>"; };
-		4A698B881E130A60006951B2 /* RegexSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexSpec.swift; sourceTree = "<group>"; };
-		4A698B891E130A60006951B2 /* StringReplacementSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringReplacementSpec.swift; sourceTree = "<group>"; };
+		4A2893A61EF07BA10081B24E /* CodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableTests.swift; sourceTree = "<group>"; };
+		4A698B871E130A60006951B2 /* OptionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsTests.swift; sourceTree = "<group>"; };
+		4A698B881E130A60006951B2 /* RegexTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexTests.swift; sourceTree = "<group>"; };
+		4A698B891E130A60006951B2 /* StringReplacementTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringReplacementTests.swift; sourceTree = "<group>"; };
 		4A698B9C1E130B17006951B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = RegexTests/Info.plist; sourceTree = "<group>"; };
 		4A82496D1EF0442E00002E42 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		4A82496E1EF0442E00002E42 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
@@ -151,7 +100,7 @@
 		CE6CDF631BE239DE00AE6393 /* Regex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Regex.h; sourceTree = "<group>"; };
 		CE6CDF651BE239DE00AE6393 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE6CDF6A1BE239DE00AE6393 /* RegexTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RegexTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE6CDF811BE23BE800AE6393 /* Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
+		CE6CDF811BE23BE800AE6393 /* Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; tabWidth = 2; };
 		CE6CDF831BE2C52600AE6393 /* MatchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchResult.swift; sourceTree = "<group>"; };
 		CE6CDF851BE2C64D00AE6393 /* Foundation+Ranges.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Foundation+Ranges.swift"; sourceTree = "<group>"; };
 		CEC768691BE99A040066BA1E /* Regex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Regex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,8 +123,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A82496F1EF0442E00002E42 /* Nimble.framework in Frameworks */,
-				4A8249701EF0442E00002E42 /* Quick.framework in Frameworks */,
 				CE6CDF6B1BE239DE00AE6393 /* Regex.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -191,8 +138,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A8249731EF0444A00002E42 /* Nimble.framework in Frameworks */,
-				4A8249741EF0444A00002E42 /* Quick.framework in Frameworks */,
 				CEC768731BE99A050066BA1E /* Regex.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,8 +160,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A8249771EF0445600002E42 /* Nimble.framework in Frameworks */,
-				4A8249781EF0445600002E42 /* Quick.framework in Frameworks */,
 				CED611E01C2A2C2E008D212A /* Regex.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,10 +178,10 @@
 		20FF08041DF89CEE00D58E8A /* RegexTests */ = {
 			isa = PBXGroup;
 			children = (
-				4A698B871E130A60006951B2 /* OptionsSpec.swift */,
-				4A698B881E130A60006951B2 /* RegexSpec.swift */,
-				4A698B891E130A60006951B2 /* StringReplacementSpec.swift */,
-				4A2893A61EF07BA10081B24E /* CodableSpec.swift */,
+				4A2893A61EF07BA10081B24E /* CodableTests.swift */,
+				4A698B871E130A60006951B2 /* OptionsTests.swift */,
+				4A698B881E130A60006951B2 /* RegexTests.swift */,
+				4A698B891E130A60006951B2 /* StringReplacementTests.swift */,
 				CE6CDF7B1BE23A2E00AE6393 /* Supporting Files */,
 			);
 			path = RegexTests;
@@ -257,6 +200,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		903B9ECD222BDEF000EE0316 /* Regex */ = {
+			isa = PBXGroup;
+			children = (
+				CE6CDF851BE2C64D00AE6393 /* Foundation+Ranges.swift */,
+				CE6CDF831BE2C52600AE6393 /* MatchResult.swift */,
+				4AC489001F34E7AC00A84B71 /* Memo.swift */,
+				CE4BE2961C1682CF005E4D4F /* Options.swift */,
+				CE6CDF811BE23BE800AE6393 /* Regex.swift */,
+				CEDA44A01C45045B00B78CAF /* String+ReplaceMatching.swift */,
+				CE6CDF7A1BE23A1D00AE6393 /* Supporting Files */,
+				CE26D9ED1C34D96A003CFB54 /* ThreadLocal.swift */,
+			);
+			path = Regex;
+			sourceTree = "<group>";
+		};
 		CE6CDF561BE239DE00AE6393 = {
 			isa = PBXGroup;
 			children = (
@@ -266,7 +224,9 @@
 				4A82496C1EF0442E00002E42 /* Frameworks */,
 				CE6CDF611BE239DE00AE6393 /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		CE6CDF611BE239DE00AE6393 /* Products */ = {
 			isa = PBXGroup;
@@ -285,14 +245,7 @@
 		CE6CDF621BE239DE00AE6393 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				CE6CDF811BE23BE800AE6393 /* Regex.swift */,
-				CE6CDF831BE2C52600AE6393 /* MatchResult.swift */,
-				4AC489001F34E7AC00A84B71 /* Memo.swift */,
-				CE4BE2961C1682CF005E4D4F /* Options.swift */,
-				CEDA44A01C45045B00B78CAF /* String+ReplaceMatching.swift */,
-				CE6CDF851BE2C64D00AE6393 /* Foundation+Ranges.swift */,
-				CE26D9ED1C34D96A003CFB54 /* ThreadLocal.swift */,
-				CE6CDF7A1BE23A1D00AE6393 /* Supporting Files */,
+				903B9ECD222BDEF000EE0316 /* Regex */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -386,7 +339,6 @@
 				CE6CDF661BE239DE00AE6393 /* Sources */,
 				CE6CDF671BE239DE00AE6393 /* Frameworks */,
 				CE6CDF681BE239DE00AE6393 /* Resources */,
-				CE322FBA1C165251005741D5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -423,7 +375,6 @@
 				CEC7686E1BE99A050066BA1E /* Sources */,
 				CEC7686F1BE99A050066BA1E /* Frameworks */,
 				CEC768701BE99A050066BA1E /* Resources */,
-				CE322FB71C16522C005741D5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -478,7 +429,6 @@
 				CED611DB1C2A2C2E008D212A /* Sources */,
 				CED611DC1C2A2C2E008D212A /* Frameworks */,
 				CED611DD1C2A2C2E008D212A /* Resources */,
-				CED611FA1C2A2DA8008D212A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -624,10 +574,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A698B951E130A6C006951B2 /* StringReplacementSpec.swift in Sources */,
-				4A2893A71EF07BA10081B24E /* CodableSpec.swift in Sources */,
-				4A698B941E130A6C006951B2 /* RegexSpec.swift in Sources */,
-				4A698B931E130A6C006951B2 /* OptionsSpec.swift in Sources */,
+				4A698B931E130A6C006951B2 /* OptionsTests.swift in Sources */,
+				904DE09D222C923A00F491FA /* RegexTests.swift in Sources */,
+				904DE097222C8DCE00F491FA /* StringReplacementTests.swift in Sources */,
+				904DE09A222C918900F491FA /* CodableTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -649,10 +599,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A698B981E130A6D006951B2 /* StringReplacementSpec.swift in Sources */,
-				4A2893A81EF07BA10081B24E /* CodableSpec.swift in Sources */,
-				4A698B971E130A6D006951B2 /* RegexSpec.swift in Sources */,
-				4A698B961E130A6D006951B2 /* OptionsSpec.swift in Sources */,
+				4A698B961E130A6D006951B2 /* OptionsTests.swift in Sources */,
+				904DE09E222C923A00F491FA /* RegexTests.swift in Sources */,
+				904DE098222C8DCF00F491FA /* StringReplacementTests.swift in Sources */,
+				904DE09B222C918A00F491FA /* CodableTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -688,10 +638,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A698B9B1E130A6E006951B2 /* StringReplacementSpec.swift in Sources */,
-				4A2893A91EF07BA10081B24E /* CodableSpec.swift in Sources */,
-				4A698B9A1E130A6E006951B2 /* RegexSpec.swift in Sources */,
-				4A698B991E130A6E006951B2 /* OptionsSpec.swift in Sources */,
+				4A698B991E130A6E006951B2 /* OptionsTests.swift in Sources */,
+				904DE09F222C923B00F491FA /* RegexTests.swift in Sources */,
+				904DE099222C8DCF00F491FA /* StringReplacementTests.swift in Sources */,
+				904DE09C222C918B00F491FA /* CodableTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -718,7 +668,6 @@
 /* Begin XCBuildConfiguration section */
 		CE6CDF721BE239DE00AE6393 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 05A5B69D1C5EDD3C00097E4A /* Carthage.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				APPLICATION_EXTENSION_API_ONLY = YES;
@@ -761,10 +710,9 @@
 				ONLY_ACTIVE_ARCH = YES;
 				ORGANISATION_IDENTIFIER = me.sharplet;
 				PROJECT_NAME = Regex;
-				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_PRODUCT_BUNDLE_IDENTIFIER = "$(ORGANISATION_IDENTIFIER).$(TEST_PRODUCT_NAME)";
 				TEST_PRODUCT_NAME = "$(PROJECT_NAME)Tests";
@@ -777,7 +725,6 @@
 		};
 		CE6CDF731BE239DE00AE6393 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 05A5B69D1C5EDD3C00097E4A /* Carthage.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				APPLICATION_EXTENSION_API_ONLY = YES;
@@ -813,9 +760,8 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ORGANISATION_IDENTIFIER = me.sharplet;
 				PROJECT_NAME = Regex;
-				SDKROOT = iphoneos;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_PRODUCT_BUNDLE_IDENTIFIER = "$(ORGANISATION_IDENTIFIER).$(TEST_PRODUCT_NAME)";
 				TEST_PRODUCT_NAME = "$(PROJECT_NAME)Tests";
@@ -835,11 +781,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Source/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Regex/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(FRAMEWORK_BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = "$(PROJECT_NAME)";
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -853,11 +800,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Source/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Regex/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(FRAMEWORK_BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = "$(PROJECT_NAME)";
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -870,6 +818,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(TEST_PRODUCT_BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = "$(TEST_PRODUCT_NAME)";
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -881,6 +830,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(TEST_PRODUCT_BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = "$(TEST_PRODUCT_NAME)";
+				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};
@@ -893,7 +843,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = Source/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Regex/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(FRAMEWORK_BUNDLE_IDENTIFIER)";
@@ -912,7 +862,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = Source/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Regex/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(FRAMEWORK_BUNDLE_IDENTIFIER)";
@@ -958,7 +908,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Source/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Regex/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(FRAMEWORK_BUNDLE_IDENTIFIER)";
@@ -977,7 +927,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Source/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Regex/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(FRAMEWORK_BUNDLE_IDENTIFIER)";
@@ -995,7 +945,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Source/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Regex/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(FRAMEWORK_BUNDLE_IDENTIFIER)";
@@ -1013,7 +963,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Source/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Regex/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(FRAMEWORK_BUNDLE_IDENTIFIER)";

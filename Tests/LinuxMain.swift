@@ -1,16 +1,8 @@
 import XCTest
-import Quick
 
-@testable import RegexTests
+import RegexTests
 
-var specs = [
-  RegexSpec.self,
-  OptionsSpec.self,
-  StringReplacementSpec.self,
-]
+var tests = [XCTestCaseEntry]()
+tests += RegexTests.__allTests()
 
-#if swift(>=3.2)
-specs.append(CodableSpec.self)
-#endif
-
-QCKMain(specs)
+XCTMain(tests)

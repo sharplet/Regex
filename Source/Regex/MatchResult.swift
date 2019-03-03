@@ -78,32 +78,18 @@ public struct MatchResult {
 
 private extension String {
   func range(from utf16Range: Range<UTF16View.Index>) -> Range<Index> {
-#if swift(>=4.0)
     return utf16Range
-#else
-    let start = Index(utf16Range.lowerBound, within: self)!
-    let end = Index(utf16Range.upperBound, within: self)!
-    return start..<end
-#endif
   }
 }
 
 // Use of a private class allows for lazy vars without the need for `mutating`.
 private final class _MatchResult {
 
-#if swift(>=4.0)
   private let string: String
-#else
-  private let string: String.UTF16View
-#endif
   fileprivate let result: NSTextCheckingResult
 
   fileprivate init(_ string: String, _ result: NSTextCheckingResult) {
-#if swift(>=4.0)
     self.string = string
-#else
-    self.string = string.utf16
-#endif
     self.result = result
   }
 
@@ -125,14 +111,7 @@ private final class _MatchResult {
   }()
 
   private func utf16Range(from range: NSRange) -> Range<String.UTF16View.Index>? {
-#if swift(>=4.0)
     return Range(range, in: string)
-#else
-    guard range.location != NSNotFound else { return nil }
-    let start = string.index(string.startIndex, offsetBy: range.location)
-    let end = string.index(start, offsetBy: range.length)
-    return start..<end
-#endif
   }
 
   private func substring(from range: Range<String.UTF16View.Index>) -> String {
