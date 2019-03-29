@@ -1,3 +1,5 @@
+CARTHAGE_PLATFORMS = %w[iOS macOS tvOS watchOS].freeze
+
 namespace :build do
   desc "Build and validate the podspec"
   task :pod do
@@ -5,13 +7,16 @@ namespace :build do
   end
 
   namespace :carthage do
-    %w[iOS macOS tvOS watchOS].each do |platform|
+    CARTHAGE_PLATFORMS.each do |platform|
       desc "Build the Carthage framework on #{platform}"
       task platform.downcase.to_sym do
         sh "carthage build --platform #{platform} --no-skip-current"
       end
     end
   end
+
+  desc "Build the Carthage framework on all platforms"
+  task :carthage => CARTHAGE_PLATFORMS.map { |platform| "carthage:#{platform.downcase}" }
 
   desc "Build the Swift package"
   task :package do
