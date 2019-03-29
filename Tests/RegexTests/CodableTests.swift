@@ -36,8 +36,15 @@ final class CodableTests: XCTestCase {
 
   func testCanBeEncodedToJSON() throws {
     let encoder = JSONEncoder()
-    encoder.outputFormatting = .prettyPrinted
-    XCTAssertEqual(String(data: try encoder.encode(form), encoding: .utf8)!, json)
+    let data = try encoder.encode(form)
+    let object = try cast(JSONSerialization.jsonObject(with: data), to: NSDictionary.self)
+    let dictionary = try cast(object, to: NSDictionary.self)
+
+    XCTAssertEqual(dictionary, [
+      "validations": [
+        ["name": "greeting", "pattern": "^(\\w+) world!$"],
+      ],
+    ])
   }
 
   func testIsIdenticalAfterEncodingAndDecoding() throws {

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A119DFD224EBEE400A4276C /* Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A119DFC224EBEE400A4276C /* Support.swift */; };
+		4A119DFE224EBEE400A4276C /* Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A119DFC224EBEE400A4276C /* Support.swift */; };
+		4A119DFF224EBEE400A4276C /* Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A119DFC224EBEE400A4276C /* Support.swift */; };
 		4A698B931E130A6C006951B2 /* OptionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A698B871E130A60006951B2 /* OptionsTests.swift */; };
 		4A698B961E130A6D006951B2 /* OptionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A698B871E130A60006951B2 /* OptionsTests.swift */; };
 		4A698B991E130A6E006951B2 /* OptionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A698B871E130A60006951B2 /* OptionsTests.swift */; };
@@ -81,6 +84,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A119DFC224EBEE400A4276C /* Support.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Support.swift; sourceTree = "<group>"; };
 		4A2893A61EF07BA10081B24E /* CodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableTests.swift; sourceTree = "<group>"; };
 		4A698B871E130A60006951B2 /* OptionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsTests.swift; sourceTree = "<group>"; };
 		4A698B881E130A60006951B2 /* RegexTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexTests.swift; sourceTree = "<group>"; };
@@ -173,6 +177,7 @@
 				4A698B871E130A60006951B2 /* OptionsTests.swift */,
 				4A698B881E130A60006951B2 /* RegexTests.swift */,
 				4A698B891E130A60006951B2 /* StringReplacementTests.swift */,
+				4A119DFC224EBEE400A4276C /* Support.swift */,
 				CE6CDF7B1BE23A2E00AE6393 /* Supporting Files */,
 			);
 			path = RegexTests;
@@ -475,6 +480,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = CE6CDF561BE239DE00AE6393;
@@ -565,6 +571,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A698B931E130A6C006951B2 /* OptionsTests.swift in Sources */,
+				4A119DFD224EBEE400A4276C /* Support.swift in Sources */,
 				904DE09D222C923A00F491FA /* RegexTests.swift in Sources */,
 				904DE097222C8DCE00F491FA /* StringReplacementTests.swift in Sources */,
 				904DE09A222C918900F491FA /* CodableTests.swift in Sources */,
@@ -590,6 +597,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A698B961E130A6D006951B2 /* OptionsTests.swift in Sources */,
+				4A119DFE224EBEE400A4276C /* Support.swift in Sources */,
 				904DE09E222C923A00F491FA /* RegexTests.swift in Sources */,
 				904DE098222C8DCF00F491FA /* StringReplacementTests.swift in Sources */,
 				904DE09B222C918A00F491FA /* CodableTests.swift in Sources */,
@@ -629,6 +637,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A698B991E130A6E006951B2 /* OptionsTests.swift in Sources */,
+				4A119DFF224EBEE400A4276C /* Support.swift in Sources */,
 				904DE09F222C923B00F491FA /* RegexTests.swift in Sources */,
 				904DE099222C8DCF00F491FA /* StringReplacementTests.swift in Sources */,
 				904DE09C222C918B00F491FA /* CodableTests.swift in Sources */,
