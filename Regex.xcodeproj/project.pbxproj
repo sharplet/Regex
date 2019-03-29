@@ -81,7 +81,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		05A5B69D1C5EDD3C00097E4A /* Carthage.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Carthage.xcconfig; sourceTree = "<group>"; };
 		4A2893A61EF07BA10081B24E /* CodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableTests.swift; sourceTree = "<group>"; };
 		4A698B871E130A60006951B2 /* OptionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsTests.swift; sourceTree = "<group>"; };
 		4A698B881E130A60006951B2 /* RegexTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexTests.swift; sourceTree = "<group>"; };
@@ -167,14 +166,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		05A5B69C1C5EDD3C00097E4A /* Config */ = {
-			isa = PBXGroup;
-			children = (
-				05A5B69D1C5EDD3C00097E4A /* Carthage.xcconfig */,
-			);
-			path = Config;
-			sourceTree = "<group>";
-		};
 		20FF08041DF89CEE00D58E8A /* RegexTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,7 +211,6 @@
 			children = (
 				CE6CDF621BE239DE00AE6393 /* Source */,
 				CE6CDF6E1BE239DE00AE6393 /* Tests */,
-				05A5B69C1C5EDD3C00097E4A /* Config */,
 				4A82496C1EF0442E00002E42 /* Frameworks */,
 				CE6CDF611BE239DE00AE6393 /* Products */,
 			);
