@@ -1,7 +1,6 @@
 import Foundation
 
 extension String {
-
   // MARK: Replacing the first match (mutating)
 
   /// If `regex` matches at least one substring, replace the first match with
@@ -21,10 +20,12 @@ extension String {
     if let match = regex.firstMatch(in: self) {
       let replacement = regex
         .regularExpression
-        .replacementString(for: match.matchResult,
+        .replacementString(
+          for: match.matchResult,
           in: self,
           offset: 0,
-          template: template)
+          template: template
+        )
 
       replaceSubrange(match.range, with: replacement)
     }
@@ -117,10 +118,12 @@ extension String {
     for match in regex.allMatches(in: self).reversed() {
       let replacement = regex
         .regularExpression
-        .replacementString(for: match.matchResult,
+        .replacementString(
+          for: match.matchResult,
           in: self,
           offset: 0,
-          template: template)
+          template: template
+        )
 
       replaceSubrange(match.range, with: replacement)
     }
@@ -194,7 +197,6 @@ extension String {
   public func replacingAll(matching pattern: StaticString, with template: String) -> String {
     return replacingAll(matching: Regex(pattern), with: template)
   }
-
 }
 
 public extension String {

@@ -4,7 +4,6 @@ import Foundation
 /// providing access to the matched string, as well as any capture groups within
 /// that string.
 public struct MatchResult {
-
   // MARK: Accessing match results
 
   /// The entire matched string.
@@ -67,13 +66,12 @@ public struct MatchResult {
   internal init(_ string: String, _ result: NSTextCheckingResult) {
     self._result = _MatchResult(string, result)
     self._string = string
-    self._captureRanges = Memo({ [_result] in
+    self._captureRanges = Memo { [_result] in
       _result.captureRanges.map { utf16range in
         utf16range.map { string.range(from: $0) }
       }
-    })
+    }
   }
-
 }
 
 private extension String {
@@ -84,7 +82,6 @@ private extension String {
 
 // Use of a private class allows for lazy vars without the need for `mutating`.
 private final class _MatchResult {
-
   private let string: String
   fileprivate let result: NSTextCheckingResult
 
@@ -94,15 +91,15 @@ private final class _MatchResult {
   }
 
   lazy var range: Range<String.UTF16View.Index> = {
-    return self.utf16Range(from: self.result.range)!
+    self.utf16Range(from: self.result.range)!
   }()
 
   lazy var captures: [String?] = {
-    return self.captureRanges.map { $0.map(self.substring(from:)) }
+    self.captureRanges.map { $0.map(self.substring(from:)) }
   }()
 
   lazy var captureRanges: [Range<String.UTF16View.Index>?] = {
-    return self.result.ranges.dropFirst().map(self.utf16Range(from:))
+    self.result.ranges.dropFirst().map(self.utf16Range(from:))
   }()
 
   lazy var matchedString: String = {
@@ -117,5 +114,4 @@ private final class _MatchResult {
   private func substring(from range: Range<String.UTF16View.Index>) -> String {
     return String(describing: string[range])
   }
-
 }

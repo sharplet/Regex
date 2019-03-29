@@ -2,7 +2,6 @@ import Foundation
 
 /// `Options` defines alternate behaviours of regular expressions when matching.
 public struct Options: OptionSet {
-
   /// Ignores the case of letters when matching.
   ///
   /// Example:
@@ -42,11 +41,9 @@ public struct Options: OptionSet {
   public init(rawValue: Int) {
     self.rawValue = rawValue
   }
-
 }
 
 internal extension Options {
-
   /// Transform an instance of `Regex.Options` into the equivalent `NSRegularExpression.Options`.
   ///
   /// - returns: The equivalent `NSRegularExpression.Options`.
@@ -58,13 +55,11 @@ internal extension Options {
     if contains(.dotMatchesLineSeparators) { options.insert(.dotMatchesLineSeparators) }
     return options
   }
-
 }
 
 // MARK: Deprecations / Removals
 
 extension Options {
-
   @available(*, unavailable, renamed: "ignoreCase")
   public static var IgnoreCase: Options {
     fatalError()
@@ -84,5 +79,4 @@ extension Options {
   public static var DotMatchesLineSeparators: Options {
     fatalError()
   }
-
 }

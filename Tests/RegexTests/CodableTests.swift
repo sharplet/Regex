@@ -25,7 +25,7 @@ final class CodableTests: XCTestCase {
 
   let form = Form(
     validations: [
-      Form.Validation(name: "greeting", pattern: Regex("^(\\w+) world!$"))
+      Form.Validation(name: "greeting", pattern: Regex("^(\\w+) world!$")),
     ]
   )
 

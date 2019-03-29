@@ -1,7 +1,6 @@
 import Foundation
 
 public struct Regex: CustomStringConvertible, CustomDebugStringConvertible {
-
   // MARK: Initialisation
 
   internal let regularExpression: NSRegularExpression
@@ -18,9 +17,10 @@ public struct Regex: CustomStringConvertible, CustomDebugStringConvertible {
   ///
   /// - throws: A value of `ErrorType` describing the invalid regular expression.
   public init(string pattern: String, options: Options = []) throws {
-    regularExpression = try NSRegularExpression(
+    self.regularExpression = try NSRegularExpression(
       pattern: pattern,
-      options: options.toNSRegularExpressionOptions())
+      options: options.toNSRegularExpressionOptions()
+    )
   }
 
   /// Create a `Regex` based on a static pattern string.
@@ -38,9 +38,10 @@ public struct Regex: CustomStringConvertible, CustomDebugStringConvertible {
   ///       For details, see `Regex.Options`.
   public init(_ pattern: StaticString, options: Options = []) {
     do {
-      regularExpression = try NSRegularExpression(
+      self.regularExpression = try NSRegularExpression(
         pattern: pattern.description,
-        options: options.toNSRegularExpressionOptions())
+        options: options.toNSRegularExpressionOptions()
+      )
     } catch {
       preconditionFailure("unexpected error creating regex: \(error)")
     }
@@ -128,7 +129,6 @@ public struct Regex: CustomStringConvertible, CustomDebugStringConvertible {
   public var debugDescription: String {
     return "/\(description)/"
   }
-
 }
 
 // MARK: Pattern matching
@@ -174,7 +174,6 @@ public func ~= (string: String, regex: Regex) -> Bool {
 extension Regex: Hashable {}
 
 extension Regex: Codable {
-
   public init(from decoder: Decoder) throws {
     let string = try decoder.singleValueContainer().decode(String.self)
     try self.init(string: string)
@@ -184,13 +183,11 @@ extension Regex: Codable {
     var container = encoder.singleValueContainer()
     try container.encode(regularExpression.pattern)
   }
-
 }
 
 // MARK: Deprecations / Removals
 
 extension Regex {
-
   @available(*, unavailable, renamed: "firstMatch(in:)")
   public func match(_ string: String) -> MatchResult? {
     fatalError()
@@ -200,5 +197,4 @@ extension Regex {
   public func allMatches(_ string: String) -> [MatchResult] {
     fatalError()
   }
-
 }
