@@ -6,18 +6,9 @@ struct Form: Codable, Equatable {
   struct Validation: Codable, Equatable {
     var name: String
     var pattern: Regex
-
-    static func == (lhs: Validation, rhs: Validation) -> Bool {
-      return lhs.name == rhs.name
-        && lhs.pattern == rhs.pattern
-    }
   }
 
   var validations: [Validation]
-
-  static func == (lhs: Form, rhs: Form) -> Bool {
-    return lhs.validations == rhs.validations
-  }
 }
 
 final class CodableTests: XCTestCase {

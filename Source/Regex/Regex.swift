@@ -171,21 +171,7 @@ public func ~= (string: String, regex: Regex) -> Bool {
 
 // MARK: Conformances
 
-extension Regex: Equatable {
-
-  public static func == (lhs: Regex, rhs: Regex) -> Bool {
-    return lhs.regularExpression == rhs.regularExpression
-  }
-
-}
-
-extension Regex: Hashable {
-
-  public func hash(into hasher: inout Hasher) {
-      hasher.combine(regularExpression)
-  }
-
-}
+extension Regex: Hashable {}
 
 extension Regex: Codable {
 
