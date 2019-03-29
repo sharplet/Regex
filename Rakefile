@@ -59,7 +59,7 @@ namespace :test do
 
   desc "Run the SwiftPM tests"
   task :package do
-    sh "env SWIFT_PACKAGE_TEST_REGEX=true swift test"
+    sh "swift test"
   end
 end
 
