@@ -131,30 +131,18 @@ let possibleEndings = Regex("it's gonna (.+)")
 
 ## Installation
 
+Regex supports Swift 4.2 and above, on all Swift platforms.
+
 #### Swift Package Manager
 
 Add a dependency to your `Package.swift`:
 
 ```swift
-// Swift 4
-
 let package = Package(
   name: "MyPackage",
   dependencies: [
     // other dependencies...
-    .package(url: "https://github.com/sharplet/Regex.git", from: "1.1.0"),
-  ]
-)
-```
-
-```swift
-// Swift 3
-
-let package = Package(
-  name: "MyPackage",
-  dependencies: [
-    // other dependencies...
-    .Package(url: "https://github.com/sharplet/Regex.git", majorVersion: 1, minor: 1),
+    .package(url: "https://github.com/sharplet/Regex.git", from: "2.0.0"),
   ]
 )
 ```
@@ -164,7 +152,7 @@ let package = Package(
 Put this in your Cartfile:
 
 ```
-github "sharplet/Regex" ~> 1.1
+github "sharplet/Regex" ~> 2.0
 ```
 
 #### CocoaPods
@@ -172,7 +160,7 @@ github "sharplet/Regex" ~> 1.1
 Put this in your Podfile:
 
 ```ruby
-pod "STRegex", "~> 1.1"
+pod "STRegex", "~> 2.0"
 ```
 
 
@@ -206,14 +194,7 @@ rake docker
 
 And run the tests via Swift Package Manager.
 
-### Carthage & Xcode
-
-Install Carthage via Homebrew and build the dependencies:
-
-```
-brew install carthage
-rake setup
-```
+### Xcode
 
 `xcpretty` is recommended, for prettifying test output:
 
@@ -230,16 +211,21 @@ rake test:ios
 rake test:tvos
 ```
 
-### Linting
+### Formatting & Linting
+
+Regex uses [SwiftFormat](https://github.com/nicklockwood/SwiftFormat) to
+maintain consistent code formatting.
 
 Regex uses [SwiftLint](https://github.com/realm/SwiftLint) to validate code style.
 SwiftLint is automatically run against pull requests using [Hound CI](https://houndci.com/).
 
-You can also run it locally:
+When submitting a pull request, running these tools and addressing any issues
+is much appreciated!
 
 ```
-$ brew install swiftlint
-$ rake swiftlint
+brew bundle
+swiftformat .
+swiftlint
 ```
 
 
