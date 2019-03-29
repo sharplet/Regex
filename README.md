@@ -190,7 +190,6 @@ See [CONTRIBUTING.md](CONTRIBUTING.md).
 Build and run the tests:
 
 ```
-export SWIFT_PACKAGE_TEST_REGEX=true
 swift test
 
 # or just

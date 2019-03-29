@@ -1,0 +1,4 @@
+--exclude Tests/*/XCTestManifests.swift
+--indent 2
+--self init-only
+--stripunusedargs closure-only

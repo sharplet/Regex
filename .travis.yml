@@ -1,30 +1,24 @@
-language: objective-c
-osx_image: xcode8.3
-cache:
-  directories:
-    - Carthage
+language: swift
+osx_image: xcode10.2
 matrix:
   include:
     - env: ACTION=test:osx
       install:
         - gem install xcpretty
-        - rake setup PLATFORM=macOS
     - env: ACTION=test:ios
       install:
         - gem install xcpretty
-        - rake setup PLATFORM=iOS
     - env: ACTION=test:tvos
       install:
         - gem install xcpretty
-        - rake setup PLATFORM=tvOS
     - env: ACTION=build:carthage:ios
     - env: ACTION=build:carthage:macos
     - env: ACTION=build:carthage:tvos
     - env: ACTION=build:carthage:watchos
     - env: ACTION=build:pod
     - env: ACTION=test:package
-    - env: ACTION=test:package SWIFT_VERSION=4.0
-      osx_image: xcode9
+    - env: ACTION=test:package
+      osx_image: xcode10.1
     - env: ACTION=test:package
       os: linux
       language: generic
@@ -33,14 +27,13 @@ matrix:
       install:
         - eval "$(cat bin/setup-swiftenv.bash)"
         - bin/swiftenv-install
-    - env: ACTION=test:package
+    - env: ACTION=test:package SWIFT_VERSION=5.0
       os: linux
       language: generic
       sudo: required
       dist: trusty
       install:
         - eval "$(cat bin/setup-swiftenv.bash)"
-        - bin/latest-snapshot '^4.0' >.swift-version
         - bin/swiftenv-install
   fast_finish: true
 script: rake "$ACTION"

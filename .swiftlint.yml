@@ -4,5 +4,12 @@ disabled_rules:
 excluded:
   - .build
   - Carthage
+  - Source/Regex/Memo.swift
+  - Tests/*/XCTestManifests.swift
+identifier_name:
+  excluded:
+    - _result
+nesting:
+  type_level: 2
 trailing_comma:
   mandatory_comma: true

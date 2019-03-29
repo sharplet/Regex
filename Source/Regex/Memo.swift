@@ -7,12 +7,7 @@ internal struct Memo<T> {
   // MARK: Lifecycle
 
   /// Constructs a `Memo` which lazily evaluates the argument.
-  init(_ unevaluated:  @escaping () -> T) {
-    self.init(unevaluated: unevaluated)
-  }
-
-  /// Constructs a `Memo` which lazily evaluates the passed function.
-  init(unevaluated: @escaping () -> T) {
+  init(_ unevaluated: @escaping () -> T) {
     self.init(state: .unevaluated(unevaluated))
   }
 
