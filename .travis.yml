@@ -1,8 +1,5 @@
 language: swift
 osx_image: xcode10.2
-cache:
-  directories:
-    - Carthage
 matrix:
   include:
     - env: ACTION=test:osx
@@ -21,7 +18,6 @@ matrix:
     - env: ACTION=build:pod
     - env: ACTION=test:package
     - env: ACTION=test:package SWIFT_VERSION=4.2
-      osx_image: xcode10.2
     - env: ACTION=test:package
       os: linux
       language: generic
@@ -30,14 +26,13 @@ matrix:
       install:
         - eval "$(cat bin/setup-swiftenv.bash)"
         - bin/swiftenv-install
-    - env: ACTION=test:package
+    - env: ACTION=test:package SWIFT_VERSION=5.0
       os: linux
       language: generic
       sudo: required
       dist: trusty
       install:
         - eval "$(cat bin/setup-swiftenv.bash)"
-        - bin/latest-snapshot '^4.2' >.swift-version
         - bin/swiftenv-install
   fast_finish: true
 script: rake "$ACTION"
