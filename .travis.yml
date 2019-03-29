@@ -17,7 +17,7 @@ matrix:
     - env: ACTION=build:carthage:watchos
     - env: ACTION=build:pod
     - env: ACTION=test:package
-    - env: ACTION=test:package SWIFT_VERSION=4.2
+    - env: ACTION=test:package SWIFT_VERSION=5.0
     - env: ACTION=test:package
       os: linux
       language: generic
