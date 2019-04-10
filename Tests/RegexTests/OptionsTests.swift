@@ -29,4 +29,10 @@ final class OptionsTests: XCTestCase {
     let multilineString = "test\ntest"
     XCTAssertEqual(regex.allMatches(in: multilineString).count, 1)
   }
+
+  func testAllowCommentsAndWhitespaceAllowsCommentsAndWhitespaces() {
+    let regex = Regex("test test # this is a regex", options: .allowCommentsAndWhitespace)
+    let multilineString = "testtest"
+    XCTAssertEqual(regex.allMatches(in: multilineString).count, 1)
+  }
 }
