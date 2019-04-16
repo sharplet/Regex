@@ -447,7 +447,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Adam Sharp";
 				TargetAttributes = {
 					CE6CDF5F1BE239DE00AE6393 = {
@@ -460,11 +460,11 @@
 					};
 					CEC768681BE99A040066BA1E = {
 						CreatedOnToolsVersion = 7.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 1020;
 					};
 					CEC768711BE99A050066BA1E = {
 						CreatedOnToolsVersion = 7.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 1020;
 					};
 					CED611C21C2A281E008D212A = {
 						CreatedOnToolsVersion = 7.2;
@@ -482,11 +482,11 @@
 			};
 			buildConfigurationList = CE6CDF5A1BE239DE00AE6393 /* Build configuration list for PBXProject "Regex" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
+				Base,
 			);
 			mainGroup = CE6CDF561BE239DE00AE6393;
 			productRefGroup = CE6CDF611BE239DE00AE6393 /* Products */;
