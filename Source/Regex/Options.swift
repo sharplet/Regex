@@ -23,6 +23,8 @@ public struct Options: OptionSet {
   /// end of the string, ignoring any newlines. With this option, "^" will
   /// the beginning of each line, and "$" will match the end of each line.
   ///
+  /// Example:
+  ///
   ///     let foo = Regex("^foo", options: .anchorsMatchLines)
   ///     foo.allMatches(in: "foo\nbar\nfoo\n").count // 2
   public static let anchorsMatchLines = Options(rawValue: 1 << 2)
@@ -30,9 +32,19 @@ public struct Options: OptionSet {
   /// Usually, "." matches all characters except newlines (\n). Using this
   /// this options will allow "." to match newLines
   ///
+  /// Example:
+  ///
   ///     let newLines = Regex("test.test", options: .dotMatchesLineSeparators)
   ///     newLines.allMatches(in: "test\ntest").count // 1
   public static let dotMatchesLineSeparators = Options(rawValue: 1 << 3)
+
+  /// Ignore whitespace and #-prefixed comments in the pattern.
+  ///
+  /// Example:
+  ///
+  ///     let newLines = Regex("test test # this is a regex", options: .allowCommentsAndWhitespace)
+  ///     newLines.allMatches(in: "testtest").count // 2
+  public static let allowCommentsAndWhitespace = Options(rawValue: 1 << 4)
 
   // MARK: OptionSetType
 
@@ -53,6 +65,7 @@ internal extension Options {
     if contains(.ignoreMetacharacters) { options.insert(.ignoreMetacharacters) }
     if contains(.anchorsMatchLines) { options.insert(.anchorsMatchLines) }
     if contains(.dotMatchesLineSeparators) { options.insert(.dotMatchesLineSeparators) }
+    if contains(.allowCommentsAndWhitespace) { options.insert(.allowCommentsAndWhitespace) }
     return options
   }
 }
