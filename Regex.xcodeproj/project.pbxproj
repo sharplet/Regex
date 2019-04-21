@@ -16,10 +16,6 @@
 		4A698B931E130A6C006951B2 /* OptionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A698B871E130A60006951B2 /* OptionsTests.swift */; };
 		4A698B961E130A6D006951B2 /* OptionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A698B871E130A60006951B2 /* OptionsTests.swift */; };
 		4A698B991E130A6E006951B2 /* OptionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A698B871E130A60006951B2 /* OptionsTests.swift */; };
-		4AC489011F34E7AC00A84B71 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC489001F34E7AC00A84B71 /* Memo.swift */; };
-		4AC489021F34E7CC00A84B71 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC489001F34E7AC00A84B71 /* Memo.swift */; };
-		4AC489031F34E7CD00A84B71 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC489001F34E7AC00A84B71 /* Memo.swift */; };
-		4AC489041F34E7CD00A84B71 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC489001F34E7AC00A84B71 /* Memo.swift */; };
 		904DE097222C8DCE00F491FA /* StringReplacementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A698B891E130A60006951B2 /* StringReplacementTests.swift */; };
 		904DE098222C8DCF00F491FA /* StringReplacementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A698B891E130A60006951B2 /* StringReplacementTests.swift */; };
 		904DE099222C8DCF00F491FA /* StringReplacementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A698B891E130A60006951B2 /* StringReplacementTests.swift */; };
@@ -100,7 +96,6 @@
 		4A8249721EF0444A00002E42 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
 		4A8249751EF0445600002E42 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/tvOS/Nimble.framework; sourceTree = "<group>"; };
 		4A8249761EF0445600002E42 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/tvOS/Quick.framework; sourceTree = "<group>"; };
-		4AC489001F34E7AC00A84B71 /* Memo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
 		CE26D9ED1C34D96A003CFB54 /* ThreadLocal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadLocal.swift; sourceTree = "<group>"; };
 		CE4BE2961C1682CF005E4D4F /* Options.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
 		CE6CDF601BE239DE00AE6393 /* Regex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Regex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -206,7 +201,6 @@
 			children = (
 				CE6CDF851BE2C64D00AE6393 /* Foundation+Ranges.swift */,
 				CE6CDF831BE2C52600AE6393 /* MatchResult.swift */,
-				4AC489001F34E7AC00A84B71 /* Memo.swift */,
 				CE4BE2961C1682CF005E4D4F /* Options.swift */,
 				CE6CDF811BE23BE800AE6393 /* Regex.swift */,
 				CEDA44A01C45045B00B78CAF /* String+ReplaceMatching.swift */,
@@ -561,7 +555,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AC489011F34E7AC00A84B71 /* Memo.swift in Sources */,
 				CE4BE2971C1682CF005E4D4F /* Options.swift in Sources */,
 				CE6CDF841BE2C52600AE6393 /* MatchResult.swift in Sources */,
 				CEDA44A11C45045B00B78CAF /* String+ReplaceMatching.swift in Sources */,
@@ -588,7 +581,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AC489021F34E7CC00A84B71 /* Memo.swift in Sources */,
 				CE4BE2981C168507005E4D4F /* Options.swift in Sources */,
 				CEC768801BE99B690066BA1E /* Regex.swift in Sources */,
 				CEDA44A21C45045B00B78CAF /* String+ReplaceMatching.swift in Sources */,
@@ -615,7 +607,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AC489031F34E7CD00A84B71 /* Memo.swift in Sources */,
 				CED611CB1C2A28CB008D212A /* Regex.swift in Sources */,
 				CED611CC1C2A28CB008D212A /* MatchResult.swift in Sources */,
 				CEDA44A31C45045B00B78CAF /* String+ReplaceMatching.swift in Sources */,
@@ -629,7 +620,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AC489041F34E7CD00A84B71 /* Memo.swift in Sources */,
 				CED611ED1C2A2CC4008D212A /* Regex.swift in Sources */,
 				CED611EE1C2A2CC4008D212A /* MatchResult.swift in Sources */,
 				CEDA44A41C45045B00B78CAF /* String+ReplaceMatching.swift in Sources */,

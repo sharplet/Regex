@@ -1,4 +1,4 @@
-import Foundation
+import class Foundation.NSTextCheckingResult
 
 /// A `MatchResult` encapsulates the result of a single match in a string,
 /// providing access to the matched string, as well as any capture groups within
@@ -25,7 +25,7 @@ public struct MatchResult {
 
   /// The range of the matched string.
   public var range: Range<String.Index> {
-    return _string.range(from: _result.range)
+    return _result.range
   }
 
   /// The matching string for each capture group in the regular expression
@@ -50,7 +50,7 @@ public struct MatchResult {
   ///
   /// - seealso: The discussion and example for `MatchResult.captures`.
   public var captureRanges: [Range<String.Index>?] {
-    return _captureRanges.value
+    return _result.captureRanges
   }
 
   // MARK: Internal initialisers
@@ -59,24 +59,10 @@ public struct MatchResult {
     return _result.result
   }
 
-  private let _captureRanges: Memo<[Range<String.Index>?]>
   private let _result: _MatchResult
-  private let _string: String
 
   internal init(_ string: String, _ result: NSTextCheckingResult) {
     self._result = _MatchResult(string, result)
-    self._string = string
-    self._captureRanges = Memo { [_result] in
-      _result.captureRanges.map { utf16range in
-        utf16range.map { string.range(from: $0) }
-      }
-    }
-  }
-}
-
-private extension String {
-  func range(from utf16Range: Range<UTF16View.Index>) -> Range<Index> {
-    return utf16Range
   }
 }
 
@@ -90,28 +76,22 @@ private final class _MatchResult {
     self.result = result
   }
 
-  lazy var range: Range<String.UTF16View.Index> = {
-    self.utf16Range(from: self.result.range)!
+  lazy var range: Range<String.Index> = {
+    Range(self.result.range, in: string)!
   }()
 
   lazy var captures: [String?] = {
-    self.captureRanges.map { $0.map(self.substring(from:)) }
+    self.captureRanges.map { range in
+      range.map { String(self.string[$0]) }
+    }
   }()
 
-  lazy var captureRanges: [Range<String.UTF16View.Index>?] = {
-    self.result.ranges.dropFirst().map(self.utf16Range(from:))
+  lazy var captureRanges: [Range<String.Index>?] = {
+    self.result.ranges.dropFirst().map { Range($0, in: self.string) }
   }()
 
   lazy var matchedString: String = {
-    let range = self.utf16Range(from: self.result.range)!
-    return self.substring(from: range)
+    let range = Range(self.result.range, in: self.string)!
+    return String(self.string[range])
   }()
-
-  private func utf16Range(from range: NSRange) -> Range<String.UTF16View.Index>? {
-    return Range(range, in: string)
-  }
-
-  private func substring(from range: Range<String.UTF16View.Index>) -> String {
-    return String(describing: string[range])
-  }
 }
