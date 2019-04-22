@@ -30,7 +30,7 @@ final class RegexTests: XCTestCase {
   func testRegexCanMatchMultipleTimesInTheSameString() {
     let regex = Regex("(foo)")
     let matches = regex
-      .allMatches(in: "foo foo foo")
+      .matches(in: "foo foo foo")
       .flatMap { $0.captures }
       .compactMap { $0 }
 
@@ -50,19 +50,6 @@ final class RegexTests: XCTestCase {
     XCTAssertTrue(matched)
   }
 
-  func testRegexSupportsMatchOperatorInReverse() {
-    let matched: Bool
-
-    switch Regex("foo") {
-    case "fool me twice":
-      matched = true
-    default:
-      matched = false
-    }
-
-    XCTAssertTrue(matched)
-  }
-
   func testRegexProvidesAccessToTheMatchedRange() {
     let foobar = "foobar"
     let match = Regex("f(oo)").firstMatch(in: foobar)
@@ -73,8 +60,8 @@ final class RegexTests: XCTestCase {
   func testRegexProvidesAccessToCaptureRanges() {
     let foobar = "foobar"
     let match = Regex("f(oo)b(ar)").firstMatch(in: foobar)!
-    let firstCaptureRange = match.captureRanges[0]!
-    let secondCaptureRange = match.captureRanges[1]!
+    let firstCaptureRange = match.captures.range(at: 0)!
+    let secondCaptureRange = match.captures.range(at: 1)!
     XCTAssertEqual(foobar[firstCaptureRange], "oo")
     XCTAssertEqual(foobar[secondCaptureRange], "ar")
   }
@@ -112,8 +99,8 @@ final class RegexTests: XCTestCase {
     """
 
     let possibleEndings = Regex("it's gonna (.+)")
-      .allMatches(in: lyrics)
-      .compactMap { $0.captureRanges[0] }
+      .matches(in: lyrics)
+      .compactMap { $0.captures.range(at: 0) }
       .map { lyrics[$0] }
 
     XCTAssertEqual(possibleEndings, ["be forever", "go down in flames"])
@@ -122,7 +109,8 @@ final class RegexTests: XCTestCase {
   func testRegexWhenMatchingAtLineAnchorsCanAnchorMatchesToTheStartOfEachLine() {
     let regex = Regex("(?m)^foo")
     let multilineString = "foo\nbar\nfoo\nbaz"
-    XCTAssertEqual(regex.allMatches(in: multilineString).count, 2)
+    let matches = Array(regex.matches(in: multilineString))
+    XCTAssertEqual(matches.count, 2)
   }
 
   func testRegexWhenMatchingAtLineAnchorsValidatesReadmeExampleIsCorrect() {
@@ -131,7 +119,7 @@ final class RegexTests: XCTestCase {
       options: [.ignoreCase, .anchorsMatchLines]
     )
     let multilineText = "hello world\ngoodbye world\nFOOBAR\n"
-    let matchingLines = totallyUniqueExamples.allMatches(in: multilineText).map { $0.matchedString }
+    let matchingLines = totallyUniqueExamples.matches(in: multilineText).map { $0.matchedString }
     XCTAssertEqual(matchingLines, ["hello world", "FOOBAR"])
   }
 
@@ -145,9 +133,9 @@ final class RegexTests: XCTestCase {
   }
 
   func testRegexLastMatchResetsLastMatchToNilWhenMatchFails() {
-    _ = "foo" ~= Regex("foo")
+    _ = Regex("foo") ~= "foo"
     XCTAssertNotNil(Regex.lastMatch)
-    _ = "foo" ~= Regex("bar")
+    _ = Regex("bar") ~= "foo"
     XCTAssertNil(Regex.lastMatch)
   }
 }

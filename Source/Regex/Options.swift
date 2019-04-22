@@ -1,4 +1,4 @@
-import Foundation
+import class Foundation.NSRegularExpression
 
 /// `Options` defines alternate behaviours of regular expressions when matching.
 public struct Options: OptionSet {
@@ -7,7 +7,7 @@ public struct Options: OptionSet {
   /// Example:
   ///
   ///     let a = Regex("a", options: .ignoreCase)
-  ///     a.allMatches(in: "aA").map { $0.matchedString } // ["a", "A"]
+  ///     a.matches(in: "aA").map { $0.matchedString } // ["a", "A"]
   public static let ignoreCase = Options(rawValue: 1)
 
   /// Ignore any metacharacters in the pattern, treating every character as
@@ -26,7 +26,7 @@ public struct Options: OptionSet {
   /// Example:
   ///
   ///     let foo = Regex("^foo", options: .anchorsMatchLines)
-  ///     foo.allMatches(in: "foo\nbar\nfoo\n").count // 2
+  ///     Array(foo.matches(in: "foo\nbar\nfoo\n")).count // 2
   public static let anchorsMatchLines = Options(rawValue: 1 << 2)
 
   /// Usually, "." matches all characters except newlines (\n). Using this
@@ -35,7 +35,7 @@ public struct Options: OptionSet {
   /// Example:
   ///
   ///     let newLines = Regex("test.test", options: .dotMatchesLineSeparators)
-  ///     newLines.allMatches(in: "test\ntest").count // 1
+  ///     Array(newLines.matches(in: "test\ntest")).count // 1
   public static let dotMatchesLineSeparators = Options(rawValue: 1 << 3)
 
   /// Ignore whitespace and #-prefixed comments in the pattern.
@@ -43,7 +43,7 @@ public struct Options: OptionSet {
   /// Example:
   ///
   ///     let newLines = Regex("test test # this is a regex", options: .allowCommentsAndWhitespace)
-  ///     newLines.allMatches(in: "testtest").count // 2
+  ///     Array(newLines.matches(in: "testtest")).count // 2
   public static let allowCommentsAndWhitespace = Options(rawValue: 1 << 4)
 
   // MARK: OptionSetType
@@ -67,29 +67,5 @@ internal extension Options {
     if contains(.dotMatchesLineSeparators) { options.insert(.dotMatchesLineSeparators) }
     if contains(.allowCommentsAndWhitespace) { options.insert(.allowCommentsAndWhitespace) }
     return options
-  }
-}
-
-// MARK: Deprecations / Removals
-
-extension Options {
-  @available(*, unavailable, renamed: "ignoreCase")
-  public static var IgnoreCase: Options {
-    fatalError()
-  }
-
-  @available(*, unavailable, renamed: "ignoreMetacharacters")
-  public static var IgnoreMetacharacters: Options {
-    fatalError()
-  }
-
-  @available(*, unavailable, renamed: "anchorsMatchLines")
-  public static var AnchorsMatchLines: Options {
-    fatalError()
-  }
-
-  @available(*, unavailable, renamed: "dotMatchesLineSeparators")
-  public static var DotMatchesLineSeparators: Options {
-    fatalError()
   }
 }

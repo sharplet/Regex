@@ -1,5 +1,3 @@
-import Foundation
-
 extension String {
   // MARK: Replacing the first match (mutating)
 
@@ -19,9 +17,9 @@ extension String {
   public mutating func replaceFirst(matching regex: Regex, with template: String) {
     if let match = regex.firstMatch(in: self) {
       let replacement = regex
-        .regularExpression
+        ._regex
         .replacementString(
-          for: match.matchResult,
+          for: match._result,
           in: self,
           offset: 0,
           template: template
@@ -115,17 +113,22 @@ extension String {
   ///     - regex: A regular expression to match against `self`.
   ///     - template: A template string used to replace matches.
   public mutating func replaceAll(matching regex: Regex, with template: String) {
-    for match in regex.allMatches(in: self).reversed() {
-      let replacement = regex
-        .regularExpression
-        .replacementString(
-          for: match.matchResult,
-          in: self,
-          offset: 0,
-          template: template
-        )
+    var offset = 0
 
-      replaceSubrange(match.range, with: replacement)
+    for match in regex.matches(in: self) {
+      let replacement = regex._regex.replacementString(
+        for: match._result,
+        in: self,
+        offset: offset,
+        template: template
+      )
+
+      var nsRange = match._result.range
+      nsRange.location += offset
+
+      replaceSubrange(Range(nsRange, in: self)!, with: replacement)
+
+      offset += replacement.utf16.count - nsRange.length
     }
   }
 
@@ -196,47 +199,5 @@ extension String {
   /// - returns: A string with all matches of `pattern` replaced by `template`.
   public func replacingAll(matching pattern: StaticString, with template: String) -> String {
     return replacingAll(matching: Regex(pattern), with: template)
-  }
-}
-
-public extension String {
-  @available(*, unavailable, renamed: "replaceFirst(matching:with:)")
-  mutating func replaceFirstMatching(_: Regex, with _: String) {
-    fatalError()
-  }
-
-  @available(*, unavailable, renamed: "replacingFirst(matching:with:)")
-  func replacingFirstMatching(_: Regex, with _: String) -> String {
-    fatalError()
-  }
-
-  @available(*, unavailable, renamed: "replaceFirst(matching:with:)")
-  mutating func replaceFirstMatching(_: String, with _: String) {
-    fatalError()
-  }
-
-  @available(*, unavailable, renamed: "replacingFirst(matching:with:)")
-  func replacingFirstMatching(_: String, with _: String) -> String {
-    fatalError()
-  }
-
-  @available(*, unavailable, renamed: "replaceAll(matching:with:)")
-  mutating func replaceAllMatching(_: Regex, with _: String) {
-    fatalError()
-  }
-
-  @available(*, unavailable, renamed: "replacingAll(matching:with:)")
-  func replacingAllMatching(_: Regex, with _: String) -> String {
-    fatalError()
-  }
-
-  @available(*, unavailable, renamed: "replaceAll(matching:with:)")
-  mutating func replaceAllMatching(_: String, with _: String) {
-    fatalError()
-  }
-
-  @available(*, unavailable, renamed: "replacingAll(matching:with:)")
-  func replacingAllMatching(_: String, with _: String) -> String {
-    fatalError()
   }
 }

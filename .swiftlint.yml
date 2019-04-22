@@ -1,13 +1,11 @@
 disabled_rules:
   - function_body_length
+  - identifier_name
   - trailing_comma
 excluded:
   - .build
   - Carthage
   - Tests/*/XCTestManifests.swift
-identifier_name:
-  excluded:
-    - _result
 nesting:
   type_level: 2
 trailing_comma:

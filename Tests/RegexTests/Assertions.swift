@@ -15,7 +15,7 @@ func XCTAssertCaptures(_ regularExpression: Regex, captures: String..., from str
   for expected in captures {
     let match = regularExpression.firstMatch(in: string)
     XCTAssertNotNil(match, file: file, line: line)
-    XCTAssertTrue(match!.captures.contains(where: { $0 == expected }), "expected <\(regularExpression)> to capture <\(captures)> from <\(string)> ", file: file, line: line)
+    XCTAssertTrue(match!.captures.contains(where: { $0 == Substring(expected) }), "expected <\(regularExpression)> to capture <\(captures)> from <\(string)> ", file: file, line: line)
   }
 }
 
@@ -23,6 +23,6 @@ func XCTAssertDoesNotCapture(_ regularExpression: Regex, captures: String..., fr
   for expected in captures {
     let match = regularExpression.firstMatch(in: string)
     XCTAssertNotNil(match, file: file, line: line)
-    XCTAssertFalse(match!.captures.contains(where: { $0 == expected }), "expected <\(regularExpression)> to not capture <\(captures)> from <\(string)> ", file: file, line: line)
+    XCTAssertFalse(match!.captures.contains(where: { $0 == Substring(expected) }), "expected <\(regularExpression)> to not capture <\(captures)> from <\(string)> ", file: file, line: line)
   }
 }

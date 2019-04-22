@@ -1,4 +1,4 @@
-import Foundation
+import class Foundation.Thread
 
 /// Convenience wrapper for generically storing values of type `T` in thread-local storage.
 internal final class ThreadLocal<T> {

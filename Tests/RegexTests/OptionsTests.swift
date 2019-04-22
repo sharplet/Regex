@@ -21,17 +21,20 @@ final class OptionsTests: XCTestCase {
   func testAnchorsMatchLinesCanAnchorMatchesToTheStartOfEachLine() {
     let regex = Regex("^foo", options: .anchorsMatchLines)
     let multilineString = "foo\nbar\nfoo\nbaz"
-    XCTAssertEqual(regex.allMatches(in: multilineString).count, 2)
+    let matches = Array(regex.matches(in: multilineString))
+    XCTAssertEqual(matches.count, 2)
   }
 
   func testDotMatchesLineSeparatorsAllowsDotToMatchNewlines() {
     let regex = Regex("test.test", options: .dotMatchesLineSeparators)
     let multilineString = "test\ntest"
-    XCTAssertEqual(regex.allMatches(in: multilineString).count, 1)
+    let matches = Array(regex.matches(in: multilineString))
+    XCTAssertEqual(matches.count, 1)
   }
 
   func testAllowCommentsAndWhitespaceAllowsCommentsAndWhitespaces() {
     let regex = Regex("test test # this is a regex", options: .allowCommentsAndWhitespace)
-    XCTAssertEqual(regex.allMatches(in: "testtest").count, 1)
+    let matches = Array(regex.matches(in: "testtest"))
+    XCTAssertEqual(matches.count, 1)
   }
 }

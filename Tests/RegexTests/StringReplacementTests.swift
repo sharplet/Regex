@@ -30,4 +30,10 @@ final class StringReplacementTests: XCTestCase {
     let result = "hello world".replacingFirst(matching: "h(ello) (\\w+)", with: "H$1, $2!")
     XCTAssertEqual(result, "Hello, world!")
   }
+
+  func testReplacingWithAShorterString() {
+    var string = "foo fooo foooo fooooo"
+    string.replaceAll(matching: "o+", with: "")
+    XCTAssertEqual(string, "f f f f")
+  }
 }
