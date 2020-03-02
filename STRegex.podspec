@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.version      = %x(git describe --tags --abbrev=0).chomp.sub(/^v/, '')
   s.summary      = "A Swift µframework providing an NSRegularExpression-backed Regex type"
   s.homepage     = "https://github.com/sharplet/Regex"
-  s.license      = "LICENSE.txt"
+  s.license      = { type: "MIT", file: "LICENSE.txt" }
   s.author       = "Adam Sharp"
   s.social_media_url = "https://twitter.com/sharplet"
   s.source       = { :git => "https://github.com/sharplet/Regex.git", :tag => s.version.to_s }
