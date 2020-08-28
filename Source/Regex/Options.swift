@@ -1,61 +1,63 @@
 import Foundation
 
-/// `Options` defines alternate behaviours of regular expressions when matching.
-public struct Options: OptionSet {
-  /// Ignores the case of letters when matching.
-  ///
-  /// Example:
-  ///
-  ///     let a = Regex("a", options: .ignoreCase)
-  ///     a.allMatches(in: "aA").map { $0.matchedString } // ["a", "A"]
-  public static let ignoreCase = Options(rawValue: 1)
+extension Regex {
+  /// `Options` defines alternate behaviours of regular expressions when matching.
+  public struct Options: OptionSet {
+    /// Ignores the case of letters when matching.
+    ///
+    /// Example:
+    ///
+    ///     let a = Regex("a", options: .ignoreCase)
+    ///     a.allMatches(in: "aA").map { $0.matchedString } // ["a", "A"]
+    public static let ignoreCase = Options(rawValue: 1)
 
-  /// Ignore any metacharacters in the pattern, treating every character as
-  /// a literal.
-  ///
-  /// Example:
-  ///
-  ///     let parens = Regex("()", options: .ignoreMetacharacters)
-  ///     parens.matches("()") // true
-  public static let ignoreMetacharacters = Options(rawValue: 1 << 1)
+    /// Ignore any metacharacters in the pattern, treating every character as
+    /// a literal.
+    ///
+    /// Example:
+    ///
+    ///     let parens = Regex("()", options: .ignoreMetacharacters)
+    ///     parens.matches("()") // true
+    public static let ignoreMetacharacters = Options(rawValue: 1 << 1)
 
-  /// By default, "^" matches the beginning of the string and "$" matches the
-  /// end of the string, ignoring any newlines. With this option, "^" will
-  /// the beginning of each line, and "$" will match the end of each line.
-  ///
-  /// Example:
-  ///
-  ///     let foo = Regex("^foo", options: .anchorsMatchLines)
-  ///     foo.allMatches(in: "foo\nbar\nfoo\n").count // 2
-  public static let anchorsMatchLines = Options(rawValue: 1 << 2)
+    /// By default, "^" matches the beginning of the string and "$" matches the
+    /// end of the string, ignoring any newlines. With this option, "^" will
+    /// the beginning of each line, and "$" will match the end of each line.
+    ///
+    /// Example:
+    ///
+    ///     let foo = Regex("^foo", options: .anchorsMatchLines)
+    ///     foo.allMatches(in: "foo\nbar\nfoo\n").count // 2
+    public static let anchorsMatchLines = Options(rawValue: 1 << 2)
 
-  /// Usually, "." matches all characters except newlines (\n). Using this
-  /// this options will allow "." to match newLines
-  ///
-  /// Example:
-  ///
-  ///     let newLines = Regex("test.test", options: .dotMatchesLineSeparators)
-  ///     newLines.allMatches(in: "test\ntest").count // 1
-  public static let dotMatchesLineSeparators = Options(rawValue: 1 << 3)
+    /// Usually, "." matches all characters except newlines (\n). Using this
+    /// this options will allow "." to match newLines
+    ///
+    /// Example:
+    ///
+    ///     let newLines = Regex("test.test", options: .dotMatchesLineSeparators)
+    ///     newLines.allMatches(in: "test\ntest").count // 1
+    public static let dotMatchesLineSeparators = Options(rawValue: 1 << 3)
 
-  /// Ignore whitespace and #-prefixed comments in the pattern.
-  ///
-  /// Example:
-  ///
-  ///     let newLines = Regex("test test # this is a regex", options: .allowCommentsAndWhitespace)
-  ///     newLines.allMatches(in: "testtest").count // 2
-  public static let allowCommentsAndWhitespace = Options(rawValue: 1 << 4)
+    /// Ignore whitespace and #-prefixed comments in the pattern.
+    ///
+    /// Example:
+    ///
+    ///     let newLines = Regex("test test # this is a regex", options: .allowCommentsAndWhitespace)
+    ///     newLines.allMatches(in: "testtest").count // 2
+    public static let allowCommentsAndWhitespace = Options(rawValue: 1 << 4)
 
-  // MARK: OptionSetType
+    // MARK: OptionSetType
 
-  public let rawValue: Int
+    public let rawValue: Int
 
-  public init(rawValue: Int) {
-    self.rawValue = rawValue
+    public init(rawValue: Int) {
+      self.rawValue = rawValue
+    }
   }
 }
 
-internal extension Options {
+internal extension Regex.Options {
   /// Transform an instance of `Regex.Options` into the equivalent `NSRegularExpression.Options`.
   ///
   /// - returns: The equivalent `NSRegularExpression.Options`.
@@ -72,24 +74,27 @@ internal extension Options {
 
 // MARK: Deprecations / Removals
 
-extension Options {
+@available(*, deprecated, renamed: "Regex.Options")
+public typealias Options = Regex.Options
+
+extension Regex.Options {
   @available(*, unavailable, renamed: "ignoreCase")
-  public static var IgnoreCase: Options {
+  public static var IgnoreCase: Regex.Options {
     fatalError()
   }
 
   @available(*, unavailable, renamed: "ignoreMetacharacters")
-  public static var IgnoreMetacharacters: Options {
+  public static var IgnoreMetacharacters: Regex.Options {
     fatalError()
   }
 
   @available(*, unavailable, renamed: "anchorsMatchLines")
-  public static var AnchorsMatchLines: Options {
+  public static var AnchorsMatchLines: Regex.Options {
     fatalError()
   }
 
   @available(*, unavailable, renamed: "dotMatchesLineSeparators")
-  public static var DotMatchesLineSeparators: Options {
+  public static var DotMatchesLineSeparators: Regex.Options {
     fatalError()
   }
 }
